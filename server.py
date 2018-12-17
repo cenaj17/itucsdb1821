@@ -565,7 +565,7 @@ def hospital_page():
     cursor.close()
     form=HospitalSearchForm()
     status = session.get('status')
-    status=1
+    #status=1
     delform=HospitalDeleteForm()
     if(request.method=='POST'):
         if form.validate_on_submit() and form.submit.data:
@@ -587,7 +587,7 @@ def hospital_page():
                 hospital_form.append(hospital(db_hosp[0],db_hosp[1],db_hosp[2],db_hosp[3],db_hosp[4],db_hosp[5],db_hosp[6]))
             cursor.close()
             return render_template('hospital_page.html', hospital=hospital_form, form=form,delform=delform, stat=status, len=len(hospital_form))
-        if delform.validate_on_submit() and delform.delete.data:
+        if delform.validate_on_submit() and delform.submit.data:
             del_list=request.form.getlist("del_hospitals")
             connection=db.connect(url)
             cursor=connection.cursor()
@@ -596,7 +596,7 @@ def hospital_page():
                 statement="DELETE FROM hospital WHERE hospital_id IN {}".format(del_hospitals)
             else:
                 del_hospitals=''.join(str(e) for e in del_list)
-                statement="DELETE FROM hospital WHERE hospital_id ={}".format(del_hospitals)
+                statement="DELETE FROM hospital WHERE hospital_id = \'{}\'".format(del_hospitals)
             cursor.execute(statement)
             connection.commit()
             cursor.close()
@@ -606,7 +606,7 @@ app.add_url_rule("/hospital", view_func=hospital_page, methods=['GET', 'POST'])
 
 def add_hospital():
     status=session.get('status')
-    status=1
+    #status=1
     if status not in (1,7):
         return redirect(url_for('home_page'))
     hospitals=[]
@@ -638,8 +638,7 @@ app.add_url_rule('/hospital/add_hospital',view_func=add_hospital, methods=['GET'
 
 def edit_hospital(hospital_id):
     status = session.get('status')
-    status=1
-
+    #status=1
     if status not in (1,7):
         return redirect(url_for('home_page'))
     connection=db.connect(url)
@@ -710,7 +709,7 @@ app.add_url_rule("/emergency_shift/<int:personnel_id>",view_func=single_personne
 
 def hospital_personnel_sheet():
     status = session.get('status')
-    status=1
+    #status=1
     workers = []
     connection = db.connect(url)
     cursor = connection.cursor()
@@ -760,7 +759,7 @@ app.add_url_rule("/hospital_personnel",
 
 def add_personnel():
     status=session.get('status')
-    status=1
+    #status=1
     if status not in (1,6,7):
         return redirect(url_for('home_page'))
     personnel=[]
@@ -796,7 +795,7 @@ app.add_url_rule('/hospital_personnel/add_personnel',view_func=add_personnel, me
 
 def hospital_personnel_page(hospital_id):
     status=session.get('status')
-    status=1
+    #status=1
     workers =[]
     connection = db.connect(url)
     cursor=connection.cursor()
@@ -845,7 +844,7 @@ app.add_url_rule("/<int:hospital_id>/hospital_personnel",view_func=hospital_pers
 def emergency_shift_page():
     data = []
     status = session.get('status')
-    status=1
+    #status=1
     connection = db.connect(url)
     cursor = connection.cursor()
     statement = """SELECT GENERATED_KEY,HOSPITAL_PERSONNEL.PERSONNEL_ID, SHIFT_BEGIN_DATE,SHIFT_REPEAT_INTERVAL,SHIFT_HOURS,DAYSHIFT ,EMERGENCY_AREA_ASSIGNED, WORKER_NAME FROM DAY_TABLE LEFT JOIN HOSPITAL_PERSONNEL ON DAY_TABLE.PERSONNEL_ID=HOSPITAL_PERSONNEL.PERSONNEL_ID ORDER BY SHIFT_BEGIN_DATE"""
