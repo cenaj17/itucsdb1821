@@ -1,7 +1,9 @@
 from flask_wtf import FlaskForm
 from wtforms import SelectField,StringField, PasswordField, SubmitField, BooleanField, RadioField, IntegerField, FloatField, SelectMultipleField,widgets,HiddenField
 from wtforms.validators import DataRequired, Length, Email, EqualTo
-
+class InsertForm(FlaskForm):
+    input = StringField('Scripts')
+    submit = SubmitField('Submit')
 class LoginForm(FlaskForm):
     id = StringField('ID',
                         validators=[DataRequired()])
@@ -21,6 +23,7 @@ class PatientForm(FlaskForm):
     insurance = StringField('Insurance')
     submit = SubmitField('Submit')
     search = SubmitField('Search')
+    delete = SubmitField('Delete')
 class PatientSearchForm(FlaskForm):
     choices = [('Name','Name'),
     ('Age','Age'),
@@ -100,7 +103,7 @@ class HospitalAddForm(FlaskForm):
     submit=SubmitField('Insert')
 
 class HospitalDeleteForm(FlaskForm):
-    submit=SubmitField('Delete')
+    delete=SubmitField('Delete')
 class Drugs_Form(FlaskForm):
     choices = [('insert','Insert'),('update','Update')]
     select = RadioField('Choose an operation',choices=choices,default='insert')
@@ -112,6 +115,26 @@ class Drugs_Form(FlaskForm):
     price = StringField('Price')
     submit = SubmitField('Submit')
     delete = SubmitField('Delete')
+    search = SubmitField('Search')
+class Drugs_Search_Form(FlaskForm):
+    choices = [('Name','Name'),
+    ('Type','Type'),
+    ('Company_ID','Company')
+    ]
+    select = SelectField('Filter Drugs:',choices=choices)
+    search = StringField('')
+    submit = SubmitField('Filter')
+
+class DrugCompanies_Search_Form(FlaskForm):
+    choices = [('Name','Name'),
+    ('Type','Type'),
+    ('Company','Company'),
+    ('Founder','Founder'),
+    ('Country','Country')
+    ]
+    select = SelectField('Filter Companies:',choices=choices)
+    search = StringField('')
+    submit = SubmitField('Filter')
 
 class DrugCompanies_Form(FlaskForm):
     choices = [('insert','Insert'),('update','Update')]
@@ -124,7 +147,7 @@ class DrugCompanies_Form(FlaskForm):
     factories=StringField('Factory Number')
     submit = SubmitField('Submit')
     delete = SubmitField('Delete')
-    delete=SubmitField('Delete')
+    search = SubmitField('Search')
 
 class PersonnelSearchForm(FlaskForm):
     choices=[('WORKER_NAME','Personnel Name'),

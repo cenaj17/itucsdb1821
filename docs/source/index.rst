@@ -1,19 +1,24 @@
-.. ITUCSDB18NN documentation master file, created as a template.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+Welcome to itucsdb1821's documentation!
+=====================================
 
-Welcome to ITUCSDB18NN's documentation!
-=======================================
+:Team: 1821
+
+:Members:
+
+   * Atakan Göl
+   * Ece Nur Şen
+   * Ecem Konu
+   * Göktuğ Başaran
+
+**HastayimDB is a project to combine every aspect of Health Industry
+into a single application. In the current health system, hospitals are seperated, pharmacies are seperated,
+drug companies are seperated and so on. Our idea brings them all together on a single platform.**
+
+Contents:
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :maxdepth: 1
 
+   user/index
+   developer/index
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
