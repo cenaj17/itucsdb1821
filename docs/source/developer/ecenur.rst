@@ -621,7 +621,7 @@ This function deletes choosen prescription with given prescription id from PRESC
 
 
 ***********************
-Detiled Prescription
+Detailed Prescription
 ***********************
 
 Table
