@@ -22,7 +22,7 @@ visible to you.
 
 .. tip:: If you cannot access this page being an authorized member, please contact the administrator.
 
-.. figure:: insert_patient.jpg
+.. figure:: goktug/insert_patient.jpg
 	:scale: 40 %
 	:alt: Patient Page
 	:align: center
@@ -60,7 +60,7 @@ and delete the given patient.
 
 Click the *SEARCH* button and this page should be visible to you. 
 
-.. figure:: search_patient.jpg
+.. figure:: goktug/search_patient.jpg
 	:scale: 40 %
 	:alt: Search Page
 	:align: center
@@ -85,7 +85,7 @@ visible to you.
 
 .. tip:: If you cannot access this page being an authorized member, please contact the administrator.
 
-.. figure:: drug_companies_page.jpg
+.. figure:: goktug/drug_companies_page.jpg
 	:scale: 40 %
 	:alt: Drug Companies Page
 	:align: center
@@ -116,12 +116,12 @@ and delete the given company.
 
 .. note:: If there is no company with the given name, the operation will fail.
 
-2.4 Searching for a Company
+2.4. Searching for a Company
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Click the *SEARCH* button and this page should be visible to you. 
 
-.. figure:: search_drug_company.jpg
+.. figure:: goktug/search_drug_company.jpg
 	:scale: 40 %
 	:alt: Search Company Page
 	:align: center
@@ -146,7 +146,7 @@ visible to you.
 
 .. tip:: If you cannot access this page being an authorized member, please contact the administrator.
 
-.. figure:: drugs_page.jpg
+.. figure:: goktug/drugs_page.jpg
 	:scale: 40 %
 	:alt: Drugs Page
 	:align: center
@@ -178,12 +178,12 @@ and delete the given drug.
 
 .. note:: If there is no drug with the given name, the operation will fail.
 
-3.4 Searching for a Drug
+3.4. Searching for a Drug
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Click the *SEARCH* button and this page should be visible to you. 
 
-.. figure:: search_drug.jpg
+.. figure:: goktug/search_drug.jpg
 	:scale: 40 %
 	:alt: Drugs Search Page
 	:align: center
