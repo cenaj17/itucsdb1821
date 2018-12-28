@@ -21,6 +21,6 @@ new functionalities of our application will be provided to you depending on your
 .. toctree::
    goktug
    ecenur
-   member3
+   ecem
    atakan
    
