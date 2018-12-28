@@ -112,6 +112,7 @@ Search validations are checked inside forms executable, by using form validators
         publicHos=RadioField('Public Hospital? ',choices=[('True','Public'),('False','Private'),('*','Both')],validators=[DataRequired()])
         submit=SubmitField('Search')
 
+
 3. Adding
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
