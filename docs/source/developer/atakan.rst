@@ -11,6 +11,7 @@ Pharmacy Personel
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: sql
+
     CREATE TABLE IF NOT EXISTS pharmacy_personel (
         tckn INTEGER,
         id SERIAL PRIMARY KEY,
@@ -26,6 +27,7 @@ Pharmacy Personel
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
+
     connection = db.connect(url)
     cursor = connection.cursor()
     statement = """ SELECT name,tel_num FROM pharmacy_personel WHERE (id ={} or id={})""".format(pharmacist_id,helper_id)
@@ -40,6 +42,7 @@ Variables pharmacist_id and helper_id are already known.
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
+
     connection = db.connect(url)
 	cursor = connection.cursor()
     statement = "UPDATE public.pharmacy_personel SET tel_num={}, years_worked={}	WHERE id = {};".format(tel,years,per_id)
@@ -57,6 +60,7 @@ Pharmacies
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: sql
+
     CREATE TABLE IF NOT EXISTS pharmacies (
         id SERIAL PRIMARY KEY,
         name VARCHAR NOT NULL,
@@ -74,6 +78,7 @@ they are set to null, if an personel is updated, they are updated, as well.
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
+
     date = str(datetime.datetime.now().date())
     connection = db.connect(url)
     cursor = connection.cursor()
@@ -93,6 +98,7 @@ Pharmaceutical Warehouse
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: sql
+
     CREATE TABLE IF NOT EXISTS pharmaceutical_warehouse (
         id SERIAL PRIMARY KEY,
         name VARCHAR NOT NULL,
@@ -107,6 +113,7 @@ Pharmaceutical Warehouse
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
+
     connection = db.connect(url)
     cursor = connection.cursor()
     statement = """SELECT name,location,next_night_shift,tel_num,pharmacist,helper FROM pharmacies
@@ -119,11 +126,8 @@ Pharmaceutical Warehouse
 In this example we select the only pharmaceutical warehouse which has the same id as pware_id which was known.
 
 **********************
-Intermediate Tables
+Intermediate Tables - Inventory Tables
 **********************
-
-Inventory Tables
---------------------
 
 There are two tables used for the same purpose, Pharmacy Inventory and Pharmaceutical Warehouse Inventory tables.
 
@@ -131,6 +135,7 @@ There are two tables used for the same purpose, Pharmacy Inventory and Pharmaceu
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: sql
+
     CREATE TABLE IF NOT EXISTS pharmacy_inventory (
         drugs_id INTEGER REFERENCES DRUGS(ID) ON DELETE CASCADE ON UPDATE CASCADE,
         pharmacy_id INTEGER REFERENCES pharmacies(id) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -151,6 +156,7 @@ And updated if they are updated.
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
+
     connection = db.connect(url)
     cursor = connection.cursor()
     statement = "select NAME , number, drugs_id from DRUGS,pharmacy_inventory where pharmacy_inventory.pharmacy_id = {} and drugs_id = ID".format(id)
@@ -165,6 +171,7 @@ This code returns all the inventory of the specified pharmacy.
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
+
     if new_value == 0:
         statement = "DELETE FROM public.pharmacy_inventory WHERE drugs_id={} and pharmacy_id = {};".format(inventory[k][2], id)
         del i[-1]
