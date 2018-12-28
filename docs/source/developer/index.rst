@@ -97,5 +97,5 @@ set of rows that satisfy the given query.
 .. toctree::
    goktug
    ecenur
-   member3
+   ecem
    atakan

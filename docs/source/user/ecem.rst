@@ -22,14 +22,14 @@ Performing operations on hospitals requires admin logins specified as above.
 A search form exists in hospitals page to further allow user to search for an hospital matching required criterias.
 If no selection is done, search will return all entries.
 
-..figure:: ecem/hospital_page_nosession.jpg
+.. figure:: ecem/hospital_page_nosession.jpg
     :scale: 40%
     :alt: Hospitals Page Without Login
     :align: center
 
     Hospitals Page Without Login
 
-..figure:: ecem/hospital_page.jpg
+.. figure:: ecem/hospital_page.jpg
     :scale: 40%
     :alt: Hospitals Page With Login
     :align: center
@@ -38,7 +38,7 @@ If no selection is done, search will return all entries.
 
 If a click is performed on hospital name in the table, it will redirect user into hospital personnel workingg in that hospital
 
-..figure:: ecem/workers_within_hospital.jpg
+.. figure:: ecem/workers_within_hospital.jpg
     :scale: %40
     :alt: Workers in Hospital
     :align: center
@@ -51,14 +51,14 @@ If a click is performed on hospital name in the table, it will redirect user int
 If login to page has been done and the session matches given constraints, a link
 for add page will be visible in the hospitals page.
 
-..figure::ecem/hospital_add_page.jpg
+.. figure:: ecem/hospital_add_page.jpg
 :scale: 40%
     :alt: Hospital Add Page With Login
     :align: center
 
     Hospital Add Page
 
-..warning:: If an unwanted access is done to add page using link, it will redirect user into homepage.
+.. warning:: If an unwanted access is done to add page using link, it will redirect user into homepage.
 
 1.2 Updating an Existing Hospital
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -66,7 +66,7 @@ for add page will be visible in the hospitals page.
 From hospital page, edit hospital button can be pressed, once pressed, if session matches given constraints
 following page will be visible.
 
-..figure::ecem/hospital_edit_page.jpg
+.. figure:: ecem/hospital_edit_page.jpg
 :scale: 40%
     :alt: Hospital Edit Page With Login
     :align: center
@@ -90,21 +90,21 @@ Navigate to the Hospital Personnel page by clicking the *Hospital Workers* butto
 
 In order to perform add, delete and edit, login status must match of admin, hospital administrator or the hospital secretary.
 
-..figure:: ecem/personnel_page.jpg
+.. figure:: ecem/personnel_page.jpg
     :scale: 40%
     :alt: Personnel Page
     :align: center
 
     Hospital Personnel Page with Login
 
-..figure:: ecem/personnel_wout_login.jpg
+.. figure:: ecem/personnel_wout_login.jpg
     :scale: 40%
     :alt: Personnel Page
     :align: center
 
     Hospital Personnel Page without Login
 
-..note::Hospital Id is not shown to unauthorized users to protect database related information.
+.. note:: Hospital Id is not shown to unauthorized users to protect database related information.
 
 Searching through hospital personnel is allowed using existing form in Hospital Personnel page.
 
@@ -114,14 +114,14 @@ Searching through hospital personnel is allowed using existing form in Hospital 
 Following the Add Hospital Personnel button from Hospital Personnel page will redirect specified user into 
 Hospital add can be done by filling following forms and then clicking insert button below forms.
 
-..figure:: ecem/worker_add_page.jpg
+.. figure:: ecem/worker_add_page.jpg
     :scale: 40%
     :alt: Personnel Add Page
     :align: center
     
     Hospital Personnel Add Page
 
-..note::Unregistered access using link will redirect user to homepage.
+.. note::Unregistered access using link will redirect user to homepage.
 
 2.2 Update an Existing Hospital Personnel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -129,16 +129,16 @@ Hospital add can be done by filling following forms and then clicking insert but
 If an hospital personnel entry is clicked from hospital personnel page and the login was done as specified,
 hospital personnel edit page will be shown to user.
 
-..figure:: ecem/personnel_edit.jpg
+.. figure:: ecem/personnel_edit.jpg
     :scale: 40%
     :alt: Personnel Edit Page
     :align: center
     
     Hospital Personnel Edit Page
 
-..note::Data of the personnel to edit is inserted to forms to make editing more accessable.
+.. note:: Data of the personnel to edit is inserted to forms to make editing more accessable.
 
-..figure:: ecem/personnel_edit_nosession.jpg
+.. figure:: ecem/personnel_edit_nosession.jpg
     :scale: 40%
     :alt: Personnel Edit with Wrong Session
     :align: center
@@ -163,7 +163,7 @@ Adding new entries to shift page can be done using form given in Shift Table pag
 3.1 Adding a New Shift to Table
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..figure:: ecem/shift_page.jpg
+.. figure:: ecem/shift_page.jpg
     :scale: 40%
     :alt: Shift Sheet
     :align: center
@@ -178,7 +178,7 @@ also be visible to user.
 
 Select checkboxes of entries to delete, then press delete button to delete entries.
 
-..figure:: ecem/shift_page_delete.jpg
+.. figure:: ecem/shift_page_delete.jpg
     :scale: 40%
     :alt: shift table delete
     :align: center
