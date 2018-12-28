@@ -116,7 +116,9 @@ Search validations are checked inside forms executable, by using form validators
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Adding a new hospital is maintained by the following Python function.INSERT query is done to add a new hospital.
+
 .. code-block:: python
+
     def add_hospital():
         status=session.get('status')
         #status=1
@@ -166,7 +168,9 @@ class HospitalAddForm(FlaskForm):
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Editing an hospital is done by followed python function
+
 .. code-block:: python
+
     def edit_hospital(hospital_id):
         status = session.get('status')
         #status=1
@@ -211,6 +215,7 @@ Deleting will be done if push method is used by submitting delete button on hosp
 
 
 .. code-block:: python
+
     delform=HospitalDeleteForm()
     if(request.method=='POST'):
         if delform.validate_on_submit() and delform.delete.data:
