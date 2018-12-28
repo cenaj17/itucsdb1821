@@ -24,7 +24,7 @@ copyright = '2018, ITUCSDB1821'
 author = 'ITUCSDB1821'
 
 # The short X.Y version
-version = ''
+version = '1.0'
 # The full version, including alpha/beta/rc tags
 release = ''
 

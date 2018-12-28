@@ -3,12 +3,13 @@ Parts Implemented by Ayser Ecem Konu
 
 This page will be providing information on
 
-*Hospitals*
-*Hospital Workers*
-*Shift Sheet*
+* *Hospitals*
+* *Hospital Workers*
+
+* *Shift Sheet*
 
 1. Hospitals
-------------
+--------------
 
 Hospital page is available for get methods as every user, however adding, deleting
 and editing is only limited to admin and the hospital administrator.
@@ -17,7 +18,7 @@ Navigate to Hospitals page by clicking the *HOSPITALS* button on sidebar.
 
 Performing operations on hospitals requires admin logins specified as above.
 
-..tip:: Enter with admin to see add page, delete options and edit, if you're not an admin, trying to access these pages will redirect you into home page.
+.. tip:: Enter with admin to see add page, delete options and edit, if you're not an admin, trying to access these pages will redirect you into home page.
 
 A search form exists in hospitals page to further allow user to search for an hospital matching required criterias.
 If no selection is done, search will return all entries.
