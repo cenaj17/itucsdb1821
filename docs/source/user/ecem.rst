@@ -40,7 +40,7 @@ If no selection is done, search will return all entries.
 If a click is performed on hospital name in the table, it will redirect user into hospital personnel workingg in that hospital
 
 .. figure:: ecem/workers_within_hospital.jpg
-    :scale: %40
+    :scale: 40%
     :alt: Workers in Hospital
     :align: center
 

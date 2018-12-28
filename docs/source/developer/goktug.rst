@@ -356,6 +356,7 @@ However, for a better user experience, for feedback, this structure is implement
 In order to delete a drug, we need to write a simple DELETE query.
 
 .. code-block:: python
+
 	name = 'Foo'
 	statement = "DELETE FROM DRUGS WHERE NAME = \'{}\'".format(name)
 	cursor.execute(statement)
