@@ -87,6 +87,13 @@ a given ID number. A typical SQL query can be accomplished via the snippet below
 At the end of the execution, if successful, result list will be populated with the 
 set of rows that satisfy the given query.
 
+.. note:: For string values, SQL statements need to be in single quotes (Eg. ... WHERE NAME='Foo'). You can achive this by using **\'** escape characters in *format*
+
+	.. code-block:: python
+
+		name = 'Foo'
+		statement = "... WHERE NAME = \'{}\'".format(name)
+	
 .. toctree::
    goktug
    ecenur
