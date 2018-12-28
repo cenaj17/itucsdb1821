@@ -248,6 +248,7 @@ and after that, using the hospital id inside a search query. If session matches 
 be available within that page.
 
 .. code-block:: python
+
     def hospital_personnel_page(hospital_id):
         status=session.get('status')
         #status=1
@@ -330,6 +331,7 @@ Hospital personnel will have search form and search all function similar to hosp
 SELECT query is used for reading entries.
 
 .. code-block:: python
+
     status = session.get('status')
     #status=1
     workers = []
@@ -529,6 +531,7 @@ addform is used for update aswell, due to the fact that validators and areas req
 Deleting will be done if push method is used by submitting delete button on personnel page.
 
 .. code-block:: python
+
     if delForm.validate_on_submit() and delForm.delete.data:
         del_list=request.form.getlist("del_personnel")
         connection=db.connect(url)
@@ -669,6 +672,7 @@ Adding is done using insert query from data collected by push method into form.
 Deleting is done similar to tables mentioned previously.
 
 .. code-block:: python
+
     delform=HospitalDeleteForm()
     if delform.validate_on_submit():
             del_list=request.form.getlist("del_shift")
@@ -695,6 +699,7 @@ Extra Tables
 ~~~~~~~~~~~~~~~~~~
 
 .. code-block:: sql
+
     CREATE TABLE IF NOT EXISTS INSURANCE(
         INSURANCE_ID SERIAL PRIMARY KEY,
         INSURANCE_NAME VARCHAR,
@@ -709,6 +714,7 @@ Insurance is a table that is used for specifying insurance type that the patient
 Coverence table is a table that connects insurances with hospitals.
 
 .. code-block:: sql
+
     CREATE TABLE IF NOT EXISTS COVERANCE(
         INSURANCE INTEGER,
         HOSPITAL_COVERED INTEGER,

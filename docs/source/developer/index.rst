@@ -10,6 +10,11 @@ The open source database management system used in this project is PostgreSQL. I
 with a diverse community which helps a lot in development phase. It also supports ACID (Atomicity,
 Consistency, Isolation, Durability). It supports multiple indexing techniques such as GIN (Generalized Inverted Index) or GiST (Generealized Search Tree).
 
+.. image:: erchart.png
+	:scale: 40 %
+	:alt: E/R Chart
+	:align: center
+
 **Database Initialization for HEROKU**
 
 Since we are using *HEROKU* for deployment, we need to set the database up accordingly. The code block below
