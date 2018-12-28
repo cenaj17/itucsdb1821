@@ -1,0 +1,454 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Parts Implemented by Ece Nur Şen &mdash; ITUCSDB1821  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Parts Implemented by Ayser Ecem Konu" href="ecem.html" />
+    <link rel="prev" title="Parts Implemented by Göktuğ Başaran" href="goktug.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ITUCSDB1821
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="goktug.html">Parts Implemented by Göktuğ Başaran</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Parts Implemented by Ece Nur Şen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#policlinics">1. Policlinics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#policlinics-page">1.1. Policlinics Page</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-new-policlinics">1.1.1. Adding New Policlinics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#editing-policlinics">1.1.2. Editing Policlinics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#detailed-policlinics-page">1.2. Detailed Policlinics Page</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-detailed-policlinic">1.2.1. Adding Detailed Policlinic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deleting-detailed-policlinic">1.2.2. Deleting Detailed Policlinic</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#prescription">2. Prescription</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#adding-prescription">2.1. Adding Prescription</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#editing-prescription">2.2. Editing Prescription</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deleting-prescription">2.3. Deleting Prescription</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#detailed-prescription">3. Detailed Prescription</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#drugs">3.1. Drugs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-drugs">3.1.1. Adding Drugs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#editing-drugs">3.1.2. Editing Drugs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deleting-drugs">3.1.3. Deleting Drugs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examination">3.2. Examination</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-examination">3.2.1. Adding Examination</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deleting-examination">3.2.2. Deleting Examination</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ecem.html">Parts Implemented by Ayser Ecem Konu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="atakan.html">Parts Implemented by Atakan Göl</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../developer/index.html">Developer Guide</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ITUCSDB1821</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">User Guide</a> &raquo;</li>
+        
+      <li>Parts Implemented by Ece Nur Şen</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/user/ecenur.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="parts-implemented-by-ece-nur-sen">
+<h1>Parts Implemented by Ece Nur Şen<a class="headerlink" href="#parts-implemented-by-ece-nur-sen" title="Permalink to this headline">¶</a></h1>
+<p>This page will be providing information on</p>
+<ul class="simple">
+<li><em>Policlinics</em></li>
+<li><em>Prescription</em></li>
+<li><em>Detailed Prescription</em></li>
+</ul>
+<div class="section" id="policlinics">
+<h2>1. Policlinics<a class="headerlink" href="#policlinics" title="Permalink to this headline">¶</a></h2>
+<p>Policlinics page give information about policlinics of choosen hospital and their detailed policlinics.
+To go to policlinics page, user firstly press Policlinics from menu. When user pressed,
+he/she will see a page for him/her to choose a hospital.</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../_images/choose_hospital_wout_log.png"><img alt="Choose Hospital Without Login" src="../_images/choose_hospital_wout_log.png" style="width: 1010.4000000000001px; height: 517.6px;" /></a>
+<p class="caption"><span class="caption-text">Choose Hospital Without Login</span></p>
+</div>
+<div class="section" id="policlinics-page">
+<h3>1.1. Policlinics Page<a class="headerlink" href="#policlinics-page" title="Permalink to this headline">¶</a></h3>
+<p>When user choose a hospital from list, user will see a list policlinics according to that hospital.</p>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../_images/choose_pol_wout_log.png"><img alt="Choosing Policlinic Without Login" src="../_images/choose_pol_wout_log.png" style="width: 1012.0px; height: 504.8px;" /></a>
+<p class="caption"><span class="caption-text">Choosing Policlinic Without Login</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If the user is admin or hospital administrator, user will see page different.</p>
+</div>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="../_images/choose_pol_w_log.png"><img alt="Choosing Policlinic Page" src="../_images/choose_pol_w_log.png" style="width: 1012.0px; height: 508.0px;" /></a>
+<p class="caption"><span class="caption-text">Choosing Policlinic Page</span></p>
+</div>
+<p>Authorized user can add, delete or edit policlinics.</p>
+</div>
+<div class="section" id="adding-new-policlinics">
+<h3>1.1.1. Adding New Policlinics<a class="headerlink" href="#adding-new-policlinics" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="../_images/add_pol_w_log.png"><img alt="Adding Policlinics" src="../_images/add_pol_w_log.png" style="width: 1014.4000000000001px; height: 516.8000000000001px;" /></a>
+<p class="caption"><span class="caption-text">Adding Policlinics</span></p>
+</div>
+<p>Once user enter all the necessary information, by clicking Add button, user can add new policlinics.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">There is a difference between policlinics and detailed policlinic. Eg. A hospital can have a policlinic called <em>Eye</em> with 3 examination rooms. Detailed policlinics of that hospital’s eye policlinics contained the information of every examination rooms’ information.</p>
+</div>
+</div>
+<div class="section" id="editing-policlinics">
+<h3>1.1.2. Editing Policlinics<a class="headerlink" href="#editing-policlinics" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id5">
+<a class="reference internal image-reference" href="../_images/edit_pol.png"><img alt="Editing policlinics" src="../_images/edit_pol.png" style="width: 1013.6px; height: 516.8000000000001px;" /></a>
+<p class="caption"><span class="caption-text">Editing Policlinics</span></p>
+</div>
+<p>If user enter any information on any box and click enter, boxes with information will change accordingly.</p>
+<p>1.1.3. Deleting Policlinics</p>
+<p>When a user is <em>authorized</em> and on <em>policlinics page</em>, user can delete a policlinics from page by clicking delete button under the name of policlinic.</p>
+</div>
+<div class="section" id="detailed-policlinics-page">
+<h3>1.2. Detailed Policlinics Page<a class="headerlink" href="#detailed-policlinics-page" title="Permalink to this headline">¶</a></h3>
+<p>A user can go to detailed policlinic page by clicking the name of policlinic.</p>
+<div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="../_images/det_pol_page_wout_log.png"><img alt="Detailed Policlinics Without Login" src="../_images/det_pol_page_wout_log.png" style="width: 1015.2px; height: 518.4px;" /></a>
+<p class="caption"><span class="caption-text">Detailed Policlinics Page</span></p>
+</div>
+<p>Detailed Policlinics page give information about, which policlinic is working during which hours, when is the result control hours and which doctor is working in that policlinics.
+A user can see this page without login.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If the user is admin or hospital administrator, user will see page different.</p>
+</div>
+<div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="../_images/det_pol_page_w_log.png"><img alt="Detailed Policlinics Page" src="../_images/det_pol_page_w_log.png" style="width: 1015.2px; height: 519.2px;" /></a>
+<p class="caption"><span class="caption-text">Detailed Policlinics Page</span></p>
+</div>
+<p>Authorized user can add or delete detailed policlinics.</p>
+</div>
+<div class="section" id="adding-detailed-policlinic">
+<h3>1.2.1. Adding Detailed Policlinic<a class="headerlink" href="#adding-detailed-policlinic" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id8">
+<a class="reference internal image-reference" href="../_images/add_det_pol.png"><img alt="Adding Detailed Policlinic" src="../_images/add_det_pol.png" style="width: 1012.8000000000001px; height: 516.8000000000001px;" /></a>
+<p class="caption"><span class="caption-text">Adding Detailed Policlinic</span></p>
+</div>
+<p>Once user enters all the necessary informations, by clicking Add button, user can add detailed policlinic.</p>
+</div>
+<div class="section" id="deleting-detailed-policlinic">
+<h3>1.2.2. Deleting Detailed Policlinic<a class="headerlink" href="#deleting-detailed-policlinic" title="Permalink to this headline">¶</a></h3>
+<p>When a user is <em>authorized</em> and on <em>detailed policlinic page</em>, user can delete a detailed policlinic from page by clicking delete button under the id of policlinic.</p>
+</div>
+</div>
+<div class="section" id="prescription">
+<h2>2. Prescription<a class="headerlink" href="#prescription" title="Permalink to this headline">¶</a></h2>
+<p>Prescription page is for observing all the prescription of a choosen patient. Because prescriptions are private, prescription page cannot be directly accessed through menu, but an authorized person can access through patient page.</p>
+<div class="figure align-center" id="id9">
+<a class="reference internal image-reference" href="../_images/presc_for_patient.png"><img alt="Prescription Page For Patient" src="../_images/presc_for_patient.png" style="width: 1015.2px; height: 519.2px;" /></a>
+<p class="caption"><span class="caption-text">Prescription Page</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If the user is patient or receptionist, user will see page like given above.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If the user is admin or doctor, user will see page different.</p>
+</div>
+<div class="figure align-center" id="id10">
+<a class="reference internal image-reference" href="../_images/presc_for_doctor.png"><img alt="Prescription Page For doctor" src="../_images/presc_for_doctor.png" style="width: 1013.6px; height: 517.6px;" /></a>
+<p class="caption"><span class="caption-text">Prescription Page</span></p>
+</div>
+<p>Admin and Doctor are authorized users of Prescription pages. Authorized can add, delete or edit Prescription Page.</p>
+<div class="section" id="adding-prescription">
+<h3>2.1. Adding Prescription<a class="headerlink" href="#adding-prescription" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id11">
+<a class="reference internal image-reference" href="../_images/add_presc.png"><img alt="Adding Prescription" src="../_images/add_presc.png" style="width: 1014.4000000000001px; height: 518.4px;" /></a>
+<p class="caption"><span class="caption-text">Adding Prescription</span></p>
+</div>
+<p>Once user enter necessary informations, by clicking Add button, user can add prescription.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Prescription and Detailed Prescription are different. Prescription only contains information such as when it entered, which doctor entered, validation date etc. On the other hand detailed prescription contains information about drugs and examinations.</p>
+</div>
+</div>
+<div class="section" id="editing-prescription">
+<h3>2.2. Editing Prescription<a class="headerlink" href="#editing-prescription" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id12">
+<a class="reference internal image-reference" href="../_images/edit_presc.png"><img alt="Editing Prescription" src="../_images/edit_presc.png" style="width: 1012.8000000000001px; height: 515.2px;" /></a>
+<p class="caption"><span class="caption-text">Editing Prescription</span></p>
+</div>
+<p>If user enter any information on any box and click enter, boxes with information will change accordingly.</p>
+</div>
+<div class="section" id="deleting-prescription">
+<h3>2.3. Deleting Prescription<a class="headerlink" href="#deleting-prescription" title="Permalink to this headline">¶</a></h3>
+<p>When a user is <em>authorized</em> and on <em>prescription page</em>, user can delete a prescription from page by clicking delete button under the id of prescription.</p>
+</div>
+</div>
+<div class="section" id="detailed-prescription">
+<h2>3. Detailed Prescription<a class="headerlink" href="#detailed-prescription" title="Permalink to this headline">¶</a></h2>
+<p>A user can reach details of a prescription by clicking the id of prescriptions.
+Detailed prescription consists of two parts: Drug and Examination.
+First table seen on detailed prescription page is drugs table. Second table seen on detailed prescription page is examination table.</p>
+<div class="figure align-center" id="id13">
+<a class="reference internal image-reference" href="../_images/det_pres_for_patient.png"><img alt="Detailed Prescription Page for Patient" src="../_images/det_pres_for_patient.png" style="width: 1014.4000000000001px; height: 516.8000000000001px;" /></a>
+<p class="caption"><span class="caption-text">Detailed Prescription Page</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If the user is patient or receptionist, user will see page like given above.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If the user is admin or doctor, user will see page different.</p>
+</div>
+<div class="figure align-center" id="id14">
+<a class="reference internal image-reference" href="../_images/det_presc_for_doctor.png"><img alt="Detailed Prescription Page" src="../_images/det_presc_for_doctor.png" style="width: 1013.6px; height: 516.8000000000001px;" /></a>
+<p class="caption"><span class="caption-text">Detailed Prescription Page</span></p>
+</div>
+<div class="section" id="drugs">
+<h3>3.1. Drugs<a class="headerlink" href="#drugs" title="Permalink to this headline">¶</a></h3>
+<p>An authorized user can add, delete or edit drugs.</p>
+</div>
+<div class="section" id="adding-drugs">
+<h3>3.1.1. Adding Drugs<a class="headerlink" href="#adding-drugs" title="Permalink to this headline">¶</a></h3>
+<p>To add new drug, user will click <em>Add Drug</em> button on Detailed Prescription Page.</p>
+<div class="figure align-center" id="id15">
+<a class="reference internal image-reference" href="../_images/add_drug.png"><img alt="Adding Drugs" src="../_images/add_drug.png" style="width: 1012.8000000000001px; height: 516.0px;" /></a>
+<p class="caption"><span class="caption-text">Adding Drugs</span></p>
+</div>
+<p>Once user enters all necessary informations, by clicking Add button, user can add a new drug to prescription.</p>
+</div>
+<div class="section" id="editing-drugs">
+<h3>3.1.2. Editing Drugs<a class="headerlink" href="#editing-drugs" title="Permalink to this headline">¶</a></h3>
+<p>To edit a drug in prescription, user will click <em>Edit</em> button under id of drug on Detailed Prescription Page.</p>
+<div class="figure align-center" id="id16">
+<a class="reference internal image-reference" href="../_images/edit_drug.png"><img alt="Adding Drugs" src="../_images/edit_drug.png" style="width: 1013.6px; height: 518.4px;" /></a>
+<p class="caption"><span class="caption-text">Editing Drugs</span></p>
+</div>
+<p>If user enter any information on any box and click enter, boxes with information will change accordingly.</p>
+</div>
+<div class="section" id="deleting-drugs">
+<h3>3.1.3. Deleting Drugs<a class="headerlink" href="#deleting-drugs" title="Permalink to this headline">¶</a></h3>
+<p>To delete a drug in prescription, user will click <em>Delete</em> button under id of drug on Detailed Prescription Page.</p>
+</div>
+<div class="section" id="examination">
+<h3>3.2. Examination<a class="headerlink" href="#examination" title="Permalink to this headline">¶</a></h3>
+<p>An authorized user can add or delete drugs.</p>
+</div>
+<div class="section" id="adding-examination">
+<h3>3.2.1. Adding Examination<a class="headerlink" href="#adding-examination" title="Permalink to this headline">¶</a></h3>
+<p>To add new examination, user will click <em>Add Examination</em> button on Detailed Prescription Page.</p>
+<div class="figure align-center" id="id17">
+<a class="reference internal image-reference" href="../_images/add_exam.png"><img alt="Adding Examination" src="../_images/add_exam.png" style="width: 1014.4000000000001px; height: 517.6px;" /></a>
+<p class="caption"><span class="caption-text">Adding Examination</span></p>
+</div>
+<p>Once user enters all necessary informations, by clicking Add button, user can add a new drug to prescription.</p>
+</div>
+<div class="section" id="deleting-examination">
+<h3>3.2.2. Deleting Examination<a class="headerlink" href="#deleting-examination" title="Permalink to this headline">¶</a></h3>
+<p>To delete a examination in prescription, user will click <em>Delete</em> button under id of examination on Detailed Prescription Page.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">If a user try to reach a page that he/she is not authorized to see, user will see page below.</p>
+</div>
+<div class="figure align-center" id="id18">
+<a class="reference internal image-reference" href="../_images/unauthorized_access.png"><img alt="Unauthorized Access" src="../_images/unauthorized_access.png" style="width: 1015.2px; height: 516.8000000000001px;" /></a>
+<p class="caption"><span class="caption-text">Unauthorized Access</span></p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ecem.html" class="btn btn-neutral float-right" title="Parts Implemented by Ayser Ecem Konu" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="goktug.html" class="btn btn-neutral" title="Parts Implemented by Göktuğ Başaran" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, ITUCSDB1821
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

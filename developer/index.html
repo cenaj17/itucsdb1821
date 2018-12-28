@@ -1,0 +1,430 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Developer Guide &mdash; ITUCSDB1821  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Parts Implemented by Göktuğ Başaran" href="goktug.html" />
+    <link rel="prev" title="Parts Implemented by Atakan Göl" href="../user/atakan.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ITUCSDB1821
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../user/index.html">User Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Developer Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="goktug.html">Parts Implemented by Göktuğ Başaran</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ecenur.html">Parts Implemented by Ece Nur Şen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ecem.html">Parts Implemented by Ayser Ecem Konu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="atakan.html">Parts Implemented by Atakan Göl</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ITUCSDB1821</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Developer Guide</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/developer/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="developer-guide">
+<h1>Developer Guide<a class="headerlink" href="#developer-guide" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="../_images/postgresql.png"><img alt="Patient Page" class="align-center" src="../_images/postgresql.png" style="width: 131.20000000000002px; height: 145.6px;" /></a>
+<p>The open source database management system used in this project is PostgreSQL. It is a DBMS
+with a diverse community which helps a lot in development phase. It also supports ACID (Atomicity,
+Consistency, Isolation, Durability). It supports multiple indexing techniques such as GIN (Generalized Inverted Index) or GiST (Generealized Search Tree).</p>
+<a class="reference internal image-reference" href="../_images/erchart.png"><img alt="E/R Chart" class="align-center" src="../_images/erchart.png" style="width: 1401.6000000000001px; height: 1116.8px;" /></a>
+<p><strong>Database Initialization for HEROKU</strong></p>
+<p>Since we are using <em>HEROKU</em> for deployment, we need to set the database up accordingly. The code block below
+descripes how our system is initialized. <strong>DATABASE_URL</strong> is inside the Heroku server and it is generated automatically
+by Heroku.</p>
+<p>All of the table creations are carried out inside <em>initialize</em> function.*INIT_STATEMENTS* are
+SQL queries for table creation.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+        <span class="k">with</span> <span class="n">dbapi2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span> <span class="k">as</span> <span class="n">connection</span><span class="p">:</span>
+                <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+                <span class="k">for</span> <span class="n">statement</span> <span class="ow">in</span> <span class="n">INIT_STATEMENTS</span><span class="p">:</span>
+                        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+                <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;DATABASE_URL&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">url</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Usage: DATABASE_URL=url python dbinit.py&quot;</span><span class="p">,</span> <span class="nb">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
+                <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">initialize</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Database Initialization for LOCAL development</strong></p>
+<p>For local development and debugging purposes, the <em>DATABASE_URL</em> should be given. It should
+contain some keywords in order to be used. For our specific database
+we can initialize as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+        <span class="k">with</span> <span class="n">dbapi2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span> <span class="k">as</span> <span class="n">connection</span><span class="p">:</span>
+                <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+                <span class="k">for</span> <span class="n">statement</span> <span class="ow">in</span> <span class="n">INIT_STATEMENTS</span><span class="p">:</span>
+                        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+                <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;dbname=&#39;&lt;dbname&gt;&#39; user=&#39;&lt;user&gt;&#39; host=&#39;&lt;host&gt;&#39; password=&#39;&lt;password&gt;&#39;&quot;</span>
+<span class="n">initialize</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Also, this can be achieved without changing the whole code’s structure via changing a boolean in our <em>server.py</em> file, line 13.</p>
+<p><em>If *DEBUG is true, you can run the database locally.</em>
+<em>If *DEBUG is false,you can run the database on HEROKU.</em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DEBUG</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="k">if</span><span class="p">(</span><span class="n">DEBUG</span> <span class="o">==</span> <span class="bp">False</span><span class="p">):</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;DATABASE_URL&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;dbname=&#39;&lt;dbname&gt;&#39; user=&#39;&lt;user&gt;&#39; host=&#39;&lt;host&gt;&#39; password=&#39;&lt;password&gt;&#39;&quot;</span>
+        <span class="n">initialize</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Sample Database Query</strong></p>
+<p>Let’s imagine a scenario where the user wants to see everything from SAMPLE_TABLE with
+a given ID number. A typical SQL query can be accomplished via the snippet below.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM SAMPLE_TABLE WHERE ID={}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="p">:</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>At the end of the execution, if successful, result list will be populated with the
+set of rows that satisfy the given query.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>For string values, SQL statements need to be in single quotes (Eg. … WHERE NAME=’Foo’). You can achive this by using <strong>‘</strong> escape characters in <em>format</em></p>
+<div class="last highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Foo&#39;</span>
+<span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;... WHERE NAME = </span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="goktug.html">Parts Implemented by Göktuğ Başaran</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="goktug.html#patients">Patients</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="goktug.html#creation">1. Creation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="goktug.html#reading">2. Reading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="goktug.html#adding">3. Adding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="goktug.html#updating">4. Updating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="goktug.html#deleting">5. Deleting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="goktug.html#drug-companies">Drug Companies</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="goktug.html#id1">1. Creation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="goktug.html#id2">2. Reading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="goktug.html#id3">3. Adding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="goktug.html#id4">4. Updating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="goktug.html#id5">5. Deleting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="goktug.html#drugs">Drugs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="goktug.html#id6">1. Creation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="goktug.html#id7">2. Reading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="goktug.html#id8">3. Adding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="goktug.html#id9">4. Updating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="goktug.html#id10">5. Deleting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="goktug.html#extra-tables">Extra Tables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="goktug.html#drug-type">1. Drug Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="goktug.html#allergies">2. Allergies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="goktug.html#allergies-index">3. Allergies Index</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ecenur.html">Parts Implemented by Ece Nur Şen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ecenur.html#policlinics">Policlinics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ecenur.html#table">1. Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecenur.html#reading-policlinics">2. Reading Policlinics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecenur.html#adding-policlinics">3. Adding Policlinics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecenur.html#editing-policlinics">4. Editing Policlinics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecenur.html#deleting-policlinics">5. Deleting Policlinics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ecenur.html#detailed-policlinics">Detailed Policlinics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ecenur.html#id1">1. Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecenur.html#reading-detailed-policlinics">2. Reading Detailed_Policlinics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecenur.html#adding-detailed-policlinics">3. Adding Detailed_Policlinics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecenur.html#deleting-detailed-policlinics">4. Deleting Detailed_Policlinics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ecenur.html#prescription">Prescription</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ecenur.html#id2">1. Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecenur.html#reading-prescription">2. Reading Prescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecenur.html#adding-prescription">3. Adding Prescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecenur.html#editing-prescription">4. Editing Prescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecenur.html#deleting-prescription">5. Deleting Prescription</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ecenur.html#detailed-prescription">Detailed Prescription</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ecenur.html#id3">1. Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecenur.html#reading-detailed-prescription-drugs-and-examination">2. Reading Detailed_Prescription(Drugs) and Examination</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecenur.html#adding-detailed-prescription">3. Adding Detailed_Prescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecenur.html#editing-detailed-prescription">4. Editing Detailed_Prescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecenur.html#deleting-detailed-prescription">5. Deleting Detailed_Prescription</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ecenur.html#examination">Examination</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ecenur.html#id4">1. Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecenur.html#adding-examination">2. Adding Examination</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecenur.html#deleting-examination">3. Deleting Examination</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ecem.html">Parts Implemented by Ayser Ecem Konu</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ecem.html#hospitals">Hospitals</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ecem.html#creation">1. Creation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecem.html#reading">2. Reading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecem.html#adding">3. Adding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecem.html#updating">4. Updating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecem.html#deleting">5. Deleting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecem.html#showing-all-workers-of-an-hospital">6. Showing All Workers of an Hospital</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ecem.html#hospital-personnel">Hospital Personnel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ecem.html#id1">1. Creation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecem.html#id2">2. Reading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecem.html#id3">3. Adding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecem.html#id4">4. Updating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecem.html#id5">5.Deleting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ecem.html#shift-table">Shift Table</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ecem.html#id6">1. Creation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecem.html#id7">2. Reading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecem.html#id8">3. Adding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecem.html#id9">4. Deleting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ecem.html#extra-tables">Extra Tables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ecem.html#insurance">1.Insurance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecem.html#coverance">2. Coverance</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="atakan.html">Parts Implemented by Atakan Göl</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="atakan.html#pharmacy-personel">Pharmacy Personel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="atakan.html#creation">1. Creation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="atakan.html#reading">2. Reading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="atakan.html#updating">3. Updating</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="atakan.html#pharmacies">Pharmacies</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="atakan.html#id1">1. Creation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="atakan.html#id2">2. Reading</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="atakan.html#pharmaceutical-warehouse">Pharmaceutical Warehouse</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="atakan.html#id3">1. Creation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="atakan.html#id4">2. Reading</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="atakan.html#intermediate-tables-inventory-tables">Intermediate Tables - Inventory Tables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="atakan.html#id5">1. Creation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="atakan.html#id6">2. Reading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="atakan.html#updating-and-deleting">3. Updating and Deleting</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="goktug.html" class="btn btn-neutral float-right" title="Parts Implemented by Göktuğ Başaran" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../user/atakan.html" class="btn btn-neutral" title="Parts Implemented by Atakan Göl" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, ITUCSDB1821
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

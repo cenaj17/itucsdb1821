@@ -1,0 +1,914 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Parts Implemented by Ayser Ecem Konu &mdash; ITUCSDB1821  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Parts Implemented by Atakan Göl" href="atakan.html" />
+    <link rel="prev" title="Parts Implemented by Ece Nur Şen" href="ecenur.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ITUCSDB1821
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../user/index.html">User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="goktug.html">Parts Implemented by Göktuğ Başaran</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ecenur.html">Parts Implemented by Ece Nur Şen</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Parts Implemented by Ayser Ecem Konu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hospitals">Hospitals</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#creation">1. Creation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reading">2. Reading</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding">3. Adding</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#updating">4. Updating</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deleting">5. Deleting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#showing-all-workers-of-an-hospital">6. Showing All Workers of an Hospital</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#hospital-personnel">Hospital Personnel</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">1. Creation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">2. Reading</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">3. Adding</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">4. Updating</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">5.Deleting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#shift-table">Shift Table</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id6">1. Creation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">2. Reading</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">3. Adding</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">4. Deleting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#extra-tables">Extra Tables</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#insurance">1.Insurance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#coverance">2. Coverance</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="atakan.html">Parts Implemented by Atakan Göl</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ITUCSDB1821</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Developer Guide</a> &raquo;</li>
+        
+      <li>Parts Implemented by Ayser Ecem Konu</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/developer/ecem.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="parts-implemented-by-ayser-ecem-konu">
+<h1>Parts Implemented by Ayser Ecem Konu<a class="headerlink" href="#parts-implemented-by-ayser-ecem-konu" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">All table creations exist in db_init.py file.</p>
+</div>
+<div class="section" id="hospitals">
+<h2>Hospitals<a class="headerlink" href="#hospitals" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="creation">
+<h3>1. Creation<a class="headerlink" href="#creation" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span>    <span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">HOSPITAL</span><span class="p">(</span>
+    <span class="n">HOSPITAL_ID</span> <span class="nb">SERIAL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+    <span class="n">HOSPITAL_NAME</span> <span class="nb">VARCHAR</span><span class="p">,</span>
+    <span class="n">IS_PUBLIC</span> <span class="n">BOOL</span> <span class="k">DEFAULT</span> <span class="k">TRUE</span><span class="p">,</span>
+    <span class="k">LOCATION</span> <span class="nb">VARCHAR</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="n">ADMINISTRATOR</span> <span class="nb">VARCHAR</span><span class="p">,</span>
+    <span class="n">TELEPHONE_NUMBER</span> <span class="nb">NUMERIC</span><span class="p">(</span><span class="mi">11</span><span class="p">),</span>
+    <span class="n">AMBULANCE_COUNT</span> <span class="nb">INTEGER</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>This table has no foreign keys. Hospital id is incremented by database, user is not allowed
+to enter hospital id for abstraction.</p>
+</div>
+<div class="section" id="reading">
+<h3>2. Reading<a class="headerlink" href="#reading" title="Permalink to this headline">¶</a></h3>
+<p>Reading the table is done with no select in rendering page. If selection is done (form push method is used with search button)
+another SELECT query will be executed.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">hospitals</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot; SELECT * FROM HOSPITAL ORDER BY HOSPITAL_NAME&quot;&quot;&quot;</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+    <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="n">rows</span><span class="o">=</span><span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">db_hosp</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+        <span class="n">hospitals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">hospital</span><span class="p">(</span><span class="n">db_hosp</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">db_hosp</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">db_hosp</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">db_hosp</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">db_hosp</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="n">db_hosp</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span><span class="n">db_hosp</span><span class="p">[</span><span class="mi">6</span><span class="p">]))</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">form</span><span class="o">=</span><span class="n">HospitalSearchForm</span><span class="p">()</span>
+    <span class="n">status</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;status&#39;</span><span class="p">)</span>
+    <span class="c1">#status=1</span>
+    <span class="n">delform</span><span class="o">=</span><span class="n">HospitalDeleteForm</span><span class="p">()</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">method</span><span class="o">==</span><span class="s1">&#39;POST&#39;</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">validate_on_submit</span><span class="p">()</span> <span class="ow">and</span> <span class="n">form</span><span class="o">.</span><span class="n">submit</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+            <span class="n">selection</span><span class="o">=</span><span class="n">form</span><span class="o">.</span><span class="n">selection</span><span class="o">.</span><span class="n">data</span>
+            <span class="n">data</span><span class="o">=</span><span class="n">form</span><span class="o">.</span><span class="n">search</span><span class="o">.</span><span class="n">data</span>
+            <span class="n">button</span><span class="o">=</span><span class="n">form</span><span class="o">.</span><span class="n">publicHos</span><span class="o">.</span><span class="n">data</span>
+            <span class="n">hospital_form</span><span class="o">=</span><span class="p">[]</span>
+            <span class="n">connection</span><span class="o">=</span><span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+            <span class="n">cursor</span> <span class="o">=</span><span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">button</span><span class="o">==</span><span class="s1">&#39;*&#39;</span><span class="p">):</span>
+                <span class="n">statement</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;SELECT * FROM HOSPITAL WHERE CAST({} AS TEXT) ILIKE  </span><span class="se">\&#39;</span><span class="s2">%{}%</span><span class="se">\&#39;</span><span class="s2"> ORDER BY {} ASC &quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">selection</span><span class="p">,</span> <span class="n">data</span> <span class="p">,</span> <span class="n">selection</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">statement</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;SELECT * FROM HOSPITAL WHERE CAST({} AS TEXT) ILIKE  </span><span class="se">\&#39;</span><span class="s2">%{}%</span><span class="se">\&#39;</span><span class="s2"> AND IS_PUBLIC={} ORDER BY {} ASC &quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">selection</span><span class="p">,</span> <span class="n">data</span> <span class="p">,</span><span class="n">button</span><span class="p">,</span> <span class="n">selection</span><span class="p">)</span>
+    <span class="c1">#        print(statement)</span>
+            <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+            <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+            <span class="n">rows</span><span class="o">=</span><span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">db_hosp</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+                <span class="n">hospital_form</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">hospital</span><span class="p">(</span><span class="n">db_hosp</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">db_hosp</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">db_hosp</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">db_hosp</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">db_hosp</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="n">db_hosp</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span><span class="n">db_hosp</span><span class="p">[</span><span class="mi">6</span><span class="p">]))</span>
+            <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;hospital_page.html&#39;</span><span class="p">,</span> <span class="n">hospital</span><span class="o">=</span><span class="n">hospital_form</span><span class="p">,</span> <span class="n">form</span><span class="o">=</span><span class="n">form</span><span class="p">,</span><span class="n">delform</span><span class="o">=</span><span class="n">delform</span><span class="p">,</span> <span class="n">stat</span><span class="o">=</span><span class="n">status</span><span class="p">,</span> <span class="nb">len</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">hospital_form</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Entries of database is inserted into a class called Hospital inside classes folder.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">hospital</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">hospital_id</span><span class="p">,</span><span class="n">hospital_name</span><span class="p">,</span><span class="n">is_public</span><span class="p">,</span><span class="n">location</span><span class="p">,</span><span class="n">administrator</span><span class="p">,</span><span class="n">telephone_number</span><span class="p">,</span><span class="n">ambulance_count</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hospital_id</span><span class="o">=</span><span class="n">hospital_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hospital_name</span><span class="o">=</span><span class="n">hospital_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_public</span><span class="o">=</span><span class="n">is_public</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">location</span><span class="o">=</span><span class="n">location</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">administrator</span><span class="o">=</span><span class="n">administrator</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">telephone_number</span><span class="o">=</span><span class="n">telephone_number</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ambulance_count</span><span class="o">=</span><span class="n">ambulance_count</span>
+
+
+    <span class="k">def</span> <span class="nf">get_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">hospital_id</span>
+    <span class="k">def</span> <span class="nf">get_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">hospital_name</span>
+    <span class="k">def</span> <span class="nf">get_public</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_public</span>
+    <span class="k">def</span> <span class="nf">get_location</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">location</span>
+    <span class="k">def</span> <span class="nf">get_administrator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">administrator</span>
+    <span class="k">def</span> <span class="nf">get_telephone_number</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">telephone_number</span>
+    <span class="k">def</span> <span class="nf">get_ambulance_count</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ambulance_count</span>
+</pre></div>
+</div>
+<p>Search validations are checked inside forms executable, by using form validators of wtforms</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">HospitalSearchForm</span><span class="p">(</span><span class="n">FlaskForm</span><span class="p">):</span>
+    <span class="n">choices</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;HOSPITAL_NAME&#39;</span><span class="p">,</span><span class="s1">&#39;Hospital Name&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;LOCATION&#39;</span><span class="p">,</span> <span class="s1">&#39;Location&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;ADMINISTRATOR&#39;</span><span class="p">,</span><span class="s1">&#39;Administrator&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;TELEPHONE_NUMBER&#39;</span><span class="p">,</span><span class="s1">&#39;Phone Number&#39;</span><span class="p">)]</span>
+    <span class="n">selection</span><span class="o">=</span><span class="n">SelectField</span><span class="p">(</span><span class="s1">&#39;Hospital Filter:&#39;</span><span class="p">,</span><span class="n">choices</span><span class="o">=</span><span class="n">choices</span><span class="p">)</span>
+    <span class="n">search</span><span class="o">=</span><span class="n">StringField</span><span class="p">(</span><span class="s1">&#39;Keyword&#39;</span><span class="p">)</span>
+    <span class="n">publicHos</span><span class="o">=</span><span class="n">RadioField</span><span class="p">(</span><span class="s1">&#39;Public Hospital? &#39;</span><span class="p">,</span><span class="n">choices</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;True&#39;</span><span class="p">,</span><span class="s1">&#39;Public&#39;</span><span class="p">),(</span><span class="s1">&#39;False&#39;</span><span class="p">,</span><span class="s1">&#39;Private&#39;</span><span class="p">),(</span><span class="s1">&#39;*&#39;</span><span class="p">,</span><span class="s1">&#39;Both&#39;</span><span class="p">)],</span><span class="n">validators</span><span class="o">=</span><span class="p">[</span><span class="n">DataRequired</span><span class="p">()])</span>
+    <span class="n">submit</span><span class="o">=</span><span class="n">SubmitField</span><span class="p">(</span><span class="s1">&#39;Search&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="adding">
+<h3>3. Adding<a class="headerlink" href="#adding" title="Permalink to this headline">¶</a></h3>
+<p>Adding a new hospital is maintained by the following Python function.INSERT query is done to add a new hospital.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_hospital</span><span class="p">():</span>
+    <span class="n">status</span><span class="o">=</span><span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;status&#39;</span><span class="p">)</span>
+    <span class="c1">#status=1</span>
+    <span class="k">if</span> <span class="n">status</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;home_page&#39;</span><span class="p">))</span>
+    <span class="n">hospitals</span><span class="o">=</span><span class="p">[]</span>
+    <span class="n">connection</span><span class="o">=</span><span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">cursor</span><span class="o">=</span><span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot; SELECT * FROM HOSPITAL ORDER BY HOSPITAL_NAME&quot;&quot;&quot;</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+    <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="p">:</span>
+        <span class="n">hospitals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">hosAddForm</span><span class="o">=</span><span class="n">HospitalAddForm</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">hosAddForm</span><span class="o">.</span><span class="n">validate_on_submit</span><span class="p">():</span>
+        <span class="n">hospital_name</span><span class="o">=</span><span class="n">hosAddForm</span><span class="o">.</span><span class="n">hospital_name</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">is_public</span><span class="o">=</span><span class="n">hosAddForm</span><span class="o">.</span><span class="n">is_public</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">location</span><span class="o">=</span><span class="n">hosAddForm</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">administrator</span><span class="o">=</span><span class="n">hosAddForm</span><span class="o">.</span><span class="n">administrator</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">telephone_number</span><span class="o">=</span><span class="n">hosAddForm</span><span class="o">.</span><span class="n">telephone_number</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">ambulance_count</span><span class="o">=</span><span class="n">hosAddForm</span><span class="o">.</span><span class="n">ambulance_count</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="n">cursor</span><span class="o">=</span><span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+        <span class="n">statement</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;INSERT INTO HOSPITAL(HOSPITAL_NAME,IS_PUBLIC,LOCATION,ADMINISTRATOR,TELEPHONE_NUMBER, AMBULANCE_COUNT) VALUES (</span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">, </span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">, </span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">, </span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">, </span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">, </span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">)&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">hospital_name</span><span class="p">,</span><span class="n">is_public</span><span class="p">,</span><span class="n">location</span><span class="p">,</span><span class="n">administrator</span><span class="p">,</span><span class="n">telephone_number</span><span class="p">,</span><span class="n">ambulance_count</span><span class="p">)</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+        <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;hospital_page&#39;</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;hospital_add_page.html&#39;</span><span class="p">,</span><span class="n">hospital</span><span class="o">=</span><span class="n">hospitals</span><span class="p">,</span><span class="n">form</span><span class="o">=</span><span class="n">hosAddForm</span> <span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">add_url_rule</span><span class="p">(</span><span class="s1">&#39;/hospital/add_hospital&#39;</span><span class="p">,</span><span class="n">view_func</span><span class="o">=</span><span class="n">add_hospital</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Validating data is handled by form validators of wtforms, in forms executable</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">HospitalAddForm</span><span class="p">(</span><span class="n">FlaskForm</span><span class="p">):</span>
+    <span class="n">hospital_name</span><span class="o">=</span><span class="n">StringField</span><span class="p">(</span><span class="s1">&#39;Hospital Name&#39;</span><span class="p">,</span><span class="n">validators</span><span class="o">=</span><span class="p">[</span><span class="n">DataRequired</span><span class="p">()])</span>
+    <span class="n">is_public</span><span class="o">=</span><span class="n">RadioField</span><span class="p">(</span><span class="s1">&#39;Public Hospital?&#39;</span><span class="p">,</span><span class="n">choices</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;True&#39;</span><span class="p">,</span><span class="s1">&#39;Public&#39;</span><span class="p">),(</span><span class="s1">&#39;False&#39;</span><span class="p">,</span><span class="s1">&#39;Private&#39;</span><span class="p">)],</span><span class="n">validators</span><span class="o">=</span><span class="p">[</span><span class="n">DataRequired</span><span class="p">()])</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">StringField</span><span class="p">(</span><span class="s1">&#39;Location&#39;</span><span class="p">)</span>
+    <span class="n">administrator</span><span class="o">=</span><span class="n">StringField</span><span class="p">(</span><span class="s1">&#39;Administrator Name&#39;</span><span class="p">)</span>
+    <span class="n">telephone_number</span><span class="o">=</span><span class="n">StringField</span><span class="p">(</span><span class="s1">&#39;Phone Number, 11 digit required&#39;</span><span class="p">)</span><span class="c1">#,validators=[Length(min=11,max=11)])</span>
+    <span class="n">ambulance_count</span><span class="o">=</span> <span class="n">StringField</span><span class="p">(</span><span class="s1">&#39;Number of ambulances&#39;</span><span class="p">)</span>
+    <span class="n">submit</span><span class="o">=</span><span class="n">SubmitField</span><span class="p">(</span><span class="s1">&#39;Insert&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="updating">
+<h3>4. Updating<a class="headerlink" href="#updating" title="Permalink to this headline">¶</a></h3>
+<p>Editing an hospital is done by followed python function</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">edit_hospital</span><span class="p">(</span><span class="n">hospital_id</span><span class="p">):</span>
+    <span class="n">status</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;status&#39;</span><span class="p">)</span>
+    <span class="c1">#status=1</span>
+    <span class="k">if</span> <span class="n">status</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;home_page&#39;</span><span class="p">))</span>
+    <span class="n">connection</span><span class="o">=</span><span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">cursor</span><span class="o">=</span><span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot; SELECT * FROM HOSPITAL WHERE HOSPITAL_ID={}&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">hospital_id</span><span class="p">)</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+    <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="n">db_hosp</span><span class="o">=</span><span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">db_hosp</span><span class="o">==</span><span class="bp">None</span><span class="p">:</span>
+        <span class="n">abort</span><span class="p">(</span><span class="mi">404</span><span class="p">)</span>
+    <span class="n">hospitalToedit</span><span class="o">=</span><span class="n">hospital</span><span class="p">(</span><span class="n">db_hosp</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">db_hosp</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">db_hosp</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">db_hosp</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">db_hosp</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="n">db_hosp</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span><span class="n">db_hosp</span><span class="p">[</span><span class="mi">6</span><span class="p">])</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">form</span><span class="o">=</span><span class="n">HospitalAddForm</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span><span class="o">==</span><span class="s1">&#39;POST&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">validate_on_submit</span><span class="p">():</span>
+            <span class="n">hospital_name</span><span class="o">=</span><span class="n">form</span><span class="o">.</span><span class="n">hospital_name</span><span class="o">.</span><span class="n">data</span>
+            <span class="n">is_public</span><span class="o">=</span><span class="n">form</span><span class="o">.</span><span class="n">is_public</span><span class="o">.</span><span class="n">data</span>
+            <span class="n">location</span><span class="o">=</span><span class="n">form</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">data</span>
+            <span class="n">administrator</span><span class="o">=</span><span class="n">form</span><span class="o">.</span><span class="n">administrator</span><span class="o">.</span><span class="n">data</span>
+            <span class="n">telephone_number</span><span class="o">=</span><span class="n">form</span><span class="o">.</span><span class="n">telephone_number</span><span class="o">.</span><span class="n">data</span>
+            <span class="n">ambulance_count</span><span class="o">=</span><span class="n">form</span><span class="o">.</span><span class="n">ambulance_count</span><span class="o">.</span><span class="n">data</span>
+            <span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+            <span class="n">cursor</span><span class="o">=</span><span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+            <span class="n">statement</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;UPDATE HOSPITAL SET hospital_name=&#39;{}&#39;, is_public=&#39;{}&#39;, location=&#39;{}&#39;, administrator=&#39;{}&#39;, telephone_number=&#39;{}&#39;, ambulance_count=&#39;{}&#39; WHERE HOSPITAL_ID={}&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">hospital_name</span><span class="p">,</span><span class="n">is_public</span><span class="p">,</span><span class="n">location</span><span class="p">,</span><span class="n">administrator</span><span class="p">,</span><span class="n">telephone_number</span><span class="p">,</span><span class="n">ambulance_count</span><span class="p">,</span> <span class="n">hospital_id</span><span class="p">)</span>
+            <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+            <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+            <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;hospital_page&#39;</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;hospital_edit_page.html&#39;</span><span class="p">,</span><span class="n">hospital</span><span class="o">=</span><span class="n">hospitalToedit</span><span class="p">,</span><span class="n">form</span><span class="o">=</span><span class="n">form</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">add_url_rule</span><span class="p">(</span><span class="s1">&#39;/&lt;int:hospital_id&gt;/edit_hospital&#39;</span><span class="p">,</span><span class="n">view_func</span><span class="o">=</span><span class="n">edit_hospital</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Form update uses same form with hospital add, constrains are introduced with validators.</p>
+</div>
+<div class="section" id="deleting">
+<h3>5. Deleting<a class="headerlink" href="#deleting" title="Permalink to this headline">¶</a></h3>
+<p>Delete query is written for hospital deletion.
+Deleting will be done if push method is used by submitting delete button on hospital page.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">delform</span><span class="o">=</span><span class="n">HospitalDeleteForm</span><span class="p">()</span>
+<span class="k">if</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">method</span><span class="o">==</span><span class="s1">&#39;POST&#39;</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">delform</span><span class="o">.</span><span class="n">validate_on_submit</span><span class="p">()</span> <span class="ow">and</span> <span class="n">delform</span><span class="o">.</span><span class="n">delete</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+        <span class="n">del_list</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">getlist</span><span class="p">(</span><span class="s2">&quot;del_hospitals&quot;</span><span class="p">)</span>
+        <span class="n">connection</span><span class="o">=</span><span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="n">cursor</span><span class="o">=</span><span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+        <span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">del_list</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">del_hospitals</span><span class="o">=</span><span class="nb">tuple</span><span class="p">(</span><span class="n">del_list</span><span class="p">)</span>
+            <span class="n">statement</span><span class="o">=</span><span class="s2">&quot;DELETE FROM hospital WHERE hospital_id IN {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">del_hospitals</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">del_hospitals</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">del_list</span><span class="p">)</span>
+            <span class="n">statement</span><span class="o">=</span><span class="s2">&quot;DELETE FROM hospital WHERE hospital_id = {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">del_hospitals</span><span class="p">)</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+        <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;hospital_page&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Since multiple deletion was allowed with checkboxes, number of selected checkboxes will be considered.
+If number of checkboxes are more than 1, multiple delete that iterates a tuple will be executed.</p>
+<p>If one checkbox, or none was selected single deletion by transforming data into a string will be executed.</p>
+</div>
+<div class="section" id="showing-all-workers-of-an-hospital">
+<h3>6. Showing All Workers of an Hospital<a class="headerlink" href="#showing-all-workers-of-an-hospital" title="Permalink to this headline">¶</a></h3>
+<p>All hospital personnel working in that hospital can be seen by clicking hospital name. This is done by getting hospital id by clicking
+and after that, using the hospital id inside a search query. If session matches priveledged users, all functionality of hospital personnel will also
+be available within that page.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">hospital_personnel_page</span><span class="p">(</span><span class="n">hospital_id</span><span class="p">):</span>
+    <span class="n">status</span><span class="o">=</span><span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;status&#39;</span><span class="p">)</span>
+    <span class="c1">#status=1</span>
+    <span class="n">workers</span> <span class="o">=</span><span class="p">[]</span>
+    <span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">cursor</span><span class="o">=</span><span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT PERSONNEL_ID, WORKER_NAME, JOB_TITLE,</span>
+<span class="s2">        JOB_EXPERIENCE, WORK_DAYS, PHONE_NUM,WORKING_FIELD, HOSPITAL_WORKED, TCKN , HOSPITAL_NAME FROM HOSPITAL_PERSONNEL RIGHT JOIN HOSPITAL ON HOSPITAL_WORKED=HOSPITAL_ID WHERE HOSPITAL_WORKED =</span><span class="si">%s</span><span class="s2">&quot;&quot;&quot;</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">,[</span><span class="n">hospital_id</span><span class="p">])</span>
+    <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">db_hosp_personnel</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+        <span class="n">workers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">hospital_personnel</span><span class="p">(</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">9</span><span class="p">]))</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">searchForm</span><span class="o">=</span><span class="n">PersonnelSearchForm</span><span class="p">()</span>
+    <span class="n">delForm</span><span class="o">=</span><span class="n">PersonnelDeleteForm</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span><span class="o">==</span><span class="s1">&#39;POST&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">searchForm</span><span class="o">.</span><span class="n">validate_on_submit</span><span class="p">():</span>
+            <span class="n">selection</span><span class="o">=</span><span class="n">searchForm</span><span class="o">.</span><span class="n">selection</span><span class="o">.</span><span class="n">data</span>
+            <span class="n">search</span><span class="o">=</span><span class="n">searchForm</span><span class="o">.</span><span class="n">search</span><span class="o">.</span><span class="n">data</span>
+            <span class="n">connection</span><span class="o">=</span><span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+            <span class="n">cursor</span> <span class="o">=</span><span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+            <span class="n">personnel_form</span><span class="o">=</span><span class="p">[]</span>
+            <span class="n">statement</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;SELECT PERSONNEL_ID, WORKER_NAME, JOB_TITLE, JOB_EXPERIENCE, WORK_DAYS, PHONE_NUM, WORKING_FIELD, HOSPITAL_WORKED,TCKN, HOSPITAL_NAME FROM HOSPITAL_PERSONNEL, HOSPITAL WHERE HOSPITAL_WORKED=HOSPITAL_ID AND CAST({} AS TEXT) ILIKE  </span><span class="se">\&#39;</span><span class="s2">%{}%</span><span class="se">\&#39;</span><span class="s2"> ORDER BY {} ASC &quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">selection</span><span class="p">,</span> <span class="n">search</span> <span class="p">,</span><span class="n">selection</span><span class="p">)</span>
+            <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+            <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+            <span class="n">rows</span><span class="o">=</span><span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">db_hosp_personnel</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+                <span class="n">personnel_form</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">hospital_personnel</span><span class="p">(</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">9</span><span class="p">]))</span>
+            <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">delForm</span><span class="o">.</span><span class="n">validate_on_submit</span><span class="p">()</span> <span class="ow">and</span> <span class="n">delForm</span><span class="o">.</span><span class="n">delete</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+            <span class="n">del_list</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">getlist</span><span class="p">(</span><span class="s2">&quot;del_personnel&quot;</span><span class="p">)</span>
+            <span class="n">connection</span><span class="o">=</span><span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+            <span class="n">cursor</span><span class="o">=</span><span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+            <span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">del_list</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">):</span>
+                <span class="n">del_personnel</span><span class="o">=</span><span class="nb">tuple</span><span class="p">(</span><span class="n">del_list</span><span class="p">)</span>
+                <span class="n">statement</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;DELETE FROM HOSPITAL_PERSONNEL WHERE personnel_id IN {}&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">del_personnel</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">del_personnel</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">del_list</span><span class="p">)</span>
+                <span class="n">statement</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;DELETE FROM HOSPITAL_PERSONNEL WHERE personnel_id = {}&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">del_personnel</span><span class="p">)</span>
+            <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+            <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;hospital_personnel_sheet&#39;</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;hospital_personnel_page.html&#39;</span><span class="p">,</span><span class="n">hospital_personnel</span><span class="o">=</span><span class="n">personnel_form</span><span class="p">,</span> <span class="n">searchForm</span><span class="o">=</span><span class="n">searchForm</span><span class="p">,</span><span class="n">delForm</span><span class="o">=</span><span class="n">delForm</span><span class="p">,</span><span class="n">stat</span><span class="o">=</span><span class="n">status</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;hospital_personnel_page.html&#39;</span><span class="p">,</span><span class="n">hospital_personnel</span><span class="o">=</span><span class="n">workers</span><span class="p">,</span> <span class="n">searchForm</span><span class="o">=</span><span class="n">searchForm</span><span class="p">,</span> <span class="n">delForm</span><span class="o">=</span><span class="n">delForm</span><span class="p">,</span> <span class="n">stat</span><span class="o">=</span><span class="n">status</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">add_url_rule</span><span class="p">(</span><span class="s2">&quot;/&lt;int:hospital_id&gt;/hospital_personnel&quot;</span><span class="p">,</span><span class="n">view_func</span><span class="o">=</span><span class="n">hospital_personnel_page</span><span class="p">,</span><span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span><span class="s2">&quot;POST&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>status=1 was used as a debug statement in project development</p>
+</div>
+</div>
+<div class="section" id="hospital-personnel">
+<h2>Hospital Personnel<a class="headerlink" href="#hospital-personnel" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>1. Creation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">HOSPITAL_PERSONNEL</span> <span class="p">(</span>
+        <span class="n">PERSONNEL_ID</span> <span class="nb">SERIAL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+        <span class="n">WORKER_NAME</span> <span class="nb">VARCHAR</span><span class="p">,</span>
+        <span class="n">JOB_TITLE</span> <span class="nb">VARCHAR</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+        <span class="n">JOB_EXPERIENCE</span> <span class="nb">INTEGER</span><span class="p">,</span>
+        <span class="n">WORK_DAYS</span> <span class="nb">INTEGER</span><span class="p">,</span>
+        <span class="n">PHONE_NUM</span> <span class="nb">VARCHAR</span><span class="p">,</span>
+        <span class="n">WORKING_FIELD</span> <span class="nb">VARCHAR</span><span class="p">,</span>
+        <span class="n">HOSPITAL_WORKED</span> <span class="nb">INTEGER</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+        <span class="n">TCKN</span> <span class="nb">VARCHAR</span><span class="p">,</span>
+        <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">HOSPITAL_WORKED</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">HOSPITAL</span><span class="p">(</span><span class="n">HOSPITAL_ID</span><span class="p">)</span> <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span> <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+<p>Foreign key referencing hospital table is introduced. If hospital id is deleted, personnel will also deleted, if its updated, personnel’s hospital id
+will be updated accordingly. Since personnel cannot work in an hospital that is no longer existing, personnel will also be deleted.</p>
+</div>
+<div class="section" id="id2">
+<h3>2. Reading<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Hospital personnel will have search form and search all function similar to hospitals.
+SELECT query is used for reading entries.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">status</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;status&#39;</span><span class="p">)</span>
+<span class="c1">#status=1</span>
+<span class="n">workers</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT PERSONNEL_ID, WORKER_NAME, JOB_TITLE, JOB_EXPERIENCE, WORK_DAYS, PHONE_NUM,WORKING_FIELD, HOSPITAL_WORKED, TCKN,  HOSPITAL_NAME FROM HOSPITAL_PERSONNEL, HOSPITAL WHERE HOSPITAL_WORKED=HOSPITAL_ID GROUP BY PERSONNEL_ID, HOSPITAL_NAME&quot;&quot;&quot;</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<span class="n">data</span><span class="o">=</span><span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">db_hosp_personnel</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+    <span class="n">workers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">hospital_personnel</span><span class="p">(</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">9</span><span class="p">]))</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">searchForm</span><span class="o">=</span><span class="n">PersonnelSearchForm</span><span class="p">()</span>
+<span class="n">delForm</span><span class="o">=</span><span class="n">PersonnelDeleteForm</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span><span class="o">==</span><span class="s1">&#39;POST&#39;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">searchForm</span><span class="o">.</span><span class="n">validate_on_submit</span><span class="p">():</span>
+        <span class="n">selection</span><span class="o">=</span><span class="n">searchForm</span><span class="o">.</span><span class="n">selection</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">search</span><span class="o">=</span><span class="n">searchForm</span><span class="o">.</span><span class="n">search</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">connection</span><span class="o">=</span><span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="n">cursor</span> <span class="o">=</span><span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+        <span class="n">personnel_form</span><span class="o">=</span><span class="p">[]</span>
+        <span class="n">statement</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;SELECT PERSONNEL_ID, WORKER_NAME, JOB_TITLE, JOB_EXPERIENCE, WORK_DAYS, PHONE_NUM, WORKING_FIELD, HOSPITAL_WORKED,TCKN, HOSPITAL_NAME FROM HOSPITAL_PERSONNEL, HOSPITAL WHERE HOSPITAL_WORKED=HOSPITAL_ID AND CAST({} AS TEXT) ILIKE  </span><span class="se">\&#39;</span><span class="s2">%{}%</span><span class="se">\&#39;</span><span class="s2"> ORDER BY {} ASC &quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">selection</span><span class="p">,</span> <span class="n">search</span> <span class="p">,</span><span class="n">selection</span><span class="p">)</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+        <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="n">rows</span><span class="o">=</span><span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">db_hosp_personnel</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+            <span class="n">personnel_form</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">hospital_personnel</span><span class="p">(</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">9</span><span class="p">]))</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;hospital_personnel_page.html&#39;</span><span class="p">,</span><span class="n">hospital_personnel</span><span class="o">=</span><span class="n">personnel_form</span><span class="p">,</span> <span class="n">searchForm</span><span class="o">=</span><span class="n">searchForm</span><span class="p">,</span><span class="n">delForm</span><span class="o">=</span><span class="n">delForm</span><span class="p">,</span><span class="n">stat</span><span class="o">=</span><span class="n">status</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Entries of database is inserted into a class called hospital_personnel inside classes folder.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Join methods are used to acquire hospital name for table reads.</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">hospital_personnel</span><span class="p">:</span>
+<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">personnel_id</span><span class="p">,</span><span class="n">worker_name</span><span class="p">,</span><span class="n">job_title</span><span class="p">,</span><span class="n">job_experience</span><span class="p">,</span><span class="n">work_days</span><span class="p">,</span><span class="n">phone_num</span><span class="p">,</span><span class="n">working_field</span><span class="p">,</span><span class="n">hospital_worked</span><span class="p">,</span><span class="n">tckn</span><span class="p">,</span><span class="n">hospital</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">personnel_id</span><span class="o">=</span><span class="n">personnel_id</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">worker_name</span><span class="o">=</span><span class="n">worker_name</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">job_title</span><span class="o">=</span><span class="n">job_title</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">job_experience</span><span class="o">=</span><span class="n">job_experience</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">work_days</span><span class="o">=</span><span class="n">work_days</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">phone_num</span><span class="o">=</span><span class="n">phone_num</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">working_field</span><span class="o">=</span><span class="n">working_field</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">hospital_worked</span><span class="o">=</span><span class="n">hospital_worked</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">tckn</span><span class="o">=</span><span class="n">tckn</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">hospital</span> <span class="o">=</span><span class="n">hospital</span>
+
+<span class="k">def</span> <span class="nf">get_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">personnel_id</span>
+<span class="k">def</span> <span class="nf">get_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">worker_name</span>
+<span class="k">def</span> <span class="nf">get_title</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">job_title</span>
+<span class="k">def</span> <span class="nf">get_exp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">job_experience</span>
+<span class="k">def</span> <span class="nf">get_days</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">work_days</span>
+<span class="k">def</span> <span class="nf">get_number</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">phone_num</span>
+<span class="k">def</span> <span class="nf">get_field</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">working_field</span>
+<span class="k">def</span> <span class="nf">get_hospital</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">hospital_worked</span>
+<span class="k">def</span> <span class="nf">get_tckn</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">tckn</span>
+<span class="k">def</span> <span class="nf">get_hospital_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">hospital</span>
+</pre></div>
+</div>
+<p>Searchform is instantiated inside forms.py</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">PersonnelSearchForm</span><span class="p">(</span><span class="n">FlaskForm</span><span class="p">):</span>
+    <span class="n">choices</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;WORKER_NAME&#39;</span><span class="p">,</span><span class="s1">&#39;Personnel Name&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;JOB_TITLE&#39;</span><span class="p">,</span> <span class="s1">&#39;Job Title&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;JOB_EXPERIENCE&#39;</span><span class="p">,</span><span class="s1">&#39;Job Experience&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;WORK_DAYS&#39;</span><span class="p">,</span><span class="s1">&#39;# of Days Worked&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;PHONE_NUM&#39;</span><span class="p">,</span><span class="s1">&#39;Contact Number&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;WORK_DAYS&#39;</span><span class="p">,</span><span class="s1">&#39;# of Days Worked&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;WORKING_FIELD&#39;</span><span class="p">,</span> <span class="s1">&#39;Work Field&#39;</span><span class="p">)]</span>
+    <span class="n">selection</span><span class="o">=</span><span class="n">SelectField</span><span class="p">(</span><span class="s1">&#39;Personnel Filter:&#39;</span><span class="p">,</span> <span class="n">choices</span><span class="o">=</span><span class="n">choices</span><span class="p">)</span>
+    <span class="n">search</span><span class="o">=</span><span class="n">StringField</span><span class="p">(</span><span class="s1">&#39;Keyword&#39;</span><span class="p">)</span>
+    <span class="n">submit</span><span class="o">=</span><span class="n">SubmitField</span><span class="p">(</span><span class="s1">&#39;Search&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>3. Adding<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Adding a new personnel is handled by another python function.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_personnel</span><span class="p">():</span>
+    <span class="n">status</span><span class="o">=</span><span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;status&#39;</span><span class="p">)</span>
+    <span class="c1">#status=1</span>
+    <span class="k">if</span> <span class="n">status</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;home_page&#39;</span><span class="p">))</span>
+    <span class="n">personnel</span><span class="o">=</span><span class="p">[]</span>
+    <span class="n">connection</span><span class="o">=</span><span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">cursor</span><span class="o">=</span><span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT PERSONNEL_ID, WORKER_NAME, JOB_TITLE, JOB_EXPERIENCE, WORK_DAYS, PHONE_NUM,WORKING_FIELD, HOSPITAL_WORKED, TCKN,  HOSPITAL_NAME FROM HOSPITAL_PERSONNEL, HOSPITAL WHERE HOSPITAL_WORKED=HOSPITAL_ID GROUP BY PERSONNEL_ID, HOSPITAL_NAME&quot;&quot;&quot;</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+    <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">db_hosp_personnel</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+        <span class="n">personnel</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">hospital_personnel</span><span class="p">(</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span><span class="n">db_hosp_personnel</span><span class="p">[</span><span class="mi">9</span><span class="p">]))</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">addForm</span><span class="o">=</span><span class="n">PersonnelAddForm</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">addForm</span><span class="o">.</span><span class="n">validate_on_submit</span><span class="p">():</span>
+        <span class="n">worker_name</span><span class="o">=</span><span class="n">addForm</span><span class="o">.</span><span class="n">worker_name</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">job_title</span><span class="o">=</span><span class="n">addForm</span><span class="o">.</span><span class="n">job_title</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">job_experience</span><span class="o">=</span><span class="n">addForm</span><span class="o">.</span><span class="n">job_experience</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">work_days</span><span class="o">=</span><span class="n">addForm</span><span class="o">.</span><span class="n">work_days</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">phone_num</span><span class="o">=</span><span class="n">addForm</span><span class="o">.</span><span class="n">phone_num</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">working_field</span><span class="o">=</span><span class="n">addForm</span><span class="o">.</span><span class="n">working_field</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">hospital_worked</span><span class="o">=</span><span class="n">addForm</span><span class="o">.</span><span class="n">hospital_worked</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">tckn</span><span class="o">=</span><span class="n">addForm</span><span class="o">.</span><span class="n">tckn</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="n">cursor</span><span class="o">=</span><span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+        <span class="n">statement</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;INSERT INTO public.hospital_personnel(worker_name, job_title, job_experience, work_days, phone_num, working_field, hospital_worked, tckn)</span>
+<span class="s2">    VALUES (</span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">,</span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">,</span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">,</span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">, </span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">, </span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">, </span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">, </span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">)&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">worker_name</span><span class="p">,</span><span class="n">job_title</span><span class="p">,</span><span class="n">job_experience</span><span class="p">,</span><span class="n">work_days</span><span class="p">,</span><span class="n">phone_num</span><span class="p">,</span><span class="n">working_field</span><span class="p">,</span><span class="n">hospital_worked</span><span class="p">,</span><span class="n">tckn</span><span class="p">)</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+        <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;hospital_personnel_sheet&#39;</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;personnel_add_page.html&#39;</span><span class="p">,</span><span class="n">personnel</span><span class="o">=</span><span class="n">personnel</span><span class="p">,</span><span class="n">form</span><span class="o">=</span><span class="n">addForm</span><span class="p">,</span> <span class="n">stat</span><span class="o">=</span><span class="n">status</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">add_url_rule</span><span class="p">(</span><span class="s1">&#39;/hospital_personnel/add_personnel&#39;</span><span class="p">,</span><span class="n">view_func</span><span class="o">=</span><span class="n">add_personnel</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Addform handles data validation using wtforms validators</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">PersonnelAddForm</span><span class="p">(</span><span class="n">FlaskForm</span><span class="p">):</span>
+    <span class="n">worker_name</span><span class="o">=</span><span class="n">StringField</span><span class="p">(</span><span class="s1">&#39;Personnel Name&#39;</span><span class="p">,</span><span class="n">validators</span><span class="o">=</span><span class="p">[</span><span class="n">DataRequired</span><span class="p">()])</span>
+    <span class="n">job_title</span><span class="o">=</span><span class="n">StringField</span><span class="p">(</span><span class="s1">&#39;Job Title&#39;</span><span class="p">,</span><span class="n">validators</span><span class="o">=</span><span class="p">[</span><span class="n">DataRequired</span><span class="p">()])</span>
+    <span class="n">job_experience</span><span class="o">=</span><span class="n">StringField</span><span class="p">(</span><span class="s1">&#39;Job Experience&#39;</span><span class="p">)</span>
+    <span class="n">work_days</span><span class="o">=</span><span class="n">StringField</span><span class="p">(</span><span class="s1">&#39;Work Days&#39;</span><span class="p">)</span>
+    <span class="n">phone_num</span><span class="o">=</span><span class="n">StringField</span><span class="p">(</span><span class="s1">&#39;Contact Number&#39;</span><span class="p">)</span>
+    <span class="n">working_field</span><span class="o">=</span><span class="n">StringField</span><span class="p">(</span><span class="s1">&#39;Work Field&#39;</span><span class="p">)</span>
+    <span class="n">hospital_worked</span><span class="o">=</span><span class="n">StringField</span><span class="p">(</span><span class="s1">&#39;Hospital Id&#39;</span><span class="p">)</span>
+    <span class="n">tckn</span><span class="o">=</span><span class="n">StringField</span><span class="p">(</span><span class="s1">&#39;Tckn&#39;</span><span class="p">)</span>
+    <span class="n">submit</span><span class="o">=</span><span class="n">SubmitField</span><span class="p">(</span><span class="s1">&#39;Insert&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>4. Updating<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Updating can be done by clicking the personnel name on personnel page. This will
+redirect user to single personnel page, where editing can also be done if session matches
+specified sessions. If session does not match, only data will be shown.</p>
+<p>addform is used for update aswell, due to the fact that validators and areas required match.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">single_personnel_page</span><span class="p">(</span><span class="n">personnel_id</span><span class="p">):</span>
+    <span class="n">status</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;status&#39;</span><span class="p">)</span>
+    <span class="c1">#status=1</span>
+    <span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT PERSONNEL_ID, WORKER_NAME, JOB_TITLE, JOB_EXPERIENCE, WORK_DAYS, PHONE_NUM, WORKING_FIELD, HOSPITAL_WORKED, TCKN,  HOSPITAL_NAME FROM HOSPITAL_PERSONNEL JOIN HOSPITAL ON HOSPITAL_WORKED=HOSPITAL_ID WHERE PERSONNEL_ID =&#39;{}&#39;&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+        <span class="n">personnel_id</span><span class="p">)</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+    <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="n">db_person</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">db_person</span><span class="o">==</span><span class="bp">None</span><span class="p">:</span>
+        <span class="n">abort</span><span class="p">(</span><span class="mi">404</span><span class="p">)</span>
+    <span class="n">person</span> <span class="o">=</span> <span class="n">hospital_personnel</span><span class="p">(</span><span class="n">db_person</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">db_person</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">db_person</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">db_person</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span>
+                                <span class="n">db_person</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">db_person</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">db_person</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">db_person</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">db_person</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">db_person</span><span class="p">[</span><span class="mi">9</span><span class="p">])</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">form</span><span class="o">=</span><span class="n">PersonnelAddForm</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">validate_on_submit</span><span class="p">():</span>
+        <span class="n">worker_name</span><span class="o">=</span><span class="n">form</span><span class="o">.</span><span class="n">worker_name</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">job_title</span><span class="o">=</span><span class="n">form</span><span class="o">.</span><span class="n">job_title</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">job_experience</span><span class="o">=</span><span class="n">form</span><span class="o">.</span><span class="n">job_experience</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">work_days</span><span class="o">=</span><span class="n">form</span><span class="o">.</span><span class="n">work_days</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">phone_num</span><span class="o">=</span><span class="n">form</span><span class="o">.</span><span class="n">phone_num</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">working_field</span><span class="o">=</span><span class="n">form</span><span class="o">.</span><span class="n">working_field</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">hospital_worked</span><span class="o">=</span><span class="n">form</span><span class="o">.</span><span class="n">hospital_worked</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">tckn</span><span class="o">=</span><span class="n">form</span><span class="o">.</span><span class="n">tckn</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="n">cursor</span><span class="o">=</span><span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+        <span class="n">statement</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;UPDATE hospital_personnel SET worker_name=&#39;{}&#39;, job_title=&#39;{}&#39;, job_experience={}, work_days={}, phone_num=&#39;{}&#39;, working_field=&#39;{}&#39;, hospital_worked=&#39;{}&#39;, tckn=&#39;{}&#39;</span>
+<span class="s2">        WHERE personnel_id={}&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">worker_name</span><span class="p">,</span><span class="n">job_title</span><span class="p">,</span><span class="n">job_experience</span><span class="p">,</span><span class="n">work_days</span><span class="p">,</span><span class="n">phone_num</span><span class="p">,</span><span class="n">working_field</span><span class="p">,</span><span class="n">hospital_worked</span><span class="p">,</span><span class="n">tckn</span><span class="p">,</span><span class="n">personnel_id</span><span class="p">)</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+        <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;hospital_personnel_sheet&#39;</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;single_personnel_page.html&#39;</span><span class="p">,</span> <span class="n">personnel</span><span class="o">=</span><span class="n">person</span><span class="p">,</span><span class="n">form</span><span class="o">=</span><span class="n">form</span><span class="p">,</span> <span class="n">stat</span><span class="o">=</span><span class="n">status</span><span class="p">,</span><span class="n">personnel_id</span><span class="o">=</span><span class="n">personnel_id</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">add_url_rule</span><span class="p">(</span><span class="s2">&quot;/emergency_shift/&lt;int:personnel_id&gt;&quot;</span><span class="p">,</span><span class="n">view_func</span><span class="o">=</span><span class="n">single_personnel_page</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>5.Deleting<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>Deleting will be done if push method is used by submitting delete button on personnel page.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">delForm</span><span class="o">.</span><span class="n">validate_on_submit</span><span class="p">()</span> <span class="ow">and</span> <span class="n">delForm</span><span class="o">.</span><span class="n">delete</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+    <span class="n">del_list</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">getlist</span><span class="p">(</span><span class="s2">&quot;del_personnel&quot;</span><span class="p">)</span>
+    <span class="n">connection</span><span class="o">=</span><span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">cursor</span><span class="o">=</span><span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    <span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">del_list</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">del_personnel</span><span class="o">=</span><span class="nb">tuple</span><span class="p">(</span><span class="n">del_list</span><span class="p">)</span>
+        <span class="n">statement</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;DELETE FROM HOSPITAL_PERSONNEL WHERE PERSONNEL_ID IN {}&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">del_personnel</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">del_personnel</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">del_list</span><span class="p">)</span>
+        <span class="n">statement</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;DELETE FROM HOSPITAL_PERSONNEL WHERE PERSONNEL_ID = {}&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">del_personnel</span><span class="p">)</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+    <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;hospital_personnel_sheet&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="shift-table">
+<h2>Shift Table<a class="headerlink" href="#shift-table" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h3>1. Creation<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">DAY_TABLE</span> <span class="p">(</span>
+        <span class="n">GENERATED_KEY</span> <span class="nb">SERIAL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+        <span class="n">PERSONNEL_ID</span> <span class="nb">INTEGER</span><span class="p">,</span>
+        <span class="n">SHIFT_BEGIN_DATE</span> <span class="nb">DATE</span><span class="p">,</span>
+        <span class="n">SHIFT_REPEAT_INTERVAL</span> <span class="nb">INTERVAL</span><span class="p">,</span>
+        <span class="n">SHIFT_HOURS</span> <span class="nb">INTERVAL</span><span class="p">,</span>
+        <span class="n">DAYSHIFT</span> <span class="n">BOOL</span><span class="p">,</span>
+        <span class="n">EMERGENCY_AREA_ASSIGNED</span> <span class="nb">VARCHAR</span><span class="p">,</span> <span class="k">CHECK</span><span class="p">(</span><span class="n">EMERGENCY_AREA_ASSIGNED</span> <span class="k">IN</span><span class="p">(</span><span class="s1">&#39;Green&#39;</span><span class="p">,</span><span class="s1">&#39;Yellow&#39;</span><span class="p">,</span><span class="s1">&#39;Red&#39;</span><span class="p">)),</span>
+        <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">PERSONNEL_ID</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">HOSPITAL_PERSONNEL</span> <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span> <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+<p>Day table has hospital personnel id as foreign key. If personnel id is deleted, shift will also deleted, if its updated, shift’s personnel id
+will be updated accordingly. Since there can not exist a shift for someone not working in there, deletion is a method to maintain conflicts on the database.</p>
+<p>3 emergency areas exist in hospitals, emergency area is constricted by check statement, only Green, Yellow or Red can be assigned.</p>
+</div>
+<div class="section" id="id7">
+<h3>2. Reading<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">emergency_shift_page</span><span class="p">():</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">status</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;status&#39;</span><span class="p">)</span>
+    <span class="c1">#status=1</span>
+    <span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT GENERATED_KEY,HOSPITAL_PERSONNEL.PERSONNEL_ID, SHIFT_BEGIN_DATE,SHIFT_REPEAT_INTERVAL,SHIFT_HOURS,DAYSHIFT ,EMERGENCY_AREA_ASSIGNED, WORKER_NAME FROM DAY_TABLE LEFT JOIN HOSPITAL_PERSONNEL ON DAY_TABLE.PERSONNEL_ID=HOSPITAL_PERSONNEL.PERSONNEL_ID ORDER BY SHIFT_BEGIN_DATE&quot;&quot;&quot;</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+    <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="n">fetcheddata</span><span class="o">=</span><span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">fetcheddata</span><span class="p">:</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">shift_data</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">row</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">row</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">row</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="n">row</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span><span class="n">row</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span><span class="n">row</span><span class="p">[</span><span class="mi">7</span><span class="p">]))</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Left join is done to obtain names of personnel on duty from hospital personnel table.</p>
+<p>Data read is inserted into class called shift_data inside classes folder.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">shift_data</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">shift_id</span><span class="p">,</span><span class="n">personnel_id</span><span class="p">,</span><span class="n">shift_begin_date</span><span class="p">,</span><span class="n">shift_repeat_interval</span><span class="p">,</span><span class="n">shift_hours</span><span class="p">,</span> <span class="n">dayshift</span><span class="p">,</span><span class="n">emergency_area_assigned</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">shift_id</span><span class="o">=</span><span class="n">shift_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">personnel_id</span><span class="o">=</span><span class="n">personnel_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">begin</span><span class="o">=</span><span class="n">shift_begin_date</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">repeat</span><span class="o">=</span><span class="n">shift_repeat_interval</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hours</span><span class="o">=</span><span class="n">shift_hours</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dayshift</span><span class="o">=</span><span class="n">dayshift</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ea</span><span class="o">=</span><span class="n">emergency_area_assigned</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="o">=</span><span class="n">name</span>
+    <span class="k">def</span> <span class="nf">get_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">shift_id</span>
+    <span class="k">def</span> <span class="nf">get_personnel_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">personnel_id</span>
+    <span class="k">def</span> <span class="nf">get_begin</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">begin</span>
+    <span class="k">def</span> <span class="nf">get_repeat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">repeat</span>
+    <span class="k">def</span> <span class="nf">get_hours</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">hours</span>
+    <span class="k">def</span> <span class="nf">get_dayshift</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">dayshift</span>
+    <span class="k">def</span> <span class="nf">get_ea</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ea</span>
+    <span class="k">def</span> <span class="nf">get_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h3>3. Adding<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>Adding is done using the form on shift sheet page.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ShiftAddForm</span><span class="p">(</span><span class="n">FlaskForm</span><span class="p">):</span>
+    <span class="n">personnel_id</span><span class="o">=</span><span class="n">StringField</span><span class="p">(</span><span class="s1">&#39;Personnel Id &#39;</span><span class="p">,</span><span class="n">validators</span><span class="o">=</span><span class="p">[</span><span class="n">DataRequired</span><span class="p">()])</span>
+    <span class="n">shift_begin_date</span><span class="o">=</span><span class="n">StringField</span><span class="p">(</span><span class="s1">&#39;Shift Begin Date YYYY-MM-DD&#39;</span><span class="p">)</span>
+    <span class="n">shift_repeat_interval</span><span class="o">=</span><span class="n">StringField</span><span class="p">(</span><span class="s1">&#39;Shift Repeat Interval&#39;</span><span class="p">)</span>
+    <span class="n">shift_hours</span><span class="o">=</span><span class="n">StringField</span><span class="p">(</span><span class="s1">&#39;Shift length -hours-&#39;</span><span class="p">)</span>
+    <span class="n">dayshift</span><span class="o">=</span><span class="n">RadioField</span><span class="p">(</span><span class="s1">&#39;Shift in daytime?&#39;</span><span class="p">,</span><span class="n">choices</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;True&#39;</span><span class="p">,</span><span class="s1">&#39;Daytime&#39;</span><span class="p">),(</span><span class="s1">&#39;False&#39;</span><span class="p">,</span><span class="s1">&#39;Nighttime&#39;</span><span class="p">)],</span><span class="n">validators</span><span class="o">=</span><span class="p">[</span><span class="n">DataRequired</span><span class="p">()])</span>
+    <span class="n">emergency_area_assigned</span><span class="o">=</span><span class="n">StringField</span><span class="p">(</span><span class="s1">&#39;Emergency area(Green, Yellow, Red)&#39;</span><span class="p">)</span>
+    <span class="n">submit</span><span class="o">=</span><span class="n">SubmitField</span><span class="p">(</span><span class="s1">&#39;Insert&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Data validations from wtforms library are used for further checking of database.
+If checkbox is not specified, data will not be inserted into table.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">form</span><span class="o">=</span><span class="n">ShiftAddForm</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">validate_on_submit</span><span class="p">():</span>
+    <span class="n">personnel_id</span><span class="o">=</span><span class="n">form</span><span class="o">.</span><span class="n">personnel_id</span><span class="o">.</span><span class="n">data</span>
+    <span class="n">shift_begin_date</span><span class="o">=</span><span class="n">form</span><span class="o">.</span><span class="n">shift_begin_date</span><span class="o">.</span><span class="n">data</span>
+    <span class="n">shift_repeat_interval</span><span class="o">=</span><span class="n">form</span><span class="o">.</span><span class="n">shift_repeat_interval</span><span class="o">.</span><span class="n">data</span>
+    <span class="n">shift_hours</span><span class="o">=</span><span class="n">form</span><span class="o">.</span><span class="n">shift_hours</span><span class="o">.</span><span class="n">data</span>
+    <span class="n">dayshift</span><span class="o">=</span><span class="n">form</span><span class="o">.</span><span class="n">dayshift</span><span class="o">.</span><span class="n">data</span>
+    <span class="n">emergency_area_assigned</span><span class="o">=</span><span class="n">form</span><span class="o">.</span><span class="n">emergency_area_assigned</span><span class="o">.</span><span class="n">data</span>
+    <span class="n">connection</span> <span class="o">=</span><span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    <span class="n">statement</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;INSERT INTO day_table(</span>
+<span class="s2">    personnel_id, shift_begin_date, shift_repeat_interval, shift_hours, dayshift, emergency_area_assigned)</span>
+<span class="s2">    VALUES ( </span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">,</span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">,</span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">, </span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">, </span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">, </span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">)&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">personnel_id</span><span class="p">,</span><span class="n">shift_begin_date</span><span class="p">,</span><span class="n">shift_repeat_interval</span><span class="p">,</span><span class="n">shift_hours</span><span class="p">,</span><span class="n">dayshift</span><span class="p">,</span><span class="n">emergency_area_assigned</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+    <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;emergency_shift_page&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Adding is done using insert query from data collected by push method into form.</p>
+</div>
+<div class="section" id="id9">
+<h3>4. Deleting<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p>Deleting is done similar to tables mentioned previously.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">delform</span><span class="o">=</span><span class="n">HospitalDeleteForm</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">delform</span><span class="o">.</span><span class="n">validate_on_submit</span><span class="p">():</span>
+        <span class="n">del_list</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">getlist</span><span class="p">(</span><span class="s2">&quot;del_shift&quot;</span><span class="p">)</span>
+        <span class="n">connection</span><span class="o">=</span><span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="n">cursor</span><span class="o">=</span><span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+        <span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">del_list</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">del_intro</span><span class="o">=</span><span class="nb">tuple</span><span class="p">(</span><span class="n">del_list</span><span class="p">)</span>
+            <span class="n">statement</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;DELETE FROM DAY_TABLE WHERE GENERATED_KEY IN {}&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">del_intro</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">del_intro</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">del_list</span><span class="p">)</span>
+            <span class="n">statement</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;DELETE FROM DAY_TABLE WHERE GENERATED_KEY ={}&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">del_intro</span><span class="p">)</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+        <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;emergency_shift_page&#39;</span><span class="p">))</span>
+<span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;emergency_shift_page.html&#39;</span><span class="p">,</span><span class="n">form</span><span class="o">=</span><span class="n">form</span><span class="p">,</span><span class="n">delform</span><span class="o">=</span><span class="n">delform</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span><span class="n">stat</span><span class="o">=</span><span class="n">status</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="extra-tables">
+<h2>Extra Tables<a class="headerlink" href="#extra-tables" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="insurance">
+<h3>1.Insurance<a class="headerlink" href="#insurance" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">INSURANCE</span><span class="p">(</span>
+    <span class="n">INSURANCE_ID</span> <span class="nb">SERIAL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+    <span class="n">INSURANCE_NAME</span> <span class="nb">VARCHAR</span><span class="p">,</span>
+    <span class="n">INSURANCE_TYPE</span> <span class="nb">VARCHAR</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Insurance is a table that is used for specifying insurance type that the patient has.</p>
+</div>
+<div class="section" id="coverance">
+<h3>2. Coverance<a class="headerlink" href="#coverance" title="Permalink to this headline">¶</a></h3>
+<p>Coverence table is a table that connects insurances with hospitals.</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">COVERANCE</span><span class="p">(</span>
+    <span class="n">INSURANCE</span> <span class="nb">INTEGER</span><span class="p">,</span>
+    <span class="n">HOSPITAL_COVERED</span> <span class="nb">INTEGER</span><span class="p">,</span>
+    <span class="n">SURGERY_COVERED</span> <span class="n">BOOL</span><span class="p">,</span>
+    <span class="n">MAX_COST_DRUG</span> <span class="nb">INTEGER</span> <span class="k">DEFAULT</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="k">FOREIGN</span> <span class="k">KEY</span><span class="p">(</span><span class="n">HOSPITAL_COVERED</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">HOSPITAL</span> <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span> <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span><span class="p">,</span>
+    <span class="k">FOREIGN</span> <span class="k">KEY</span><span class="p">(</span><span class="n">INSURANCE</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">INSURANCE</span><span class="p">(</span><span class="n">INSURANCE_ID</span><span class="p">)</span>  <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span> <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Properties of insurances, such as covering surgeries and covering drugs are also included.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="atakan.html" class="btn btn-neutral float-right" title="Parts Implemented by Atakan Göl" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ecenur.html" class="btn btn-neutral" title="Parts Implemented by Ece Nur Şen" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, ITUCSDB1821
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

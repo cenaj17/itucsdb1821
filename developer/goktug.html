@@ -1,0 +1,628 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Parts Implemented by Göktuğ Başaran &mdash; ITUCSDB1821  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Parts Implemented by Ece Nur Şen" href="ecenur.html" />
+    <link rel="prev" title="Developer Guide" href="index.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ITUCSDB1821
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../user/index.html">User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Parts Implemented by Göktuğ Başaran</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#patients">Patients</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#creation">1. Creation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reading">2. Reading</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding">3. Adding</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#updating">4. Updating</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deleting">5. Deleting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#drug-companies">Drug Companies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">1. Creation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">2. Reading</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">3. Adding</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">4. Updating</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">5. Deleting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#drugs">Drugs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id6">1. Creation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">2. Reading</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">3. Adding</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">4. Updating</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">5. Deleting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#extra-tables">Extra Tables</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#drug-type">1. Drug Type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#allergies">2. Allergies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#allergies-index">3. Allergies Index</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ecenur.html">Parts Implemented by Ece Nur Şen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ecem.html">Parts Implemented by Ayser Ecem Konu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="atakan.html">Parts Implemented by Atakan Göl</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ITUCSDB1821</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Developer Guide</a> &raquo;</li>
+        
+      <li>Parts Implemented by Göktuğ Başaran</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/developer/goktug.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="parts-implemented-by-goktug-basaran">
+<h1>Parts Implemented by Göktuğ Başaran<a class="headerlink" href="#parts-implemented-by-goktug-basaran" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">All table creations exist in db_init.py file.</p>
+</div>
+<div class="section" id="patients">
+<h2>Patients<a class="headerlink" href="#patients" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="creation">
+<h3>1. Creation<a class="headerlink" href="#creation" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">PATIENTS</span><span class="p">(</span>
+                <span class="n">ID</span> <span class="nb">SERIAL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+                <span class="n">NAME</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+                <span class="n">AGE</span> <span class="nb">INTEGER</span><span class="p">,</span>
+                <span class="n">SEX</span> <span class="n">BOOL</span> <span class="k">DEFAULT</span> <span class="k">FALSE</span><span class="p">,</span>
+                <span class="n">TCKN</span> <span class="nb">VARCHAR</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+                <span class="n">PHONE</span> <span class="nb">VARCHAR</span><span class="p">,</span>
+                <span class="n">CUR_COMPLAINT</span> <span class="nb">VARCHAR</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+                <span class="n">INSURANCE</span> <span class="nb">INTEGER</span> <span class="k">REFERENCES</span> <span class="n">INSURANCE</span><span class="p">(</span><span class="n">INSURANCE_ID</span><span class="p">)</span>
+                        <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">SET</span> <span class="k">NULL</span>
+                        <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span>
+        <span class="p">)</span>
+</pre></div>
+</div>
+<p>Insurance references Insurance table. If an insurance company is deleted
+it is set to null, if an insurance company is updated, it is updated, as well.</p>
+</div>
+<div class="section" id="reading">
+<h3>2. Reading<a class="headerlink" href="#reading" title="Permalink to this headline">¶</a></h3>
+<p>In order to read from patients table, we write a simple SELECT query with insurance table joined.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">patients</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;SELECT .NAME,AGE,SEX,TCKN,PHONE,CUR_COMPLAINT,INSURANCE.INSURANCE_NAME,.ID FROM ,INSURANCE WHERE .INSURANCE = INSURANCE.INSURANCE_ID ORDER BY .NAME ASC&quot;</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="p">:</span>
+    <span class="n">patients</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="adding">
+<h3>3. Adding<a class="headerlink" href="#adding" title="Permalink to this headline">¶</a></h3>
+<p>In order to add a new patient, we write a simple INSERT query. We apply some validation in input boxes just in case.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span> <span class="ow">or</span> <span class="n">age</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span> <span class="ow">or</span> <span class="n">tckn</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span> <span class="ow">or</span> <span class="n">phone</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span> <span class="ow">or</span> <span class="n">complaint</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span> <span class="ow">or</span> <span class="n">insurance</span> <span class="o">==</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
+        <span class="n">flash</span><span class="p">(</span><span class="s2">&quot;Fill in the boxes&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s2">&quot;patients_page&quot;</span><span class="p">))</span>
+<span class="k">else</span><span class="p">:</span>
+        <span class="n">insurance</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM INSURANCE WHERE INSURANCE_NAME = </span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">insurance</span><span class="p">)</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">insurance</span><span class="p">)</span>
+        <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">insurance</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">result</span> <span class="o">==</span> <span class="bp">None</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">insurance_id</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">sex</span> <span class="o">=</span> <span class="bp">True</span> <span class="k">if</span> <span class="n">sex</span> <span class="o">==</span> <span class="s2">&quot;Male&quot;</span> <span class="k">else</span> <span class="bp">False</span>
+                <span class="n">insert</span> <span class="o">=</span> <span class="s2">&quot;INSERT INTO (NAME,AGE,SEX,TCKN,PHONE,CUR_COMPLAINT,INSURANCE) VALUES(</span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">,{},{},</span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">,</span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">,</span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">,{});&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                        <span class="n">name</span><span class="p">,</span><span class="n">age</span><span class="p">,</span><span class="n">sex</span><span class="p">,</span><span class="n">tckn</span><span class="p">,</span><span class="n">phone</span><span class="p">,</span><span class="n">complaint</span><span class="p">,</span><span class="n">insurance_id</span>
+                        <span class="p">)</span>
+                <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">insert</span><span class="p">)</span>
+                <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+                <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s2">&quot;patients_page&quot;</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+                <span class="n">flash</span><span class="p">(</span><span class="s2">&quot;Insurance company is unknown.&quot;</span><span class="p">,</span><span class="s1">&#39;warning&#39;</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s2">&quot;patients_page&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Insurance company must exist in order to insert a new patient.</p>
+</div>
+</div>
+<div class="section" id="updating">
+<h3>4. Updating<a class="headerlink" href="#updating" title="Permalink to this headline">¶</a></h3>
+<p>In order to update an existing patient, we need to find that patient first, if found, then it can be updated.
+For this, 2 SQL queries are needed. One for finding, one for updating. This is not a must. It can be handled with only 1 query.
+However, for a better user experience, for feedback, this structure is implemented.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Selecting the patient.</span>
+<span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM PATIENTS WHERE NAME = </span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+<span class="c1">#Check if the result is empty.</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">result</span> <span class="o">==</span> <span class="bp">None</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">complaint</span> <span class="o">=</span> <span class="s1">&#39;Flu&#39;</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Foo&#39;</span>
+        <span class="n">insert</span> <span class="o">=</span> <span class="s2">&quot;UPDATE PATIENTS SET CUR_COMPLAINT=</span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2"> WHERE name = </span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">complaint</span><span class="p">,</span><span class="n">name</span><span class="p">)</span>
+                <span class="n">name</span><span class="p">,</span><span class="n">age</span><span class="p">,</span><span class="n">sex</span><span class="p">,</span><span class="n">tckn</span><span class="p">,</span><span class="n">phone</span><span class="p">,</span><span class="n">complaint</span><span class="p">,</span><span class="n">insurance_id</span>
+                <span class="p">)</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">insert</span><span class="p">)</span>
+        <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s2">&quot;patients_page&quot;</span><span class="p">))</span>
+<span class="k">else</span><span class="p">:</span>
+        <span class="n">flash</span><span class="p">(</span><span class="s2">&quot;Insurance company is unknown.&quot;</span><span class="p">,</span><span class="s1">&#39;warning&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s2">&quot;patients_page&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Insurance company must exist in order to update a patient.</p>
+</div>
+</div>
+<div class="section" id="deleting">
+<h3>5. Deleting<a class="headerlink" href="#deleting" title="Permalink to this headline">¶</a></h3>
+<p>In order to delete a patient, we need to write a simple DELETE query.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Foo&#39;</span>
+<span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;DELETE FROM PATIENTS WHERE NAME=</span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="drug-companies">
+<h2>Drug Companies<a class="headerlink" href="#drug-companies" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>1. Creation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>There are no foreign keys, this table is just an entity by itself.</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span>    <span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">DRUG_COMPANIES</span> <span class="p">(</span>
+    <span class="n">ID</span> <span class="nb">SERIAL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+    <span class="n">NAME</span> <span class="nb">VARCHAR</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="n">FOUNDATION_YEAR</span> <span class="nb">INTEGER</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="n">FOUNDER</span> <span class="nb">VARCHAR</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="n">COUNTRY</span> <span class="nb">VARCHAR</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="n">WORKER_NUM</span> <span class="nb">INTEGER</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="n">FACTORY_NUM</span> <span class="nb">INTEGER</span> <span class="k">NOT</span> <span class="k">NULL</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>2. Reading<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>In order to read from drug companies table, we write a simple SELECT query.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">companies</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT * FROM DRUG_COMPANIES&quot;&quot;&quot;&quot;&quot;</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="p">:</span>
+    <span class="n">companies</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>3. Adding<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>In order to add a new company, we write a simple INSERT query. We apply some validation in input boxes just in case.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="n">name</span><span class="o">==</span><span class="s2">&quot;&quot;</span> <span class="ow">or</span> <span class="n">year</span> <span class="o">==</span><span class="s2">&quot;&quot;</span> <span class="ow">or</span> <span class="n">founder</span> <span class="o">==</span><span class="s2">&quot;&quot;</span> <span class="ow">or</span> <span class="n">country</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span> <span class="ow">or</span> <span class="n">factories</span> <span class="o">==</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
+        <span class="n">flash</span><span class="p">(</span><span class="s2">&quot;Please fill in all the boxes.&quot;</span><span class="p">,</span><span class="s1">&#39;warning&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;drug_companies_page&#39;</span><span class="p">))</span>
+<span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;INSERT INTO PUBLIC.DRUG_COMPANIES(NAME,FOUNDATION_YEAR,FOUNDER,COUNTRY,WORKER_NUM,FACTORY_NUM) VALUES(</span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">,{},</span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">,</span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">,{},{});&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+        <span class="n">name</span><span class="p">,</span><span class="n">year</span><span class="p">,</span><span class="n">founder</span><span class="p">,</span><span class="n">country</span><span class="p">,</span><span class="n">workers</span><span class="p">,</span><span class="n">factories</span>
+<span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>4. Updating<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>In order to update an existing company, we need to find that company first, if found, then it can be updated.
+For this, 2 SQL queries are needed. One for finding, one for updating. This is not a must. It can be handled with only 1 query.
+However, for a better user experience, for feedback, this structure is implemented.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM DRUG_COMPANIES WHERE NAME = </span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">result</span> <span class="o">==</span> <span class="bp">None</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+        <span class="n">comp_id</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;update public.drug_companies SET name=</span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">,foundation_year={},FOUNDER=</span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">,COUNTRY=</span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">,WORKER_NUM={},FACTORY_NUM={} WHERE ID = {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+        <span class="n">name</span><span class="p">,</span><span class="n">year</span><span class="p">,</span><span class="n">founder</span><span class="p">,</span><span class="n">country</span><span class="p">,</span><span class="n">workers</span><span class="p">,</span><span class="n">factories</span><span class="p">,</span><span class="n">comp_id</span>
+        <span class="p">)</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+        <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>5. Deleting<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>In order to delete a company, we need to write a simple DELETE query.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Foo&#39;</span>
+<span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;DELETE FROM DRUG_COMPANIES WHERE NAME=</span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="drugs">
+<h2>Drugs<a class="headerlink" href="#drugs" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h3>1. Creation<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>In order to have drugs, we first need a helper table called Drug_Type. Drug type table is just
+an index table where every id corresponds to a drug type such as tablets, syrups etc.</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">DRUGS</span><span class="p">(</span>
+    <span class="n">ID</span> <span class="nb">SERIAL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+    <span class="n">NAME</span> <span class="nb">VARCHAR</span> <span class="k">UNIQUE</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="n">COMPANY_ID</span> <span class="nb">INTEGER</span><span class="p">,</span>
+    <span class="k">SIZE</span> <span class="nb">INTEGER</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="n">SHELF_LIFE</span> <span class="nb">INTEGER</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="n">PRICE</span> <span class="nb">VARCHAR</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="k">TYPE</span> <span class="nb">INTEGER</span><span class="p">,</span>
+    <span class="k">CONSTRAINT</span> <span class="n">c1</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="k">TYPE</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">DRUG_TYPE</span><span class="p">(</span><span class="n">ID</span><span class="p">)</span>
+        <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">SET</span> <span class="k">NULL</span>
+        <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span><span class="p">,</span>
+    <span class="k">CONSTRAINT</span> <span class="n">c2</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">COMPANY_ID</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">DRUG_COMPANIES</span><span class="p">(</span><span class="n">ID</span><span class="p">)</span>
+        <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">SET</span> <span class="k">NULL</span>
+        <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span>
+<span class="p">);</span>
+
+    <span class="k">TYPE</span> <span class="k">column</span> <span class="k">references</span> <span class="k">to</span> <span class="n">DRUG_TYPE</span> <span class="k">table</span><span class="p">.</span> <span class="k">If</span> <span class="n">a</span> <span class="k">type</span> <span class="k">is</span> <span class="n">deleted</span><span class="p">,</span> <span class="k">all</span> <span class="n">the</span> <span class="n">drugs</span> <span class="n">that</span> <span class="k">is</span> <span class="n">that</span> <span class="k">type</span> <span class="n">have</span> <span class="n">their</span> <span class="n">types</span> <span class="k">null</span><span class="p">,</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="k">type</span> <span class="k">is</span> <span class="n">updated</span><span class="p">,</span> <span class="k">all</span> <span class="n">drugs</span> <span class="n">that</span> <span class="k">are</span> <span class="n">that</span> <span class="k">type</span> <span class="k">are</span> <span class="n">updated</span><span class="p">.</span>
+
+    <span class="n">COMPANY_ID</span> <span class="k">column</span> <span class="k">references</span> <span class="k">to</span> <span class="n">DRUG_COMPANIES</span> <span class="k">table</span><span class="p">.</span> <span class="n">The</span> <span class="n">same</span> <span class="n">stands</span> <span class="k">for</span> <span class="n">company_id</span> <span class="k">column</span><span class="p">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h3>2. Reading<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>In order to read from drug companies table, we write a simple SELECT query joined with drug_companies and drug_type.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">drugs</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<span class="n">statement</span><span class="o">=</span> <span class="s2">&quot;SELECT DRUGS.name,DRUG_COMPANIES.name,size,shelf_life,price,DRUG_TYPE.name FROM DRUGS,DRUG_COMPANIES,DRUG_TYPE WHERE company_id=DRUG_COMPANIES.id AND type=DRUG_TYPE.id ORDER BY drugs.NAME ASC&quot;</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="p">:</span>
+    <span class="n">drugs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h3>3. Adding<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>In order to add a new company, we write a simple INSERT query. We apply some validation in input boxes just in case.
+We need to check if the drug company exists.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="n">name</span><span class="o">==</span><span class="s2">&quot;&quot;</span> <span class="ow">or</span> <span class="n">company</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span> <span class="ow">or</span> <span class="n">shelf</span> <span class="o">==</span><span class="s2">&quot;&quot;</span> <span class="ow">or</span> <span class="n">size</span> <span class="o">==</span><span class="s2">&quot;&quot;</span> <span class="ow">or</span> <span class="n">typ</span> <span class="o">==</span><span class="s2">&quot;&quot;</span> <span class="ow">or</span> <span class="n">price</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">):</span>
+        <span class="n">flash</span><span class="p">(</span><span class="s2">&quot;Please fill in all the boxes.&quot;</span><span class="p">,</span><span class="s1">&#39;warning&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;drug_companies_page&#39;</span><span class="p">))</span>
+<span class="n">statement</span><span class="o">=</span><span class="s2">&quot;SELECT * FROM DRUGS WHERE NAME= </span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">result</span> <span class="o">==</span> <span class="bp">None</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+        <span class="n">flash</span><span class="p">(</span><span class="s2">&quot;The drug already exists, cannot insert.&quot;</span><span class="p">,</span><span class="s1">&#39;warning&#39;</span><span class="p">)</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s2">&quot;drugs_page&quot;</span><span class="p">))</span>
+<span class="k">else</span><span class="p">:</span>
+        <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;SELECT * from drug_companies where NAME = </span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">company</span><span class="p">)</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+        <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">result</span> <span class="o">==</span> <span class="bp">None</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">company_id</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM DRUG_TYPE WHERE NAME = </span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">typ</span><span class="p">)</span>
+                <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+                <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">result</span> <span class="o">==</span> <span class="bp">None</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+                        <span class="n">drug_type</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                        <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;INSERT INTO public.DRUGS(name,company_id,size,shelf_life,price,type) VALUES (</span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">,{},{},{},</span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">,{});&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">company_id</span><span class="p">,</span><span class="n">size</span><span class="p">,</span><span class="n">shelf</span><span class="p">,</span><span class="n">price</span><span class="p">,</span><span class="n">drug_type</span><span class="p">)</span>
+                        <span class="k">print</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+                        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+                        <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+                        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s2">&quot;drugs_page&quot;</span><span class="p">))</span>
+                <span class="k">else</span><span class="p">:</span>
+                        <span class="n">flash</span><span class="p">(</span><span class="s2">&quot;Drug type is unknown. Please check again&quot;</span><span class="p">,</span><span class="s1">&#39;warning&#39;</span><span class="p">)</span>
+                        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s2">&quot;drugs_page&quot;</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+                <span class="n">flash</span><span class="p">(</span><span class="s2">&quot;The Drug Company does not exists.&quot;</span><span class="p">,</span><span class="s1">&#39;warning&#39;</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s2">&quot;drugs_page&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id9">
+<h3>4. Updating<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p>In order to update an existing drug, we need to find that drug first, if found, then it can be updated if the drug company and tpe exist.
+For this, 4 SQL queries are needed. One for finding the drug, one for finding the company, one for finding the type and one for updating. This is not a must. It can be handled with only 3 queries.
+However, for a better user experience, for feedback, this structure is implemented.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Foo&#39;</span>
+<span class="n">statement</span><span class="o">=</span><span class="s2">&quot;SELECT * FROM DRUGS WHERE NAME= </span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">result</span> <span class="o">==</span> <span class="bp">None</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;The drug does not exists, cannot update.&quot;</span><span class="p">)</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s2">&quot;drugs_page&quot;</span><span class="p">))</span>
+<span class="k">else</span><span class="p">:</span>
+        <span class="n">drug_id</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;SELECT * from drug_companies where NAME = </span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">company</span><span class="p">)</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+        <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">result</span> <span class="o">==</span> <span class="bp">None</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">company_id</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM DRUG_TYPE WHERE TYPE = </span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">typ</span><span class="p">)</span>
+                <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+                <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">result</span> <span class="o">==</span> <span class="bp">None</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+                        <span class="n">drug_type</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                        <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;UPDATE public.drugs SET name=</span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">,company_id={},size={},shelf_life={},price=</span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">,type={} WHERE id = {};&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">company_id</span><span class="p">,</span><span class="n">size</span><span class="p">,</span><span class="n">shelf</span><span class="p">,</span><span class="n">price</span><span class="p">,</span><span class="n">typ</span><span class="p">,</span><span class="n">drug_id</span><span class="p">)</span>
+                        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+                        <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+                        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s2">&quot;drugs_page&quot;</span><span class="p">))</span>
+                <span class="k">else</span><span class="p">:</span>
+                        <span class="n">flash</span><span class="p">(</span><span class="s2">&quot;Drug type is unknown.&quot;</span><span class="p">,</span><span class="s1">&#39;warning&#39;</span><span class="p">)</span>
+                        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s2">&quot;drugs_page&quot;</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+                <span class="n">flash</span><span class="p">(</span><span class="s2">&quot;The company does not exists.&quot;</span><span class="p">,</span><span class="s1">&#39;warning&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id10">
+<h3>5. Deleting<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<p>In order to delete a drug, we need to write a simple DELETE query.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Foo&#39;</span>
+<span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;DELETE FROM DRUGS WHERE NAME = </span><span class="se">\&#39;</span><span class="s2">{}</span><span class="se">\&#39;</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="extra-tables">
+<h2>Extra Tables<a class="headerlink" href="#extra-tables" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="drug-type">
+<h3>1. Drug Type<a class="headerlink" href="#drug-type" title="Permalink to this headline">¶</a></h3>
+<p>Drug type table is just
+an index table where every id corresponds to a drug type such as tablets, syrups etc.</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span>    <span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">DRUG_TYPE</span><span class="p">(</span>
+    <span class="n">ID</span> <span class="nb">SERIAL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+    <span class="n">NAME</span> <span class="nb">VARCHAR</span> <span class="k">NOT</span> <span class="k">NULL</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="allergies">
+<h3>2. Allergies<a class="headerlink" href="#allergies" title="Permalink to this headline">¶</a></h3>
+<p>Allergies table is created to have a list of allergies.</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span>    <span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">ALLERGIES</span> <span class="p">(</span>
+    <span class="n">ID</span> <span class="nb">SERIAL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+    <span class="n">NAME</span> <span class="nb">VARCHAR</span> <span class="k">NOT</span> <span class="k">NULL</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="allergies-index">
+<h3>3. Allergies Index<a class="headerlink" href="#allergies-index" title="Permalink to this headline">¶</a></h3>
+<p>Allergies index is the table where allergies are assigned to patients. This table is not visible anywhere on front-end, just yet.</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span>    <span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">ALLERGIE_INDEX</span> <span class="p">(</span>
+    <span class="n">PATIENT_ID</span> <span class="nb">SERIAL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+    <span class="n">ALLERGIES_ID</span> <span class="nb">INTEGER</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="k">CONSTRAINT</span> <span class="n">c1</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">PATIENT_ID</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">PATIENTS</span><span class="p">(</span><span class="n">ID</span><span class="p">)</span>
+        <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span>
+        <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span><span class="p">,</span>
+    <span class="k">CONSTRAINT</span> <span class="n">c2</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">ALLERGIES_ID</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">ALLERGIES</span><span class="p">(</span><span class="n">ID</span><span class="p">)</span>
+        <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span>
+        <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ecenur.html" class="btn btn-neutral float-right" title="Parts Implemented by Ece Nur Şen" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Developer Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, ITUCSDB1821
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

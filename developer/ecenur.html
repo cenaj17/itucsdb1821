@@ -1,0 +1,1124 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Parts Implemented by Ece Nur Şen &mdash; ITUCSDB1821  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Parts Implemented by Ayser Ecem Konu" href="ecem.html" />
+    <link rel="prev" title="Parts Implemented by Göktuğ Başaran" href="goktug.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ITUCSDB1821
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../user/index.html">User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="goktug.html">Parts Implemented by Göktuğ Başaran</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Parts Implemented by Ece Nur Şen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#policlinics">Policlinics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#table">1. Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reading-policlinics">2. Reading Policlinics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-policlinics">3. Adding Policlinics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#editing-policlinics">4. Editing Policlinics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deleting-policlinics">5. Deleting Policlinics</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#detailed-policlinics">Detailed Policlinics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">1. Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reading-detailed-policlinics">2. Reading Detailed_Policlinics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-detailed-policlinics">3. Adding Detailed_Policlinics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deleting-detailed-policlinics">4. Deleting Detailed_Policlinics</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#prescription">Prescription</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">1. Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reading-prescription">2. Reading Prescription</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-prescription">3. Adding Prescription</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#editing-prescription">4. Editing Prescription</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deleting-prescription">5. Deleting Prescription</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#detailed-prescription">Detailed Prescription</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">1. Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reading-detailed-prescription-drugs-and-examination">2. Reading Detailed_Prescription(Drugs) and Examination</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-detailed-prescription">3. Adding Detailed_Prescription</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#editing-detailed-prescription">4. Editing Detailed_Prescription</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deleting-detailed-prescription">5. Deleting Detailed_Prescription</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#examination">Examination</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">1. Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-examination">2. Adding Examination</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deleting-examination">3. Deleting Examination</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ecem.html">Parts Implemented by Ayser Ecem Konu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="atakan.html">Parts Implemented by Atakan Göl</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ITUCSDB1821</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Developer Guide</a> &raquo;</li>
+        
+      <li>Parts Implemented by Ece Nur Şen</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/developer/ecenur.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="parts-implemented-by-ece-nur-sen">
+<h1>Parts Implemented by Ece Nur Şen<a class="headerlink" href="#parts-implemented-by-ece-nur-sen" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">All table creations exist in db_init.py file.</p>
+</div>
+<div class="section" id="policlinics">
+<h2>Policlinics<a class="headerlink" href="#policlinics" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="table">
+<h3>1. Table<a class="headerlink" href="#table" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">POLICLINICS</span> <span class="p">(</span>
+    <span class="n">ID</span> <span class="nb">SERIAL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+    <span class="n">HOSPITAL_ID</span> <span class="nb">INTEGER</span><span class="p">,</span>
+    <span class="n">RECEPTIONIST_ID</span> <span class="nb">INTEGER</span><span class="p">,</span>
+    <span class="n">NAME</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="n">NUMBER_OF_EXAMINATION_ROOMS</span> <span class="nb">INTEGER</span> <span class="k">DEFAULT</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="n">NUMBER_OF_OPERATION_ROOMS</span> <span class="nb">INTEGER</span> <span class="k">DEFAULT</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="n">PRIVATE</span> <span class="n">BOOL</span> <span class="k">DEFAULT</span> <span class="k">FALSE</span><span class="p">,</span>
+    <span class="n">IS_PEDIATRICS</span> <span class="n">BOOL</span> <span class="k">DEFAULT</span> <span class="k">FALSE</span><span class="p">,</span>
+    <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">HOSPITAL_ID</span><span class="p">)</span>
+        <span class="k">REFERENCES</span> <span class="n">HOSPITAL</span><span class="p">(</span><span class="n">HOSPITAL_ID</span><span class="p">)</span>
+        <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span>
+        <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span><span class="p">,</span>
+    <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">RECEPTIONIST_ID</span><span class="p">)</span>
+        <span class="k">REFERENCES</span> <span class="n">HOSPITAL_PERSONNEL</span><span class="p">(</span><span class="n">PERSONNEL_ID</span><span class="p">)</span>
+        <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span>
+        <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>HOSPITAL_ID is referencing HOSPITAL_ID from HOSPITAL table. When a hospital got deleted or updated, it will affect Policlinics Table. Policlinics with given hospital id will be deleted or updated accordingly.
+RECEPTIONIST_ID is referencing PERSONNEL_ID from HOSPITAL_PERSONNEL table. When a hospital personnel got deleted or updated, it will affect Policlinics Table. Policlinics with given receptionist id will be deleted or updated accordingly.</p>
+</div>
+<div class="section" id="reading-policlinics">
+<h3>2. Reading Policlinics<a class="headerlink" href="#reading-policlinics" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s2">&quot;/policlinics/&lt;hospital_id&gt;&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">all_policlinics</span><span class="p">(</span><span class="n">hospital_id</span><span class="p">):</span>
+    <span class="n">log_id</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;status&quot;</span><span class="p">)</span>
+    <span class="n">policlinics</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot; SELECT POLICLINICS.*,HOSPITAL.HOSPITAL_NAME,HOSPITAL_PERSONNEL.WORKER_NAME FROM POLICLINICS,HOSPITAL,HOSPITAL_PERSONNEL</span>
+<span class="s2">        WHERE POLICLINICS.HOSPITAL_ID=&quot;&quot;&quot;</span><span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="n">hospital_id</span><span class="o">+</span><span class="s2">&quot;AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        AND POLICLINICS.HOSPITAL_ID = HOSPITAL.HOSPITAL_ID</span>
+<span class="s2">        AND POLICLINICS.RECEPTIONIST_ID = HOSPITAL_PERSONNEL.PERSONNEL_ID</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+    <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="p">:</span>
+        <span class="n">policlinics</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;policlinics.html&#39;</span><span class="p">,</span><span class="n">policlinics</span> <span class="o">=</span> <span class="n">policlinics</span> <span class="p">,</span><span class="n">hospital_id</span> <span class="o">=</span> <span class="n">hospital_id</span><span class="p">,</span><span class="n">log_id</span> <span class="o">=</span> <span class="n">log_id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This function gets id of hospital and returns the all policlinics with given hospital id through html to user.</p>
+</div>
+<div class="section" id="adding-policlinics">
+<h3>3. Adding Policlinics<a class="headerlink" href="#adding-policlinics" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s2">&quot;/add_policlinics/&lt;hospital_id&gt;&quot;</span><span class="p">,</span><span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">add_pol</span><span class="p">(</span><span class="n">hospital_id</span><span class="p">):</span>
+    <span class="n">log_id</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;status&quot;</span><span class="p">)</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;GET&#39;</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;pol_add.html&#39;</span><span class="p">,</span> <span class="n">hospital_id</span> <span class="o">=</span> <span class="n">hospital_id</span><span class="p">,</span> <span class="n">log_id</span> <span class="o">=</span> <span class="n">log_id</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+            <span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+            <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+            <span class="n">r_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;r_id&#39;</span><span class="p">])</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>
+            <span class="n">ex_room</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;ex_room&#39;</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">ex_room</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                    <span class="n">ex_room</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">op_room</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;op_room&#39;</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">op_room</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span> <span class="p">:</span>
+                    <span class="n">op_room</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;private&#39;</span><span class="p">)</span> <span class="p">:</span>
+                    <span class="n">private</span> <span class="o">=</span> <span class="bp">True</span>
+            <span class="k">else</span><span class="p">:</span>
+                    <span class="n">private</span> <span class="o">=</span> <span class="bp">False</span>
+            <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;pedi&#39;</span><span class="p">)</span> <span class="p">:</span>
+                    <span class="n">pedi</span> <span class="o">=</span> <span class="bp">True</span>
+            <span class="k">else</span><span class="p">:</span>
+                    <span class="n">pedi</span> <span class="o">=</span> <span class="bp">False</span>
+            <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;INSERT INTO POLICLINICS (HOSPITAL_ID,RECEPTIONIST_ID,NAME,NUMBER_OF_EXAMINATION_ROOMS,NUMBER_OF_OPERATION_ROOMS,PRIVATE,IS_PEDIATRICS) VALUES (</span>
+<span class="s2">            &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">hospital_id</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,</span>
+<span class="s2">            &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">r_id</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,</span>
+<span class="s2">            &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&#39;&quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;&#39; AS VARCHAR) &quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,</span>
+<span class="s2">            &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ex_room</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,</span>
+<span class="s2">            &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">op_room</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,</span>
+<span class="s2">            &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&#39;&quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">private</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;&#39; AS BOOL) &quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,</span>
+<span class="s2">            &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&#39;&quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">pedi</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;&#39; AS BOOL) &quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">            );</span>
+<span class="s2">            &quot;&quot;&quot;</span>
+            <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+            <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+            <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">all_policlinics</span><span class="p">(</span><span class="n">hospital_id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This function insert new policlinic to policlinics table. When the method is ‘GET’, it returns html of adding page. When the method is ‘POST’, it creates a sql statement for inserting new entry and executes accordingly.</p>
+</div>
+<div class="section" id="editing-policlinics">
+<h3>4. Editing Policlinics<a class="headerlink" href="#editing-policlinics" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s2">&quot;/edit_pol/&lt;hospital_id&gt;/&lt;id&gt;/&quot;</span><span class="p">,</span><span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">edit_pol</span><span class="p">(</span><span class="n">hospital_id</span><span class="p">,</span><span class="nb">id</span><span class="p">):</span>
+        <span class="n">log_id</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;status&quot;</span><span class="p">)</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;GET&#39;</span><span class="p">):</span>
+                <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;edit_policlinics.html&#39;</span><span class="p">,</span> <span class="nb">id</span> <span class="o">=</span> <span class="nb">id</span><span class="p">,</span><span class="n">hospital_id</span> <span class="o">=</span> <span class="n">hospital_id</span><span class="p">,</span> <span class="n">log_id</span> <span class="o">=</span> <span class="n">log_id</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+                <span class="n">flag</span> <span class="o">=</span> <span class="bp">True</span>
+                <span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+                <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+                <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;UPDATE POLICLINICS &quot;&quot;&quot;</span>
+
+                <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;r_id&#39;</span><span class="p">):</span>
+                        <span class="n">flag</span> <span class="o">=</span> <span class="bp">False</span>
+                        <span class="n">r_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;r_id&#39;</span><span class="p">])</span>
+                        <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;SET RECEPTIONIST_ID = &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">r_id</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span>
+
+                <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">):</span>
+                        <span class="k">if</span> <span class="n">flag</span> <span class="o">==</span><span class="bp">False</span><span class="p">:</span>
+                                <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,&quot;&quot;&quot;</span>
+                        <span class="k">else</span><span class="p">:</span>
+                                <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;SET &quot;&quot;&quot;</span>
+                        <span class="n">flag</span> <span class="o">=</span> <span class="bp">False</span>
+                        <span class="n">name</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>
+                        <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;NAME = &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS VARCHAR)&quot;&quot;&quot;</span>
+
+                <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ex_room&#39;</span><span class="p">):</span>
+                        <span class="k">if</span> <span class="n">flag</span> <span class="o">==</span><span class="bp">False</span><span class="p">:</span>
+                                <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,&quot;&quot;&quot;</span>
+                        <span class="k">else</span><span class="p">:</span>
+                                <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;SET &quot;&quot;&quot;</span>
+                        <span class="n">flag</span> <span class="o">=</span> <span class="bp">False</span>
+                        <span class="n">ex_room</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;ex_room&#39;</span><span class="p">])</span>
+                        <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;NUMBER_OF_EXAMINATION_ROOMS = &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ex_room</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span>
+
+                <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;op_room&#39;</span><span class="p">):</span>
+                        <span class="k">if</span> <span class="n">flag</span> <span class="o">==</span><span class="bp">False</span><span class="p">:</span>
+                                <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,&quot;&quot;&quot;</span>
+                        <span class="k">else</span><span class="p">:</span>
+                                <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;SET &quot;&quot;&quot;</span>
+                        <span class="n">flag</span> <span class="o">=</span> <span class="bp">False</span>
+                        <span class="n">op_room</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;op_room&#39;</span><span class="p">])</span>
+                        <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;NUMBER_OF_OPERATION_ROOMS = &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">op_room</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span>
+
+                <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;private&#39;</span><span class="p">):</span>
+                        <span class="k">if</span> <span class="n">flag</span> <span class="o">==</span><span class="bp">False</span><span class="p">:</span>
+                                <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,&quot;&quot;&quot;</span>
+                        <span class="k">else</span><span class="p">:</span>
+                                <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;SET &quot;&quot;&quot;</span>
+                        <span class="n">flag</span> <span class="o">=</span> <span class="bp">False</span>
+                        <span class="n">private</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;private&#39;</span><span class="p">]</span>
+                        <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;PRIVATE = &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">private</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS BOOL)&quot;&quot;&quot;</span>
+
+                <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;pedi&#39;</span><span class="p">):</span>
+                        <span class="k">if</span> <span class="n">flag</span> <span class="o">==</span><span class="bp">False</span><span class="p">:</span>
+                                <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,&quot;&quot;&quot;</span>
+                        <span class="k">else</span><span class="p">:</span>
+                                <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;SET &quot;&quot;&quot;</span>
+                        <span class="n">flag</span> <span class="o">=</span> <span class="bp">False</span>
+                        <span class="n">pedi</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;pedi&#39;</span><span class="p">]</span>
+                        <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;IS_PEDIATRICS = &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">pedi</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS BOOL)&quot;&quot;&quot;</span>
+
+                <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;WHERE ID = &quot;&quot;&quot;</span><span class="o">+</span><span class="s2">&quot;CAST(&#39;&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;&#39;AS INTEGER)&quot;&quot;&quot;</span>
+                <span class="k">if</span> <span class="n">flag</span><span class="p">:</span>
+                        <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+                        <span class="k">return</span> <span class="n">all_policlinics</span><span class="p">(</span><span class="n">hospital_id</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+                        <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+                        <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+                        <span class="k">return</span> <span class="n">all_policlinics</span><span class="p">(</span><span class="n">hospital_id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This function updates a policlinic from Policlinics table. When the method is ‘GET’, it returns html of editing page. When method is ‘POST’, it generates an sql statement for updating table and it executes statement.</p>
+</div>
+<div class="section" id="deleting-policlinics">
+<h3>5. Deleting Policlinics<a class="headerlink" href="#deleting-policlinics" title="Permalink to this headline">¶</a></h3>
+<p>This function deletes choosen policlinic with given policlinics id from Policlinics Table.</p>
+</div>
+</div>
+<div class="section" id="detailed-policlinics">
+<h2>Detailed Policlinics<a class="headerlink" href="#detailed-policlinics" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>1. Table<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">DETAILED_POLICLINICS</span> <span class="p">(</span>
+        <span class="n">ID</span>  <span class="nb">SERIAL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+        <span class="n">HOSPITAL_ID</span> <span class="nb">INTEGER</span><span class="p">,</span>
+        <span class="n">POLICLINIC_ID</span> <span class="nb">INTEGER</span><span class="p">,</span>
+        <span class="n">DOCTOR_ID</span> <span class="nb">INTEGER</span><span class="p">,</span>
+        <span class="n">WORKING_HOURS</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+        <span class="n">RESULT_HOURS</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+        <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">POLICLINIC_ID</span><span class="p">)</span>
+                <span class="k">REFERENCES</span> <span class="n">POLICLINICS</span><span class="p">(</span><span class="n">ID</span><span class="p">)</span>
+                <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span>
+                <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span><span class="p">,</span>
+        <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">DOCTOR_ID</span><span class="p">)</span>
+                <span class="k">REFERENCES</span> <span class="n">HOSPITAL_PERSONNEL</span><span class="p">(</span><span class="n">PERSONNEL_ID</span><span class="p">)</span>
+                <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span>
+                <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span><span class="p">,</span>
+        <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">HOSPITAL_ID</span><span class="p">)</span>
+                <span class="k">REFERENCES</span> <span class="n">HOSPITAL</span><span class="p">(</span><span class="n">HOSPITAL_ID</span><span class="p">)</span>
+                <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span>
+                <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>HOSPITAL_ID is referencing HOSPITAL_ID from HOSPITAL table. When a hospital got deleted or updated, it will affect Detailed_Policlinics Table. Detailed_Policlinics with given hospital id will be deleted or updated accordingly.
+POLICLINIC_ID is referencing ID from POLICLINICS table. When a policlinics got deleted or updated, it will affect Detailed_Policlinics Table. Detailed_Policlinics with given policlinics id will be deleted or updated accordingly.
+DOCTOR_ID is referencing PERSONNEL_ID from HOSPITAL_PERSONNEL table. When a hospital personnel got deleted or updated, it will affect Detailed_Policlinics Table. Detailed_Policlinics with given doctor id will be deleted or updated accordingly.</p>
+</div>
+<div class="section" id="reading-detailed-policlinics">
+<h3>2. Reading Detailed_Policlinics<a class="headerlink" href="#reading-detailed-policlinics" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s2">&quot;/policlinics/&lt;hospital_id&gt;/&lt;pol_id&gt;&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">det_policlinic</span><span class="p">(</span><span class="n">hospital_id</span><span class="p">,</span><span class="n">pol_id</span><span class="p">):</span>
+        <span class="n">log_id</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;status&quot;</span><span class="p">)</span>
+        <span class="n">policlinic</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+        <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot; SELECT DETAILED_POLICLINICS.*,HOSPITAL.HOSPITAL_NAME,POLICLINICS.NAME,HOSPITAL_PERSONNEL.WORKER_NAME FROM DETAILED_POLICLINICS,POLICLINICS,HOSPITAL,HOSPITAL_PERSONNEL</span>
+<span class="s2">                WHERE DETAILED_POLICLINICS.HOSPITAL_ID=&quot;&quot;&quot;</span><span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="n">hospital_id</span><span class="o">+</span><span class="s2">&quot;AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                AND DETAILED_POLICLINICS.POLICLINIC_ID=&quot;&quot;&quot;</span><span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="n">pol_id</span><span class="o">+</span><span class="s2">&quot;AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                AND DETAILED_POLICLINICS.HOSPITAL_ID = HOSPITAL.HOSPITAL_ID</span>
+<span class="s2">                AND DETAILED_POLICLINICS.POLICLINIC_ID = POLICLINICS.ID</span>
+<span class="s2">                AND DETAILED_POLICLINICS.DOCTOR_ID = HOSPITAL_PERSONNEL.PERSONNEL_ID</span>
+<span class="s2">        &quot;&quot;&quot;</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+        <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="p">:</span>
+                <span class="n">policlinic</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;det_policlinic.html&#39;</span><span class="p">,</span><span class="n">policlinic</span> <span class="o">=</span> <span class="n">policlinic</span><span class="p">,</span><span class="n">hospital_id</span> <span class="o">=</span> <span class="n">hospital_id</span><span class="p">,</span> <span class="n">pol_id</span> <span class="o">=</span> <span class="n">pol_id</span><span class="p">,</span><span class="n">log_id</span> <span class="o">=</span> <span class="n">log_id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This function gets id of hospital and id of policlinics, returns the detailed_policlinics with given hospital id and policlinics id through html to user.</p>
+</div>
+<div class="section" id="adding-detailed-policlinics">
+<h3>3. Adding Detailed_Policlinics<a class="headerlink" href="#adding-detailed-policlinics" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s2">&quot;/add_policlinics/&lt;hospital_id&gt;/&lt;pol_id&gt;&quot;</span><span class="p">,</span><span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">add_pol_det</span><span class="p">(</span><span class="n">hospital_id</span><span class="p">,</span><span class="n">pol_id</span><span class="p">):</span>
+        <span class="n">log_id</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;status&quot;</span><span class="p">)</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;GET&#39;</span><span class="p">):</span>
+                <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;det_pol_add.html&#39;</span><span class="p">,</span> <span class="n">hospital_id</span> <span class="o">=</span> <span class="n">hospital_id</span><span class="p">,</span> <span class="n">pol_id</span> <span class="o">=</span> <span class="n">pol_id</span><span class="p">,</span><span class="n">log_id</span> <span class="o">=</span> <span class="n">log_id</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+                <span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+                <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+                <span class="n">d_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;d_id&#39;</span><span class="p">])</span>
+                <span class="n">work</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;work_hours&#39;</span><span class="p">]</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;result_hours&#39;</span><span class="p">]</span>
+                <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;INSERT INTO DETAILED_POLICLINICS (HOSPITAL_ID,POLICLINIC_ID,DOCTOR_ID,WORKING_HOURS,RESULT_HOURS) VALUES (</span>
+<span class="s2">                &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">hospital_id</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,</span>
+<span class="s2">                &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">pol_id</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,</span>
+<span class="s2">                &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">d_id</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,</span>
+<span class="s2">                &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&#39;&quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">work</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;&#39; AS VARCHAR) &quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,</span>
+<span class="s2">                &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&#39;&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">result</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;&#39; AS VARCHAR)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                );</span>
+<span class="s2">                &quot;&quot;&quot;</span>
+                <span class="k">print</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+                <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+                <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+                <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+                <span class="k">return</span> <span class="n">det_policlinic</span><span class="p">(</span><span class="n">hospital_id</span><span class="p">,</span><span class="n">pol_id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This function insert new detailed_policlinic to detailed_policlinics table. When the method is ‘GET’, it returns html of adding page. When the method is ‘POST’, it creates a sql statement for inserting new entry and executes accordingly.</p>
+</div>
+<div class="section" id="deleting-detailed-policlinics">
+<h3>4. Deleting Detailed_Policlinics<a class="headerlink" href="#deleting-detailed-policlinics" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s2">&quot;/delete_policlinics/&lt;id&gt;&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">det_pol_del</span><span class="p">(</span><span class="nb">id</span><span class="p">):</span>
+        <span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+        <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot; DELETE FROM DETAILED_POLICLINICS</span>
+<span class="s2">                WHERE ID=&quot;&quot;&quot;</span><span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">id</span><span class="o">+</span><span class="s2">&quot;AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        &quot;&quot;&quot;</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+        <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">choose_hospital</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This function deletes choosen detailed_policlinic with given id from Detailed_Policlinics Table.</p>
+</div>
+</div>
+<div class="section" id="prescription">
+<h2>Prescription<a class="headerlink" href="#prescription" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>1. Table<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">PRESCRIPTION</span> <span class="p">(</span>
+        <span class="n">ID</span> <span class="nb">SERIAL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+        <span class="n">HOSPITAL_ID</span> <span class="nb">INTEGER</span><span class="p">,</span>
+        <span class="n">DOCTOR_ID</span> <span class="nb">INTEGER</span><span class="p">,</span>
+        <span class="n">PATIENT_ID</span> <span class="nb">INTEGER</span><span class="p">,</span>
+        <span class="n">HOSPITAL_NAME</span> <span class="nb">VARCHAR</span><span class="p">,</span>
+        <span class="n">DOCTOR_NAME</span> <span class="nb">VARCHAR</span><span class="p">,</span>
+        <span class="n">PATIENT_NAME</span> <span class="nb">VARCHAR</span><span class="p">,</span>
+        <span class="n">PRESCRIPTION_DATE</span> <span class="nb">DATE</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+        <span class="n">VALIDATION</span> <span class="nb">INTEGER</span> <span class="k">DEFAULT</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">HOSPITAL_ID</span><span class="p">)</span>
+                <span class="k">REFERENCES</span> <span class="n">HOSPITAL</span><span class="p">(</span><span class="n">HOSPITAL_ID</span><span class="p">)</span>
+                <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">SET</span> <span class="k">NULL</span>
+                <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">SET</span> <span class="k">NULL</span><span class="p">,</span>
+        <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">DOCTOR_ID</span><span class="p">)</span>
+                <span class="k">REFERENCES</span> <span class="n">HOSPITAL_PERSONNEL</span><span class="p">(</span><span class="n">PERSONNEL_ID</span><span class="p">)</span>
+                <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">SET</span> <span class="k">NULL</span>
+                <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">SET</span> <span class="k">NULL</span><span class="p">,</span>
+        <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">PATIENT_ID</span><span class="p">)</span>
+                <span class="k">REFERENCES</span> <span class="n">PATIENTS</span><span class="p">(</span><span class="n">ID</span><span class="p">)</span>
+                <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span>
+                <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">SET</span> <span class="k">NULL</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>HOSPITAL_ID is referencing HOSPITAL_ID from HOSPITAL table. When a hospital got deleted or updated, it will affect Prescription Table. Prescription with given hospital id will be set as NULL. Because when a hospital got destroyed or changed, we don’t want prescription data to change.
+DOCTOR_ID is referencing PERSONNEL_ID from HOSPITAL_PERSONNEL table. When a hospital personnel got deleted or updated, it will affect Prescription Table. Prescription with given doctor id will be set as NULL. Because when a doctor got died or changed, we don’t want prescription data to change.
+PATIENT_ID is referencing ID from PATIENTS table. When a patient got deleted or updated, it will affect Prescription Table. Prescription with given patient id will be deleted when a patient id wanted to be deleted. But when patient id wanted to be updated, patient id in prescription it will set as NULL.</p>
+</div>
+<div class="section" id="reading-prescription">
+<h3>2. Reading Prescription<a class="headerlink" href="#reading-prescription" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s2">&quot;/Prescription/&lt;id&gt;/&quot;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">prescription_page</span><span class="p">(</span><span class="nb">id</span><span class="p">):</span>
+        <span class="n">log_id</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;status&quot;</span><span class="p">)</span>
+        <span class="n">prescriptions</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">date</span><span class="p">()</span>
+        <span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+        <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT * FROM PRESCRIPTION</span>
+<span class="s2">                        WHERE PATIENT_ID=&quot;&quot;&quot;</span><span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">id</span><span class="o">+</span><span class="s2">&quot;AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                        ORDER BY PRESCRIPTION_DATE DESC</span>
+<span class="s2">                &quot;&quot;&quot;</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+        <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="p">:</span>
+                <span class="n">prescriptions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;prescription.html&#39;</span><span class="p">,</span> <span class="n">Prescriptions</span><span class="o">=</span><span class="n">prescriptions</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="nb">id</span><span class="p">,</span><span class="n">log_id</span> <span class="o">=</span> <span class="n">log_id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This function gets id of patients and returns the all prescriptions with given patient id through html to user.</p>
+</div>
+<div class="section" id="adding-prescription">
+<h3>3. Adding Prescription<a class="headerlink" href="#adding-prescription" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s2">&quot;/Prescription_Add/&lt;id&gt;/&quot;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">prescription_add_page</span><span class="p">(</span><span class="nb">id</span><span class="p">):</span>
+        <span class="n">log_id</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;status&quot;</span><span class="p">)</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;GET&#39;</span><span class="p">):</span>
+                <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;prescription_add.html&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="nb">id</span><span class="p">,</span><span class="n">log_id</span> <span class="o">=</span> <span class="n">log_id</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                <span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+                <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+                <span class="n">h_a_name</span> <span class="o">=</span><span class="p">[]</span>
+                <span class="n">dr_a_name</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="n">p_a_name</span> <span class="o">=</span> <span class="p">[]</span>
+
+                <span class="n">h_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;h_id&#39;</span><span class="p">])</span>
+                <span class="n">dr_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;dr_id&#39;</span><span class="p">])</span>
+                <span class="n">date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">date</span><span class="p">()</span>
+                <span class="n">valid</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;validity&#39;</span><span class="p">]</span>
+                <span class="k">if</span> <span class="n">valid</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                        <span class="n">valid</span> <span class="o">=</span> <span class="mi">3</span>
+
+
+                <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT HOSPITAL_NAME FROM HOSPITAL</span>
+<span class="s2">                WHERE HOSPITAL_ID=&quot;&quot;&quot;</span><span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">h_id</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                GROUP BY HOSPITAL_NAME&quot;&quot;&quot;</span>
+                <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="p">:</span>
+                        <span class="n">h_a_name</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">h_a_name</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+                        <span class="n">h_name</span> <span class="o">=</span> <span class="n">name</span>
+
+                <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT WORKER_NAME FROM HOSPITAL_PERSONNEL</span>
+<span class="s2">                WHERE PERSONNEL_ID=&quot;&quot;&quot;</span><span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">dr_id</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                GROUP BY WORKER_NAME&quot;&quot;&quot;</span>
+                <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="p">:</span>
+                        <span class="n">dr_a_name</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">dr_a_name</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+                        <span class="n">dr_name</span> <span class="o">=</span> <span class="n">name</span>
+
+                <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT NAME FROM PATIENTS</span>
+<span class="s2">                WHERE ID = &quot;&quot;&quot;</span><span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                GROUP BY NAME&quot;&quot;&quot;</span>
+                <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="p">:</span>
+                        <span class="n">p_a_name</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">p_a_name</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+                        <span class="n">p_name</span> <span class="o">=</span> <span class="n">name</span>
+
+                <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;INSERT INTO PRESCRIPTION (HOSPITAL_ID,DOCTOR_ID, PATIENT_ID, HOSPITAL_NAME, DOCTOR_NAME, PATIENT_NAME ,PRESCRIPTION_DATE,VALIDATION) VALUES (</span>
+<span class="s2">                        &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">h_id</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,</span>
+<span class="s2">                        &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">dr_id</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,</span>
+<span class="s2">                        &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,</span>
+<span class="s2">                        &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&#39;&quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">h_name</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;&#39; AS VARCHAR) &quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,</span>
+<span class="s2">                        &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&#39;&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">dr_name</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;&#39; AS VARCHAR)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,</span>
+<span class="s2">                        &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&#39;&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">p_name</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;&#39; AS VARCHAR)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,</span>
+<span class="s2">                        &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&#39;&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">date</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; &#39;AS DATE)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,</span>
+<span class="s2">                        &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">valid</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                );</span>
+<span class="s2">                &quot;&quot;&quot;</span>
+
+                <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+                <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="k">except</span> <span class="n">db</span><span class="o">.</span><span class="n">DatabaseError</span><span class="p">:</span>
+                <span class="n">connection</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
+                <span class="n">flash</span><span class="p">(</span><span class="s1">&#39;Something Went Wrong&#39;</span><span class="p">,</span> <span class="s1">&#39;danger&#39;</span><span class="p">)</span>
+        <span class="k">finally</span><span class="p">:</span>
+                <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">prescription_page</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This function insert new prescription to prescription table. When the method is ‘GET’, it returns html of adding page. When the method is ‘POST’, it creates a sql statement for inserting new entry and executes accordingly.</p>
+</div>
+<div class="section" id="editing-prescription">
+<h3>4. Editing Prescription<a class="headerlink" href="#editing-prescription" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s2">&quot;/edit_pres/&lt;id&gt;/&lt;pid&gt;&quot;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">edit_pres</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span><span class="n">pid</span><span class="p">):</span>
+        <span class="n">log_id</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;status&quot;</span><span class="p">)</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;GET&#39;</span><span class="p">):</span>
+                <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;edit_pres.html&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="nb">id</span><span class="p">,</span><span class="n">pid</span><span class="o">=</span><span class="n">pid</span><span class="p">,</span><span class="n">log_id</span> <span class="o">=</span> <span class="n">log_id</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+                <span class="n">flag</span> <span class="o">=</span> <span class="bp">True</span>
+                <span class="n">h_a_name</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="n">dr_a_name</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+                <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+                <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;UPDATE PRESCRIPTION &quot;&quot;&quot;</span>
+
+                <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;h_id&#39;</span><span class="p">):</span>
+                        <span class="n">flag</span> <span class="o">=</span> <span class="bp">False</span>
+                        <span class="n">h_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;h_id&#39;</span><span class="p">])</span>
+                        <span class="n">statement1</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT HOSPITAL_NAME FROM HOSPITAL</span>
+<span class="s2">                                WHERE HOSPITAL_ID =&quot;&quot;&quot;</span><span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">h_id</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                                GROUP BY HOSPITAL_NAME&quot;&quot;&quot;</span>
+                        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement1</span><span class="p">)</span>
+                        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="p">:</span>
+                                <span class="n">h_a_name</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+                        <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">h_a_name</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+                                <span class="n">h_name</span> <span class="o">=</span> <span class="n">name</span>
+
+                        <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;SET HOSPITAL_ID = &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">h_id</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER),&quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                                HOSPITAL_NAME = &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&#39;&quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">h_name</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;&#39; AS VARCHAR) &quot;&quot;&quot;</span>
+
+                <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;dr_id&#39;</span><span class="p">):</span>
+                        <span class="k">if</span> <span class="n">flag</span> <span class="o">==</span><span class="bp">False</span><span class="p">:</span>
+                                <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,&quot;&quot;&quot;</span>
+                        <span class="k">else</span><span class="p">:</span>
+                                <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;SET &quot;&quot;&quot;</span>
+                        <span class="n">flag</span> <span class="o">=</span> <span class="bp">False</span>
+                        <span class="n">dr_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;dr_id&#39;</span><span class="p">])</span>
+                        <span class="n">statement1</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT WORKER_NAME FROM HOSPITAL_PERSONNEL</span>
+<span class="s2">                                WHERE PERSONNEL_ID =&quot;&quot;&quot;</span><span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">dr_id</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                                GROUP BY WORKER_NAME&quot;&quot;&quot;</span>
+                        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement1</span><span class="p">)</span>
+                        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="p">:</span>
+                                <span class="n">dr_a_name</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+                        <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">dr_a_name</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+                                <span class="n">dr_name</span> <span class="o">=</span> <span class="n">name</span>
+
+                        <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;DOCTOR_ID = &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">dr_id</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER),&quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                                DOCTOR_NAME = &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&#39;&quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">dr_name</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;&#39; AS VARCHAR) &quot;&quot;&quot;</span>
+
+
+                <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;validity&#39;</span><span class="p">):</span>
+                        <span class="k">if</span> <span class="n">flag</span> <span class="o">==</span><span class="bp">False</span><span class="p">:</span>
+                                <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,&quot;&quot;&quot;</span>
+                        <span class="k">else</span><span class="p">:</span>
+                                <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;SET &quot;&quot;&quot;</span>
+                        <span class="n">flag</span> <span class="o">=</span> <span class="bp">False</span>
+                        <span class="n">validity</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;validity&#39;</span><span class="p">])</span>
+                        <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;VALIDATION = &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">validity</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span>
+
+                <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;WHERE ID = &quot;&quot;&quot;</span><span class="o">+</span><span class="s2">&quot;CAST(&#39;&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">pid</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;&#39;AS INTEGER)&quot;&quot;&quot;</span>
+                <span class="k">if</span> <span class="n">flag</span><span class="p">:</span>
+                        <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+                        <span class="k">return</span> <span class="n">prescription_page</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+                        <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+                        <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+                        <span class="k">return</span> <span class="n">prescription_page</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+
+                <span class="k">try</span><span class="p">:</span>
+                <span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+                <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+                <span class="n">h_a_name</span> <span class="o">=</span><span class="p">[]</span>
+                <span class="n">dr_a_name</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="n">p_a_name</span> <span class="o">=</span> <span class="p">[]</span>
+
+                <span class="n">h_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;h_id&#39;</span><span class="p">])</span>
+                <span class="n">dr_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;dr_id&#39;</span><span class="p">])</span>
+                <span class="n">date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">date</span><span class="p">()</span>
+                <span class="n">valid</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;validity&#39;</span><span class="p">]</span>
+                <span class="k">if</span> <span class="n">valid</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                        <span class="n">valid</span> <span class="o">=</span> <span class="mi">3</span>
+
+
+                <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT HOSPITAL_NAME FROM HOSPITAL</span>
+<span class="s2">                WHERE HOSPITAL_ID=&quot;&quot;&quot;</span><span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">h_id</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                GROUP BY HOSPITAL_NAME&quot;&quot;&quot;</span>
+                <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="p">:</span>
+                        <span class="n">h_a_name</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">h_a_name</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+                        <span class="n">h_name</span> <span class="o">=</span> <span class="n">name</span>
+
+                <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT WORKER_NAME FROM HOSPITAL_PERSONNEL</span>
+<span class="s2">                WHERE PERSONNEL_ID=&quot;&quot;&quot;</span><span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">dr_id</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                GROUP BY WORKER_NAME&quot;&quot;&quot;</span>
+                <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="p">:</span>
+                        <span class="n">dr_a_name</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">dr_a_name</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+                        <span class="n">dr_name</span> <span class="o">=</span> <span class="n">name</span>
+
+                <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT NAME FROM PATIENTS</span>
+<span class="s2">                WHERE ID = &quot;&quot;&quot;</span><span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                GROUP BY NAME&quot;&quot;&quot;</span>
+                <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="p">:</span>
+                        <span class="n">p_a_name</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">p_a_name</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+                        <span class="n">p_name</span> <span class="o">=</span> <span class="n">name</span>
+
+                <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;INSERT INTO PRESCRIPTION (HOSPITAL_ID,DOCTOR_ID, PATIENT_ID, HOSPITAL_NAME, DOCTOR_NAME, PATIENT_NAME ,PRESCRIPTION_DATE,VALIDATION) VALUES (</span>
+<span class="s2">                        &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">h_id</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,</span>
+<span class="s2">                        &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">dr_id</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,</span>
+<span class="s2">                        &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,</span>
+<span class="s2">                        &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&#39;&quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">h_name</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;&#39; AS VARCHAR) &quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,</span>
+<span class="s2">                        &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&#39;&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">dr_name</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;&#39; AS VARCHAR)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,</span>
+<span class="s2">                        &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&#39;&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">p_name</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;&#39; AS VARCHAR)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,</span>
+<span class="s2">                        &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&#39;&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">date</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; &#39;AS DATE)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,</span>
+<span class="s2">                        &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">valid</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                );</span>
+<span class="s2">                &quot;&quot;&quot;</span>
+
+                <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+                <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="k">except</span> <span class="n">db</span><span class="o">.</span><span class="n">DatabaseError</span><span class="p">:</span>
+                <span class="n">connection</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
+                <span class="n">flash</span><span class="p">(</span><span class="s1">&#39;Something Went Wrong&#39;</span><span class="p">,</span> <span class="s1">&#39;danger&#39;</span><span class="p">)</span>
+        <span class="k">finally</span><span class="p">:</span>
+                <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">prescription_page</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This function updates a prescription from Prescription table. When the method is ‘GET’, it returns html of editing page. When method is ‘POST’, it generates an sql statement for updating table and it executes statement.</p>
+</div>
+<div class="section" id="deleting-prescription">
+<h3>5. Deleting Prescription<a class="headerlink" href="#deleting-prescription" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s2">&quot;/pres_del/&lt;id&gt;/&lt;pid&gt;/&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">pres_del</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span><span class="n">pid</span><span class="p">):</span>
+        <span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+        <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot; DELETE FROM PRESCRIPTION</span>
+<span class="s2">                WHERE ID=&quot;&quot;&quot;</span><span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="n">pid</span><span class="o">+</span><span class="s2">&quot;AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        &quot;&quot;&quot;</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+        <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">prescription_page</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This function deletes choosen prescription with given prescription id from PRESCRIPTION Table.</p>
+</div>
+</div>
+<div class="section" id="detailed-prescription">
+<h2>Detailed Prescription<a class="headerlink" href="#detailed-prescription" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>1. Table<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">DETAILED_PRESCRIPTION</span><span class="p">(</span>
+        <span class="n">ID</span> <span class="nb">SERIAL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+        <span class="n">PRESCRIPTION_ID</span> <span class="nb">INTEGER</span><span class="p">,</span>
+        <span class="n">DRUG_ID</span> <span class="nb">INTEGER</span><span class="p">,</span>
+        <span class="n">DRUG_NAME</span> <span class="nb">VARCHAR</span><span class="p">,</span>
+        <span class="n">DOSAGE_PER_TAKE</span> <span class="nb">INTEGER</span> <span class="k">DEFAULT</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">TIMES_PER_DAY</span> <span class="nb">INTEGER</span> <span class="k">DEFAULT</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">DURATION</span> <span class="nb">INTEGER</span> <span class="k">DEFAULT</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="n">REGULAR</span> <span class="n">BOOL</span> <span class="k">DEFAULT</span> <span class="k">FALSE</span><span class="p">,</span>
+        <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">PRESCRIPTION_ID</span><span class="p">)</span>
+                <span class="k">REFERENCES</span> <span class="n">PRESCRIPTION</span><span class="p">(</span><span class="n">ID</span><span class="p">)</span>
+                <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span>
+                <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">RESTRICT</span><span class="p">,</span>
+        <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">DRUG_ID</span><span class="p">)</span>
+                <span class="k">REFERENCES</span> <span class="n">DRUGS</span><span class="p">(</span><span class="n">ID</span><span class="p">)</span>
+                <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">SET</span> <span class="k">NULL</span>
+                <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">SET</span> <span class="k">NULL</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>PRESCRIPTION_ID is referencing ID from PRESCRIPTION table. When a prescription got deleted or updated, it will affect Detailed_Prescription Table. Detailed_Prescription with given prescription id will be deleted when a prescription id wanted to be deleted. But when prescription id wanted to be updated, it will be restricted.
+DRUG_ID is referencing ID from DRUGS table. When a drug got deleted or updated, it will affect Detailed_Prescription Table. Detailed_Prescription’s drug id will be set as NULL. Because when a drug got no longer produced or changed, we don’t want detailed_prescription data to change.</p>
+</div>
+<div class="section" id="reading-detailed-prescription-drugs-and-examination">
+<h3>2. Reading Detailed_Prescription(Drugs) and Examination<a class="headerlink" href="#reading-detailed-prescription-drugs-and-examination" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s2">&quot;/Prescription/&lt;id&gt;/&lt;pid&gt;/&quot;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">det_prescription_page</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">pid</span><span class="p">):</span>
+        <span class="n">log_id</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;status&quot;</span><span class="p">)</span>
+        <span class="n">drug</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">examination</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">date</span><span class="p">()</span>
+        <span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+        <span class="n">statement1</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT * FROM DETAILED_PRESCRIPTION</span>
+<span class="s2">                        WHERE PRESCRIPTION_ID=&quot;&quot;&quot;</span><span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="n">pid</span><span class="o">+</span><span class="s2">&quot;AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                        GROUP BY ID</span>
+<span class="s2">                &quot;&quot;&quot;</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement1</span><span class="p">)</span>
+        <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="p">:</span>
+                <span class="n">drug</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+        <span class="n">statement2</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT * FROM EXAMINATION</span>
+<span class="s2">                        WHERE PRESCRIPTION_ID=&quot;&quot;&quot;</span><span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="n">pid</span><span class="o">+</span><span class="s2">&quot;AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                        GROUP BY ID</span>
+<span class="s2">                &quot;&quot;&quot;</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement2</span><span class="p">)</span>
+        <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="p">:</span>
+                <span class="n">examination</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;detail_prescription.html&#39;</span><span class="p">,</span> <span class="n">P_Drugs</span><span class="o">=</span><span class="n">drug</span><span class="p">,</span> <span class="n">P_Examination</span><span class="o">=</span><span class="n">examination</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="nb">id</span><span class="p">,</span> <span class="n">pid</span><span class="o">=</span><span class="n">pid</span><span class="p">,</span> <span class="n">log_id</span> <span class="o">=</span> <span class="n">log_id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This function gets id of prescription and returns the drug and examination detailes of given prescription through html to user.</p>
+</div>
+<div class="section" id="adding-detailed-prescription">
+<h3>3. Adding Detailed_Prescription<a class="headerlink" href="#adding-detailed-prescription" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s2">&quot;/add_drug_pres/&lt;id&gt;/&lt;pid&gt;/&quot;</span><span class="p">,</span><span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">add_drug_pres</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span><span class="n">pid</span><span class="p">):</span>
+        <span class="n">log_id</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;status&quot;</span><span class="p">)</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;GET&#39;</span><span class="p">):</span>
+                <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;add_drug_pres.html&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="nb">id</span><span class="p">,</span><span class="n">pid</span><span class="o">=</span><span class="n">pid</span><span class="p">,</span><span class="n">log_id</span> <span class="o">=</span> <span class="n">log_id</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+                <span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+                <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+                <span class="n">drug_a_name</span> <span class="o">=</span> <span class="p">[]</span>
+
+                <span class="n">drug_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;drug_id&#39;</span><span class="p">])</span>
+
+                <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT NAME FROM DRUGS</span>
+<span class="s2">                WHERE ID=&quot;&quot;&quot;</span><span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">drug_id</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                GROUP BY NAME&quot;&quot;&quot;</span>
+                <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+
+                <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="p">:</span>
+                        <span class="n">drug_a_name</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">drug_a_name</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+                        <span class="n">drug_name</span> <span class="o">=</span> <span class="n">name</span>
+
+                <span class="k">print</span><span class="p">(</span><span class="n">drug_name</span><span class="p">)</span>
+
+                <span class="n">dosage</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;dosage&#39;</span><span class="p">]</span>
+                <span class="k">if</span> <span class="n">dosage</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                        <span class="n">dosage</span> <span class="o">=</span> <span class="mi">1</span>
+
+                <span class="n">times</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;times&#39;</span><span class="p">]</span>
+                <span class="k">if</span> <span class="n">times</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                        <span class="n">times</span> <span class="o">=</span> <span class="mi">1</span>
+
+                <span class="n">duration</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;duration&#39;</span><span class="p">]</span>
+                <span class="k">if</span> <span class="n">duration</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                        <span class="n">duration</span><span class="o">=</span> <span class="mi">3</span>
+
+                <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;regular&#39;</span><span class="p">)</span> <span class="p">:</span>
+                        <span class="n">regular</span> <span class="o">=</span> <span class="bp">True</span>
+                <span class="k">else</span><span class="p">:</span>
+                        <span class="n">regular</span> <span class="o">=</span> <span class="bp">False</span>
+
+                <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;INSERT INTO DETAILED_PRESCRIPTION (PRESCRIPTION_ID,DRUG_ID,DRUG_NAME,DOSAGE_PER_TAKE,TIMES_PER_DAY,DURATION,REGULAR) VALUES (</span>
+<span class="s2">                &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">pid</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,</span>
+<span class="s2">                &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">drug_id</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,</span>
+<span class="s2">                &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&#39;&quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">drug_name</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;&#39; AS VARCHAR) &quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,</span>
+<span class="s2">                &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">dosage</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,</span>
+<span class="s2">                &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">times</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,</span>
+<span class="s2">                &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">duration</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,</span>
+<span class="s2">                &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&#39;&quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">regular</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;&#39; AS BOOL) &quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                );</span>
+<span class="s2">                &quot;&quot;&quot;</span>
+                <span class="k">print</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+                <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+                <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+                <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+                <span class="k">return</span> <span class="n">det_prescription_page</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">pid</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This function insert new detailed_prescription(drug) to detailed_prescription table. When the method is ‘GET’, it returns html of adding page. When the method is ‘POST’, it creates a sql statement for inserting new entry and executes accordingly.</p>
+</div>
+<div class="section" id="editing-detailed-prescription">
+<h3>4. Editing Detailed_Prescription<a class="headerlink" href="#editing-detailed-prescription" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s2">&quot;/edit_drug_pres/&lt;id&gt;/&lt;pid&gt;/&lt;did&gt;/&quot;</span><span class="p">,</span><span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">edit_drug_pres</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span><span class="n">pid</span><span class="p">,</span><span class="n">did</span><span class="p">):</span>
+        <span class="n">log_id</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;status&quot;</span><span class="p">)</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;GET&#39;</span><span class="p">):</span>
+                <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;edit_drug_pres.html&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="nb">id</span><span class="p">,</span><span class="n">pid</span><span class="o">=</span><span class="n">pid</span><span class="p">,</span><span class="n">did</span><span class="o">=</span><span class="n">did</span><span class="p">,</span><span class="n">log_id</span> <span class="o">=</span> <span class="n">log_id</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+                <span class="n">flag</span> <span class="o">=</span> <span class="bp">True</span>
+                <span class="n">drug_a_name</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+                <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+                <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;UPDATE DETAILED_PRESCRIPTION &quot;&quot;&quot;</span>
+
+                <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;drug_id&#39;</span><span class="p">):</span>
+                        <span class="n">flag</span> <span class="o">=</span> <span class="bp">False</span>
+                        <span class="n">drug_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;drug_id&#39;</span><span class="p">])</span>
+                        <span class="n">statement1</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT NAME FROM DRUGS</span>
+<span class="s2">                                WHERE ID=&quot;&quot;&quot;</span><span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">drug_id</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                                GROUP BY NAME&quot;&quot;&quot;</span>
+                        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement1</span><span class="p">)</span>
+                        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="p">:</span>
+                                <span class="n">drug_a_name</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+                        <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">drug_a_name</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+                                <span class="n">drug_name</span> <span class="o">=</span> <span class="n">name</span>
+
+                        <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;SET DRUG_ID = &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">drug_id</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER),&quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                                DRUG_NAME = &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&#39;&quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">drug_name</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;&#39; AS VARCHAR) &quot;&quot;&quot;</span>
+
+                <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;dosage&#39;</span><span class="p">):</span>
+                        <span class="k">if</span> <span class="n">flag</span> <span class="o">==</span><span class="bp">False</span><span class="p">:</span>
+                                <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,&quot;&quot;&quot;</span>
+                        <span class="k">else</span><span class="p">:</span>
+                                <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;SET &quot;&quot;&quot;</span>
+                        <span class="n">dosage</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;dosage&#39;</span><span class="p">])</span>
+                        <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot; DOSAGE_PER_TAKE = &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">dosage</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span>
+
+                <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;times&#39;</span><span class="p">):</span>
+                        <span class="k">if</span> <span class="n">flag</span> <span class="o">==</span><span class="bp">False</span><span class="p">:</span>
+                                <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,&quot;&quot;&quot;</span>
+                        <span class="k">else</span><span class="p">:</span>
+                                <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;SET &quot;&quot;&quot;</span>
+                        <span class="n">flag</span> <span class="o">=</span> <span class="bp">False</span>
+                        <span class="n">times</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;times&#39;</span><span class="p">]</span>
+                        <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;TIMES_PER_DAY = &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">times</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span>
+
+                <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;duration&#39;</span><span class="p">):</span>
+                        <span class="k">if</span> <span class="n">flag</span> <span class="o">==</span><span class="bp">False</span><span class="p">:</span>
+                                <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,&quot;&quot;&quot;</span>
+                        <span class="k">else</span><span class="p">:</span>
+                                <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;SET &quot;&quot;&quot;</span>
+                        <span class="n">flag</span> <span class="o">=</span> <span class="bp">False</span>
+                        <span class="n">duration</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;duration&#39;</span><span class="p">])</span>
+                        <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;DURATION = &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">duration</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span>
+
+                <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;regular&#39;</span><span class="p">):</span>
+                        <span class="k">if</span> <span class="n">flag</span> <span class="o">==</span><span class="bp">False</span><span class="p">:</span>
+                                <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,&quot;&quot;&quot;</span>
+                        <span class="k">else</span><span class="p">:</span>
+                                <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;SET &quot;&quot;&quot;</span>
+                        <span class="n">flag</span> <span class="o">=</span> <span class="bp">False</span>
+                        <span class="n">regular</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;regular&#39;</span><span class="p">]</span>
+                        <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;REGULAR = &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">regular</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS BOOL)&quot;&quot;&quot;</span>
+
+                <span class="n">statement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;WHERE ID = &quot;&quot;&quot;</span><span class="o">+</span><span class="s2">&quot;CAST(&#39;&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">did</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;&#39;AS INTEGER)&quot;&quot;&quot;</span>
+                <span class="k">if</span> <span class="n">flag</span><span class="p">:</span>
+                        <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+                        <span class="k">return</span> <span class="n">det_prescription_page</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">pid</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+                        <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+                        <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+                        <span class="k">return</span> <span class="n">det_prescription_page</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">pid</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This function updates a detail_prescription from Detailed_Prescription table. When the method is ‘GET’, it returns html of editing page. When method is ‘POST’, it generates an sql statement for updating table and it executes statement.</p>
+</div>
+<div class="section" id="deleting-detailed-prescription">
+<h3>5. Deleting Detailed_Prescription<a class="headerlink" href="#deleting-detailed-prescription" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s2">&quot;/drug_pres_del/&lt;id&gt;/&lt;pid&gt;/&lt;did&gt;&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">drug_pres_del</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span><span class="n">pid</span><span class="p">,</span><span class="n">did</span><span class="p">):</span>
+        <span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+        <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot; DELETE FROM DETAILED_PRESCRIPTION</span>
+<span class="s2">                WHERE ID=&quot;&quot;&quot;</span><span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="n">did</span><span class="o">+</span><span class="s2">&quot;AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        &quot;&quot;&quot;</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+        <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">det_prescription_page</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">pid</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This function deletes choosen detailed_prescription with given id from Detailed_Prescription Table.</p>
+</div>
+</div>
+<div class="section" id="examination">
+<h2>Examination<a class="headerlink" href="#examination" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h3>1. Table<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">EXAMINATION</span><span class="p">(</span>
+        <span class="n">ID</span> <span class="nb">SERIAL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+        <span class="n">PRESCRIPTION_ID</span> <span class="nb">INTEGER</span><span class="p">,</span>
+        <span class="k">TYPE</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+        <span class="n">DURATION</span> <span class="nb">INTEGER</span><span class="p">,</span>
+        <span class="n">PLACE</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">30</span><span class="p">),</span>
+        <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">PRESCRIPTION_ID</span><span class="p">)</span>
+                <span class="k">REFERENCES</span> <span class="n">PRESCRIPTION</span><span class="p">(</span><span class="n">ID</span><span class="p">)</span>
+                <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span>
+                <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">RESTRICT</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>PRESCRIPTION_ID is referencing ID from PRESCRIPTION table. When a prescription got deleted or updated, it will affect Examination Table. Examination with given prescription id will be deleted when a prescription id wanted to be deleted. But when prescription id wanted to be updated, it will be restricted.</p>
+</div>
+<div class="section" id="adding-examination">
+<h3>2. Adding Examination<a class="headerlink" href="#adding-examination" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s2">&quot;/add_exam_pres/&lt;id&gt;/&lt;pid&gt;/&quot;</span><span class="p">,</span><span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">add_exam_pres</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span><span class="n">pid</span><span class="p">):</span>
+        <span class="n">log_id</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;status&quot;</span><span class="p">)</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;GET&#39;</span><span class="p">):</span>
+                <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;add_exam_pres.html&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="nb">id</span><span class="p">,</span><span class="n">pid</span><span class="o">=</span><span class="n">pid</span><span class="p">,</span><span class="n">log_id</span> <span class="o">=</span> <span class="n">log_id</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+                <span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+                <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+                <span class="n">exam_type</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;exam_type&#39;</span><span class="p">]</span>
+
+                <span class="n">duration</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;duration&#39;</span><span class="p">]</span>
+
+                <span class="n">place</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;place&#39;</span><span class="p">]</span>
+
+
+                <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;INSERT INTO EXAMINATION (PRESCRIPTION_ID,TYPE,DURATION,PLACE) VALUES (</span>
+<span class="s2">                &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">pid</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,</span>
+<span class="s2">                &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&#39;&quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">exam_type</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;&#39; AS VARCHAR) &quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,</span>
+<span class="s2">                &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">duration</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;,</span>
+<span class="s2">                &quot;&quot;&quot;</span> <span class="o">+</span><span class="s2">&quot;CAST(&#39;&quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">place</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;&#39; AS VARCHAR) &quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                );</span>
+<span class="s2">                &quot;&quot;&quot;</span>
+                <span class="k">print</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+                <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+                <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+                <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+                <span class="k">return</span> <span class="n">det_prescription_page</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">pid</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This function insert new examination to examination table. When the method is ‘GET’, it returns html of adding page. When the method is ‘POST’, it creates a sql statement for inserting new entry and executes accordingly.</p>
+</div>
+<div class="section" id="deleting-examination">
+<h3>3. Deleting Examination<a class="headerlink" href="#deleting-examination" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s2">&quot;/exam_pres_del/&lt;id&gt;/&lt;pid&gt;/&lt;did&gt;&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">exam_pres_del</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span><span class="n">pid</span><span class="p">,</span><span class="n">did</span><span class="p">):</span>
+        <span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+        <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot; DELETE FROM EXAMINATION</span>
+<span class="s2">                WHERE ID=&quot;&quot;&quot;</span><span class="o">+</span><span class="s2">&quot;CAST(&quot;</span><span class="o">+</span><span class="n">did</span><span class="o">+</span><span class="s2">&quot;AS INTEGER)&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        &quot;&quot;&quot;</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+        <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">det_prescription_page</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">pid</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This function deletes choosen examination with given id from Examination Table.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ecem.html" class="btn btn-neutral float-right" title="Parts Implemented by Ayser Ecem Konu" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="goktug.html" class="btn btn-neutral" title="Parts Implemented by Göktuğ Başaran" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, ITUCSDB1821
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

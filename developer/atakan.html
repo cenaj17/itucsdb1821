@@ -1,0 +1,405 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Parts Implemented by Atakan Göl &mdash; ITUCSDB1821  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Parts Implemented by Ayser Ecem Konu" href="ecem.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ITUCSDB1821
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../user/index.html">User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="goktug.html">Parts Implemented by Göktuğ Başaran</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ecenur.html">Parts Implemented by Ece Nur Şen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ecem.html">Parts Implemented by Ayser Ecem Konu</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Parts Implemented by Atakan Göl</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pharmacy-personel">Pharmacy Personel</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#creation">1. Creation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reading">2. Reading</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#updating">3. Updating</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pharmacies">Pharmacies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">1. Creation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">2. Reading</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pharmaceutical-warehouse">Pharmaceutical Warehouse</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">1. Creation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">2. Reading</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#intermediate-tables-inventory-tables">Intermediate Tables - Inventory Tables</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id5">1. Creation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">2. Reading</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#updating-and-deleting">3. Updating and Deleting</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ITUCSDB1821</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Developer Guide</a> &raquo;</li>
+        
+      <li>Parts Implemented by Atakan Göl</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/developer/atakan.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="parts-implemented-by-atakan-gol">
+<h1>Parts Implemented by Atakan Göl<a class="headerlink" href="#parts-implemented-by-atakan-gol" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">All table creations exist in db_init.py file.</p>
+</div>
+<div class="section" id="pharmacy-personel">
+<h2>Pharmacy Personel<a class="headerlink" href="#pharmacy-personel" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="creation">
+<h3>1. Creation<a class="headerlink" href="#creation" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">pharmacy_personel</span> <span class="p">(</span>
+    <span class="n">tckn</span> <span class="nb">INTEGER</span><span class="p">,</span>
+    <span class="n">id</span> <span class="nb">SERIAL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+    <span class="n">name</span> <span class="nb">VARCHAR</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="n">tel_num</span> <span class="nb">INTEGER</span><span class="p">,</span>
+    <span class="n">job</span> <span class="n">BOOL</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="n">school</span> <span class="nb">VARCHAR</span><span class="p">,</span>
+    <span class="n">graduation_year</span> <span class="nb">INTEGER</span><span class="p">,</span>
+    <span class="n">years_worked</span> <span class="nb">INTEGER</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="reading">
+<h3>2. Reading<a class="headerlink" href="#reading" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot; SELECT name,tel_num FROM pharmacy_personel WHERE (id ={} or id={})&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pharmacist_id</span><span class="p">,</span><span class="n">helper_id</span><span class="p">)</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<span class="n">employees</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Variables pharmacist_id and helper_id are already known.</p>
+</div>
+<div class="section" id="updating">
+<h3>3. Updating<a class="headerlink" href="#updating" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;UPDATE public.pharmacy_personel SET tel_num={}, years_worked={}        WHERE id = {};&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">tel</span><span class="p">,</span><span class="n">years</span><span class="p">,</span><span class="n">per_id</span><span class="p">)</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>In this example the personel which has it’s id as pers_id, is eing updated. It’s telephone number and years they worked at this pharmacy is changed.</p>
+</div>
+</div>
+<div class="section" id="pharmacies">
+<h2>Pharmacies<a class="headerlink" href="#pharmacies" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>1. Creation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">pharmacies</span> <span class="p">(</span>
+    <span class="n">id</span> <span class="nb">SERIAL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+    <span class="n">name</span> <span class="nb">VARCHAR</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="k">location</span> <span class="nb">VARCHAR</span><span class="p">,</span>
+    <span class="n">pharmacist</span> <span class="nb">INTEGER</span> <span class="k">REFERENCES</span>  <span class="n">pharmacy_personel</span><span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">SET</span> <span class="k">NULL</span> <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span><span class="p">,</span>
+    <span class="n">helper</span> <span class="nb">INTEGER</span> <span class="k">REFERENCES</span>  <span class="n">pharmacy_personel</span><span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">SET</span> <span class="k">NULL</span> <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span><span class="p">,</span>
+    <span class="n">next_night_shift</span> <span class="nb">DATE</span><span class="p">,</span>
+    <span class="n">tel_num</span> <span class="nb">INTEGER</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>helper and pharmacist references pharmacy_personel table. If an personel is deleted
+they are set to null, if an personel is updated, they are updated, as well.</p>
+</div>
+<div class="section" id="id2">
+<h3>2. Reading<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">date</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">date</span><span class="p">())</span>
+<span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT name,location,tel_num FROM pharmacies WHERE next_night_shift = &#39;{}&#39; &quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">date</span><span class="p">)</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">commit</span>
+<span class="n">on_duty</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>In this example a list of all the pharmacies which’s next night shift is today.</p>
+</div>
+</div>
+<div class="section" id="pharmaceutical-warehouse">
+<h2>Pharmaceutical Warehouse<a class="headerlink" href="#pharmaceutical-warehouse" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>1. Creation<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">pharmaceutical_warehouse</span> <span class="p">(</span>
+    <span class="n">id</span> <span class="nb">SERIAL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+    <span class="n">name</span> <span class="nb">VARCHAR</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="n">tel_num</span> <span class="nb">INTEGER</span><span class="p">,</span>
+    <span class="n">years_worked</span> <span class="nb">INTEGER</span><span class="p">,</span>
+    <span class="n">adress</span> <span class="nb">VARCHAR</span><span class="p">,</span>
+    <span class="n">region</span> <span class="nb">VARCHAR</span><span class="p">,</span>
+    <span class="n">carriers</span> <span class="nb">INTEGER</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>2. Reading<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT name,location,next_night_shift,tel_num,pharmacist,helper FROM pharmacies</span>
+<span class="s2">                WHERE id = &#39;{}&#39; &quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pware_id</span><span class="p">)</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<span class="n">phar_detail</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>In this example we select the only pharmaceutical warehouse which has the same id as pware_id which was known.</p>
+</div>
+</div>
+<div class="section" id="intermediate-tables-inventory-tables">
+<h2>Intermediate Tables - Inventory Tables<a class="headerlink" href="#intermediate-tables-inventory-tables" title="Permalink to this headline">¶</a></h2>
+<p>There are two tables used for the same purpose, Pharmacy Inventory and Pharmaceutical Warehouse Inventory tables.</p>
+<div class="section" id="id5">
+<h3>1. Creation<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">pharmacy_inventory</span> <span class="p">(</span>
+    <span class="n">drugs_id</span> <span class="nb">INTEGER</span> <span class="k">REFERENCES</span> <span class="n">DRUGS</span><span class="p">(</span><span class="n">ID</span><span class="p">)</span> <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span> <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span><span class="p">,</span>
+    <span class="n">pharmacy_id</span> <span class="nb">INTEGER</span> <span class="k">REFERENCES</span> <span class="n">pharmacies</span><span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span> <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span><span class="p">,</span>
+    <span class="nb">number</span> <span class="nb">INTEGER</span> <span class="k">DEFAULT</span> <span class="mi">0</span>
+<span class="p">);</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">warehouse_inventory</span> <span class="p">(</span>
+    <span class="n">drugs_id</span> <span class="nb">INTEGER</span> <span class="k">REFERENCES</span> <span class="n">DRUGS</span><span class="p">(</span><span class="n">ID</span><span class="p">)</span> <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span> <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span><span class="p">,</span>
+    <span class="n">warehouse_id</span> <span class="nb">INTEGER</span> <span class="k">REFERENCES</span> <span class="n">pharmaceutical_warehouse</span><span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span> <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span><span class="p">,</span>
+    <span class="nb">number</span> <span class="nb">INTEGER</span> <span class="k">DEFAULT</span> <span class="mi">0</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>These tables refence both drugs table and pharmacies/pharmaceutical_warehouse tables.
+They are deleted when either drugs or pharmacies/pharmaceutical_warehouse tables get deleted.
+And updated if they are updated.</p>
+</div>
+<div class="section" id="id6">
+<h3>2. Reading<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;select NAME , number, drugs_id from DRUGS,pharmacy_inventory where pharmacy_inventory.pharmacy_id = {} and drugs_id = ID&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<span class="n">inventory</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This code returns all the inventory of the specified pharmacy.</p>
+</div>
+<div class="section" id="updating-and-deleting">
+<h3>3. Updating and Deleting<a class="headerlink" href="#updating-and-deleting" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">new_value</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;DELETE FROM public.pharmacy_inventory WHERE drugs_id={} and pharmacy_id = {};&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">inventory</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="nb">id</span><span class="p">)</span>
+    <span class="k">del</span> <span class="n">i</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;UPDATE public.pharmacy_inventory SET number={} WHERE drugs_id={} and pharmacy_id = {};&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">new_value</span><span class="p">,</span> <span class="n">inventory</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="nb">id</span><span class="p">)</span>
+
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This code evaluates the new value of a specific drug of a specific pharmacy and either updates or deletes that entry.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="ecem.html" class="btn btn-neutral" title="Parts Implemented by Ayser Ecem Konu" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, ITUCSDB1821
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
