@@ -148,7 +148,7 @@ There are no foreign keys, this table is just an entity by itself.
 
 In order to read from drug companies table, we write a simple SELECT query.
 
-..code-block:: python
+.. code-block:: python
 
     companies = []
     connection = db.connect(url)
@@ -225,10 +225,6 @@ an index table where every id corresponds to a drug type such as tablets, syrups
 
 .. code-block:: sql
 	
-	CREATE TABLE IF NOT EXISTS DRUG_TYPE(
-        ID SERIAL PRIMARY KEY,
-        NAME VARCHAR NOT NULL
-    );
     CREATE TABLE IF NOT EXISTS DRUGS(
         ID SERIAL PRIMARY KEY,
         NAME VARCHAR UNIQUE NOT NULL,
@@ -255,7 +251,7 @@ an index table where every id corresponds to a drug type such as tablets, syrups
 
 In order to read from drug companies table, we write a simple SELECT query joined with drug_companies and drug_type.
 
-..code-block:: python
+.. code-block:: python
 
     drugs = []
     connection = db.connect(url)
@@ -360,8 +356,55 @@ However, for a better user experience, for feedback, this structure is implement
 In order to delete a drug, we need to write a simple DELETE query.
 
 .. code-block:: python
-
+	name = 'Foo'
 	statement = "DELETE FROM DRUGS WHERE NAME = \'{}\'".format(name)
 	cursor.execute(statement)
 	connection.commit()
 	cursor.close()
+
+********************
+Extra Tables
+********************
+
+1. Drug Type
+~~~~~~~~~~~~~~~~~~
+
+Drug type table is just 
+an index table where every id corresponds to a drug type such as tablets, syrups etc.
+
+.. code-block:: sql
+
+	CREATE TABLE IF NOT EXISTS DRUG_TYPE(
+        ID SERIAL PRIMARY KEY,
+        NAME VARCHAR NOT NULL
+    );
+	
+2. Allergies
+~~~~~~~~~~~~~~~~~~
+
+Allergies table is created to have a list of allergies.
+
+.. code-block:: sql
+
+	CREATE TABLE IF NOT EXISTS ALLERGIES (
+        ID SERIAL PRIMARY KEY,
+        NAME VARCHAR NOT NULL
+    );
+
+3. Allergies Index
+~~~~~~~~~~~~~~~~~~~~
+
+Allergies index is the table where allergies are assigned to patients. This table is not visible anywhere on front-end, just yet.
+
+.. code-block:: sql
+
+	CREATE TABLE IF NOT EXISTS ALLERGIE_INDEX (
+        PATIENT_ID SERIAL PRIMARY KEY,
+        ALLERGIES_ID INTEGER NOT NULL,
+        CONSTRAINT c1 FOREIGN KEY (PATIENT_ID) REFERENCES PATIENTS(ID)
+            ON DELETE CASCADE
+            ON UPDATE CASCADE,
+        CONSTRAINT c2 FOREIGN KEY (ALLERGIES_ID) REFERENCES ALLERGIES(ID)
+            ON DELETE CASCADE
+            ON UPDATE CASCADE
+    )
