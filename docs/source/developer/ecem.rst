@@ -112,7 +112,6 @@ Search validations are checked inside forms executable, by using form validators
         publicHos=RadioField('Public Hospital? ',choices=[('True','Public'),('False','Private'),('*','Both')],validators=[DataRequired()])
         submit=SubmitField('Search')
 
-
 3. Adding
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -153,7 +152,9 @@ Adding a new hospital is maintained by the following Python function.INSERT quer
     app.add_url_rule('/hospital/add_hospital',view_func=add_hospital, methods=['GET','POST'])
 
 Validating data is handled by form validators of wtforms, in forms executable.
+
 .. code-block:: python
+
 class HospitalAddForm(FlaskForm):
     hospital_name=StringField('Hospital Name',validators=[DataRequired()])
     is_public=RadioField('Public Hospital?',choices=[('True','Public'),('False','Private')],validators=[DataRequired()])
