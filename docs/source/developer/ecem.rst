@@ -151,18 +151,18 @@ Adding a new hospital is maintained by the following Python function.INSERT quer
         return render_template('hospital_add_page.html',hospital=hospitals,form=hosAddForm )
     app.add_url_rule('/hospital/add_hospital',view_func=add_hospital, methods=['GET','POST'])
 
-Validating data is handled by form validators of wtforms, in forms executable.
+Validating data is handled by form validators of wtforms, in forms executable
 
 .. code-block:: python
 
-class HospitalAddForm(FlaskForm):
-    hospital_name=StringField('Hospital Name',validators=[DataRequired()])
-    is_public=RadioField('Public Hospital?',choices=[('True','Public'),('False','Private')],validators=[DataRequired()])
-    location=StringField('Location')
-    administrator=StringField('Administrator Name')
-    telephone_number=StringField('Phone Number, 11 digit required')#,validators=[Length(min=11,max=11)])
-    ambulance_count= StringField('Number of ambulances')
-    submit=SubmitField('Insert')
+    class HospitalAddForm(FlaskForm):
+        hospital_name=StringField('Hospital Name',validators=[DataRequired()])
+        is_public=RadioField('Public Hospital?',choices=[('True','Public'),('False','Private')],validators=[DataRequired()])
+        location=StringField('Location')
+        administrator=StringField('Administrator Name')
+        telephone_number=StringField('Phone Number, 11 digit required')#,validators=[Length(min=11,max=11)])
+        ambulance_count= StringField('Number of ambulances')
+        submit=SubmitField('Insert')
 
 
 
