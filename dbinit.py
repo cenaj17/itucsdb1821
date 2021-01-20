@@ -1,305 +1,188 @@
-import os
-import sys
-
 import psycopg2 as dbapi2
+import sys
+import json
+import os
 
+path_url  = "dbname='db' user='postgres' host='localhost' password='1234'"
 
-
-INIT_STATEMENTS = [
-    """CREATE TABLE IF NOT EXISTS USERS (
-        ID VARCHAR NOT NULL,
-        PASSWORD VARCHAR NOT NULL,
-        STATUS INTEGER NOT NULL,
-        CONSTRAINT pk PRIMARY KEY (ID,PASSWORD)
-    )""",
-    """
-    CREATE TABLE IF NOT EXISTS INSURANCE(
-        INSURANCE_ID SERIAL PRIMARY KEY,
-        INSURANCE_NAME VARCHAR,
-        INSURANCE_TYPE VARCHAR
-    )
-    """,
-
-    #GOKTUG
-    #False == Male
-    """CREATE TABLE IF NOT EXISTS PATIENTS (
-        ID SERIAL PRIMARY KEY,
-        NAME VARCHAR(50) NOT NULL,
-        AGE INTEGER,
-        SEX BOOL DEFAULT FALSE, 
-        TCKN VARCHAR NOT NULL,
-        PHONE VARCHAR,
-        CUR_COMPLAINT VARCHAR NOT NULL,
-        INSURANCE INTEGER REFERENCES INSURANCE(INSURANCE_ID) ON DELETE SET NULL ON UPDATE CASCADE
-    )
-    """,
-    """CREATE TABLE IF NOT EXISTS ALLERGIES (
-        ID SERIAL PRIMARY KEY,
-        NAME VARCHAR NOT NULL
-    )""",
-    """CREATE TABLE IF NOT EXISTS ALLERGIE_INDEX (
-        PATIENT_ID SERIAL PRIMARY KEY,
-        ALLERGIES_ID INTEGER NOT NULL,
-        CONSTRAINT c1 FOREIGN KEY (PATIENT_ID) REFERENCES PATIENTS(ID)
-            ON DELETE CASCADE
-            ON UPDATE CASCADE,
-        CONSTRAINT c2 FOREIGN KEY (ALLERGIES_ID) REFERENCES ALLERGIES(ID)
-            ON DELETE CASCADE
-            ON UPDATE CASCADE
-    )""",
-
-     """CREATE TABLE IF NOT EXISTS DRUG_COMPANIES (
-        ID SERIAL PRIMARY KEY,
-        NAME VARCHAR NOT NULL,
-        FOUNDATION_YEAR INTEGER NOT NULL,
-        FOUNDER VARCHAR NOT NULL,
-        COUNTRY VARCHAR NOT NULL,
-        WORKER_NUM INTEGER NOT NULL,
-        FACTORY_NUM INTEGER NOT NULL
-    )""",
-    """CREATE TABLE IF NOT EXISTS DRUG_TYPE(
-        ID SERIAL PRIMARY KEY,
-        NAME VARCHAR NOT NULL
-    )""",
-    """CREATE TABLE IF NOT EXISTS DRUGS(
-        ID SERIAL PRIMARY KEY,
-        NAME VARCHAR UNIQUE NOT NULL,
-        COMPANY_ID INTEGER,
-        SIZE INTEGER NOT NULL,
-        SHELF_LIFE INTEGER NOT NULL,
-        PRICE VARCHAR NOT NULL,
-        TYPE INTEGER,
-        CONSTRAINT c1 FOREIGN KEY (TYPE) REFERENCES DRUG_TYPE(ID) 
-            ON DELETE SET NULL
-            ON UPDATE CASCADE,
-        CONSTRAINT c2 FOREIGN KEY (COMPANY_ID) REFERENCES DRUG_COMPANIES(ID)
-            ON DELETE SET NULL
-            ON UPDATE CASCADE
-    )""",
-    # /GOKTUG
-
-    #Ecem
-
-     """
-    CREATE TABLE IF NOT EXISTS HOSPITAL(
-        HOSPITAL_ID SERIAL PRIMARY KEY,
-        HOSPITAL_NAME VARCHAR,
-        IS_PUBLIC BOOL DEFAULT TRUE,
-        LOCATION VARCHAR NOT NULL,
-        ADMINISTRATOR VARCHAR,
-        TELEPHONE_NUMBER NUMERIC(11),
-        AMBULANCE_COUNT INTEGER
-    )
-    """,
-
-        """CREATE TABLE IF NOT EXISTS HOSPITAL_PERSONNEL (
-        PERSONNEL_ID SERIAL PRIMARY KEY,
-        WORKER_NAME VARCHAR,
-        JOB_TITLE VARCHAR NOT NULL,
-        JOB_EXPERIENCE INTEGER,
-        WORK_DAYS INTEGER,
-        PHONE_NUM VARCHAR,
-        WORKING_FIELD VARCHAR,
-        HOSPITAL_WORKED INTEGER NOT NULL,
-        TCKN VARCHAR,
-        FOREIGN KEY (HOSPITAL_WORKED) REFERENCES HOSPITAL(HOSPITAL_ID) ON DELETE CASCADE ON UPDATE CASCADE
-    )""",
-
-
-        """CREATE TABLE IF NOT EXISTS DAY_TABLE (
-        GENERATED_KEY SERIAL PRIMARY KEY,
-        PERSONNEL_ID INTEGER,
-        SHIFT_BEGIN_DATE DATE,
-        SHIFT_REPEAT_INTERVAL INTERVAL,
-        SHIFT_HOURS INTERVAL,
-        DAYSHIFT BOOL,
-        EMERGENCY_AREA_ASSIGNED VARCHAR, CHECK(EMERGENCY_AREA_ASSIGNED IN('Green','Yellow','Red')),
-        FOREIGN KEY (PERSONNEL_ID) REFERENCES HOSPITAL_PERSONNEL ON DELETE CASCADE ON UPDATE CASCADE
-    )""",
-        #emergency area assigned -> red yellow green
-
-
-    """
-    CREATE TABLE IF NOT EXISTS COVERANCE(
-        INSURANCE INTEGER,
-        HOSPITAL_COVERED INTEGER,
-        SURGERY_COVERED BOOL,
-        MAX_COST_DRUG INTEGER DEFAULT 0,
-        FOREIGN KEY(HOSPITAL_COVERED) REFERENCES HOSPITAL ON DELETE CASCADE ON UPDATE CASCADE,
-        FOREIGN KEY(INSURANCE) REFERENCES INSURANCE(INSURANCE_ID)  ON DELETE CASCADE ON UPDATE CASCADE
-    )
-    """,
-
-    #covered_hospitals -> all, public hospitals only, special privates included, none.
-
-    # ATAKAN
-    # job = 0 = pharmacist
-    """
-    CREATE TABLE IF NOT EXISTS pharmacy_personel (
-        tckn INTEGER,
-        id SERIAL PRIMARY KEY,
-        name VARCHAR NOT NULL,
-        tel_num INTEGER,
-        job BOOL NOT NULL,
-        school VARCHAR,
-        graduation_year INTEGER,
-        years_worked INTEGER
-    )
-    """,
-    """CREATE TABLE IF NOT EXISTS pharmacies (
-        id SERIAL PRIMARY KEY,
-        name VARCHAR NOT NULL,
-        location VARCHAR,
-        pharmacist INTEGER REFERENCES  pharmacy_personel(id) ON DELETE SET NULL ON UPDATE CASCADE,
-        helper INTEGER REFERENCES  pharmacy_personel(id) ON DELETE SET NULL ON UPDATE CASCADE,
-        next_night_shift DATE,
-        tel_num INTEGER
-    )""",
-    """
-    CREATE TABLE IF NOT EXISTS pharmaceutical_warehouse (
-        id SERIAL PRIMARY KEY,
-        name VARCHAR NOT NULL,
-        tel_num INTEGER,
-        years_worked INTEGER,
-        adress VARCHAR,
-        region VARCHAR,
-        carriers INTEGER
-    )""",
-    """
-    CREATE TABLE IF NOT EXISTS pharmacy_inventory (
-        drugs_id INTEGER REFERENCES DRUGS(ID) ON DELETE CASCADE ON UPDATE CASCADE,
-        pharmacy_id INTEGER REFERENCES pharmacies(id) ON DELETE CASCADE ON UPDATE CASCADE,
-        number INTEGER DEFAULT 0
-    )""",
-    """
-    CREATE TABLE IF NOT EXISTS warehouse_inventory (
-        drugs_id INTEGER REFERENCES DRUGS(ID) ON DELETE CASCADE ON UPDATE CASCADE,
-        warehouse_id INTEGER REFERENCES pharmaceutical_warehouse(id) ON DELETE CASCADE ON UPDATE CASCADE,
-        number INTEGER DEFAULT 0
-    )
-    """,
-    # $Ece Nur$
-
-    """CREATE TABLE IF NOT EXISTS POLICLINICS (
-        ID SERIAL PRIMARY KEY,
-        HOSPITAL_ID INTEGER,
-        RECEPTIONIST_ID INTEGER,
-        NAME VARCHAR(50) NOT NULL,
-        NUMBER_OF_EXAMINATION_ROOMS INTEGER DEFAULT 0,
-        NUMBER_OF_OPERATION_ROOMS INTEGER DEFAULT 0,
-        PRIVATE BOOL DEFAULT FALSE,
-        IS_PEDIATRICS BOOL DEFAULT FALSE,
-        FOREIGN KEY (HOSPITAL_ID) 
-            REFERENCES HOSPITAL(HOSPITAL_ID)
-            ON DELETE CASCADE
-            ON UPDATE CASCADE,
-        FOREIGN KEY (RECEPTIONIST_ID) 
-            REFERENCES HOSPITAL_PERSONNEL(PERSONNEL_ID)
-            ON DELETE CASCADE
-            ON UPDATE CASCADE
-    )
-    """,
-
-    """CREATE TABLE IF NOT EXISTS DETAILED_POLICLINICS (
-        ID  SERIAL PRIMARY KEY,
-        HOSPITAL_ID INTEGER,
-        POLICLINIC_ID INTEGER,
-        DOCTOR_ID INTEGER,
-        WORKING_HOURS VARCHAR(50),
-        RESULT_HOURS VARCHAR(50),
-        FOREIGN KEY (POLICLINIC_ID) 
-            REFERENCES POLICLINICS(ID)
-            ON DELETE CASCADE
-            ON UPDATE CASCADE,
-        FOREIGN KEY (DOCTOR_ID) 
-            REFERENCES HOSPITAL_PERSONNEL(PERSONNEL_ID)
-            ON DELETE CASCADE
-            ON UPDATE CASCADE,
-        FOREIGN KEY (HOSPITAL_ID) 
-            REFERENCES HOSPITAL(HOSPITAL_ID)
-            ON DELETE CASCADE
-            ON UPDATE CASCADE
-    )
-    """,
-
-    """CREATE TABLE IF NOT EXISTS PRESCRIPTION (
-        ID SERIAL PRIMARY KEY,
-        HOSPITAL_ID INTEGER,
-        DOCTOR_ID INTEGER,
-        PATIENT_ID INTEGER,
-        HOSPITAL_NAME VARCHAR,
-        DOCTOR_NAME VARCHAR,
-        PATIENT_NAME VARCHAR,
-        PRESCRIPTION_DATE DATE NOT NULL,
-        VALIDATION INTEGER DEFAULT 3,
-        FOREIGN KEY (HOSPITAL_ID)  
-            REFERENCES HOSPITAL(HOSPITAL_ID)
-            ON DELETE SET NULL
-            ON UPDATE SET NULL,
-        FOREIGN KEY (DOCTOR_ID) 
-            REFERENCES HOSPITAL_PERSONNEL(PERSONNEL_ID)
-            ON DELETE SET NULL
-            ON UPDATE SET NULL,
-        FOREIGN KEY (PATIENT_ID) 
-            REFERENCES PATIENTS(ID)
-            ON DELETE CASCADE
-            ON UPDATE SET NULL
-    )
-    """,
-
-    """CREATE TABLE IF NOT EXISTS DETAILED_PRESCRIPTION(
-        ID SERIAL PRIMARY KEY,
-        PRESCRIPTION_ID INTEGER,
-        DRUG_ID INTEGER,
-        DRUG_NAME VARCHAR,
-        DOSAGE_PER_TAKE INTEGER DEFAULT 1,
-        TIMES_PER_DAY INTEGER DEFAULT 1, 
-        DURATION INTEGER DEFAULT 3,
-        REGULAR BOOL DEFAULT FALSE,
-        FOREIGN KEY (PRESCRIPTION_ID) 
-            REFERENCES PRESCRIPTION(ID)
-            ON DELETE CASCADE
-            ON UPDATE RESTRICT,
-        FOREIGN KEY (DRUG_ID) 
-            REFERENCES DRUGS(ID)
-            ON DELETE SET NULL
-            ON UPDATE SET NULL
-    )
-    """,
-
-    """CREATE TABLE IF NOT EXISTS EXAMINATION(
-        ID SERIAL PRIMARY KEY,
-        PRESCRIPTION_ID INTEGER,
-        TYPE VARCHAR(30) NOT NULL,
-        DURATION INTEGER,
-        PLACE VARCHAR(30),
-        FOREIGN KEY (PRESCRIPTION_ID) 
-            REFERENCES PRESCRIPTION(ID)
-            ON DELETE CASCADE
-            ON UPDATE RESTRICT
-    )
-    """
-    # €Ece Nur€
-]
-def initialize(url):
-    with dbapi2.connect(url) as connection:
-        cursor = connection.cursor()
-        for statement in INIT_STATEMENTS:
-            cursor.execute(statement)
+#function that takes the values passed (email, name, password and university major of a student)
+#and inserts it as a row in Student table
+def student_signup(email, password):
+    tmp=False
+    id=0
+    connection = dbapi2.connect(path_url)
+    cursor = connection.cursor()
+    query = """INSERT INTO public."STUDENT"("EMAIL", "PASSWORD")
+	VALUES ('{}', '{}') RETURNING "ID";""".format(email, password)
+    try:
+        cursor.execute(query)
+        id = cursor.fetchone()
+        connection.commit()
+        id = int(id[0])
+        tmp=True
+    except Exception as err:
+        if (err.pgcode == "23505"):
+            print("E-mail is already being in use.")
+            id=-1
+            tmp=False
+    finally:
         cursor.close()
+        connection.close()
+
+    return (tmp,id)
 
 
-if __name__ == "__main__":
-    url = os.getenv("DATABASE_URL")
-    if url is None:
-        print("Usage: DATABASE_URL=url python dbinit.py", file=sys.stderr)
-        sys.exit(1)
-    initialize(url)
+#function logging in to the student account
+#taking email and password as values
+def student_login(email, password):
+
+    connection = dbapi2.connect(path_url)
+    cursor = connection.cursor()
+    query = """SELECT "ID" FROM public."STUDENT" where "EMAIL" = '{}' and "PASSWORD"='{}';""".format(email, password)
+    cursor.execute(query)
+    res = cursor.fetchone()
+    if res:
+        return (True, int(res[0]))
+    
+    query = """SELECT "ID" FROM public."STUDENT" where "EMAIL" = '{}' ;""".format(email)
+    if res:
+        print('Password entered is wrong.')
+        return (False, int(res[0]))
+
+    print("Create a new account.")
+
+    return(False, -1)
+
+#function which shows the student details 
+#when the student id is provided
+def student_profile(student_id):
+
+    connection = dbapi2.connect(path_url)
+    cursor = connection.cursor()    
+    query ="""SELECT 
+    S."ID" as id,
+    S."NAME" as name,
+    S."UNIVERSITY" as university,
+	ARRAY_AGG( concat(SK."NAME", ':' ,SK."DESCRIPTION")) as skill_list
+    from "STUDENT" S 
+    left join "STUDENT_SKILL" SS on S."ID" = SS."STUDENT_ID" 
+    left join "SKILL" SK on SS."SKILL_ID" = SK."ID"
+	where S."ID" = {}
+    GROUP BY S."ID",S."NAME",S."UNIVERSITY"
+    """.format(student_id)
+    cursor.execute(query)
+    result = cursor.fetchone()
+    return(result)
 
 
+def student_skill(student_id,skill_id):
+    connection = db.connect(path_url)
+    cursor = connection.cursor()
+    statement = """INSERT INTO public."STUDENT_SKILL"(
+	"STUDENT ID", "SKILL ID")
+	VALUES ({}, {}) RETURNING "ID";""".format(student_id,skill_id)
+    try:
+        cursor.execute(statement)
+        res = cursor.fetchall()
+        connection.commit()
+        flag = True
+        try:
 
-def drop_table(url):
-    with dbapi2.connect(url) as connection:
-        cursor = connection.cursor()
-        cursor.execute("DROP SCHEMA public CASCADE;CREATE SCHEMA public;")
+            id = res[0][0]
+        except:
+            print("no student with this id" )
+            id=student_id
+            flag=False
+
+    except Exception as err:
+        
+        if (err.pgcode == "23503"):
+            print("this skill or student doesnt exist")
+            id=-1
+            flag=False
+        if (err.pgcode == "23505"):
+            print("this student already has this skill")
+            id=-1
+            flag=False
+        id=-1
+        flag=False
+
+    finally:
         cursor.close()
+        connection.close()
+        
+    return (flag,id)
+
+def student_university(student_id,department_id):
+    connection = db.connect(path_url)
+    cursor = connection.cursor()
+    statement = """UPDATE public."STUDENT"
+	SET "UNIVERSITY MAJOR"={}
+	WHERE "ID"={} returning "ID";""".format(department_id,student_id)
+
+    try:
+        cursor.execute(statement)
+        res = cursor.fetchall()
+        #print(len(res))
+        connection.commit()
+        flag = True
+        try:
+
+            id = res[0][0]
+        except:
+            "no student with this id" 
+            id=student_id
+            flag=False
+    except Exception as err:
+        print_psycopg2_exception(err)
+        if (err.pgcode == "23503"):
+            print("no department with this id found")
+            id=-1
+            flag=False
+    finally:
+        cursor.close()
+        connection.close()
+        
+    return (flag,id)
+
+#employer signup function taking as values
+#the company name, email and password
+def signup_employer(email, password): 
+    connection = db.connect(path_url)
+    cursor = connection.cursor()
+    query = """INSERT INTO public."EMPLOYER"(
+	"EMAIL", "PASSWORD")
+	VALUES ('{}', '{}') RETURNING "ID" ;""".format(email, password)
+    try:
+        cursor.execute(query)
+        id = cursor.fetchone()
+        connection.commit()
+        id = int(id[0])
+        tmp=True
+    except Exception as err:
+        if (err.pgcode == "23505"):
+            print("E-mail is already being used.")
+            id=-1
+            tmp=False
+    finally:
+        cursor.close()
+        connection.close()
+    return (tmp, id)
+
+#function that takes email and password
+#as attributes in order to login
+def login_employer(email, password):
+    tmp=False
+    connection = db.connect(path_url)
+    cursor = connection.cursor()
+    query = """SELECT "ID" FROM public."EMPLOYER" where "EMAIL" = '{}' and "PASSWORD"='{}';""".format(email, password)
+    cursor.execute(query)
+    tmp = cursor.fetchone()
+    if tmp:
+        return (True, int(tmp[0]))
+    query = """SELECT "ID" FROM public."EMPLOYER" where "EMAIL" = '{}' ;""".format(email)
+    if tmp:
+        print('The entered password is wrong.')
+        return (False, int(tmp[0]))
+    print("Create a new account.")
+    return(False,-1)  
